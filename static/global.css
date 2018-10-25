@@ -51,6 +51,7 @@ body {
   color: var(--color-font);
   background-color: var(--color-quaternary);
 }
+
 main {
   margin: 0 auto;
 }
@@ -163,7 +164,14 @@ button {
   background: none;
   border: none;
   border-radius: 0;
+  font-size: 1rem;
+  transition: all 200ms ease;
 }
+
+button:focus {
+  outline: none;
+}
+
 button[disabled] {
   filter: grayscale(1);
   pointer-events: none;
@@ -184,20 +192,14 @@ button[disabled] {
   background: rgba(25, 155, 252, 0.99);
 }
 
-.appear {
-  transform: scaleX(0);
-  transform-origin: 0 50%;
-  animation-name: appear;
-  animation-duration: 800ms;
-  animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+.mobile--only {
+  display: block;
+}
+.desktop--only {
+  display: none;
 }
 
 @media (min-width: 768px) {
-  main {
-    padding: 2rem 0;
-    padding-bottom: 0;
-  }
   h1 {
     font-size: 5rem;
     line-height: 1.03;
@@ -225,5 +227,12 @@ button[disabled] {
   p {
     line-height: 1.94em;
     text-align: left;
+  }
+
+  .mobile--only {
+    display: none;
+  }
+  .desktop--only {
+    display: block;
   }
 }
