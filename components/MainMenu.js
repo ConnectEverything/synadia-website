@@ -1,7 +1,7 @@
 import React from 'react';
 import { slide as Menu } from 'react-burger-menu';
 import ScrollTo from './ScrollTo';
-import SocialItems from './SocialItems';
+import HeaderSocialItems from './HeaderSocialItems';
 
 export default class MainMenu extends React.Component {
   constructor(props) {
@@ -9,7 +9,6 @@ export default class MainMenu extends React.Component {
 
     this.state = {
       menuOpen: false,
-      isTop: true,
       vpWidth: null
     };
 
@@ -19,12 +18,6 @@ export default class MainMenu extends React.Component {
   componentDidMount() {
     this.updateWindowDimensions();
     window.addEventListener('resize', this.updateWindowDimensions);
-    document.addEventListener('scroll', () => {
-      const isTop = window.scrollY < 1;
-      if (isTop !== this.state.isTop) {
-        this.setState({ isTop });
-      }
-    });
   }
 
   updateWindowDimensions() {
@@ -60,24 +53,32 @@ export default class MainMenu extends React.Component {
         <nav>
           <ul className="navigation">
             <li>
-              <ScrollTo onClick={() => this.closeMenu()} href="about">
+              <ScrollTo
+                className="navigation-item"
+                onClick={() => this.closeMenu()}
+                href="about"
+              >
                 About
               </ScrollTo>
             </li>
             <li>
-              <ScrollTo onClick={() => this.closeMenu()} href="team">
+              <ScrollTo
+                className="navigation-item"
+                onClick={() => this.closeMenu()}
+                href="team"
+              >
                 Team
               </ScrollTo>
             </li>
             <li>
-              <ScrollTo onClick={() => this.closeMenu()} href="join-us">
+              <a className="navigation-item" href="mailto:jobs@synadia.com">
                 Join us
-              </ScrollTo>
+              </a>
             </li>
           </ul>
         </nav>
 
-        <SocialItems />
+        <HeaderSocialItems />
 
         <style jsx>{`
           .navigation {
@@ -109,17 +110,25 @@ export default class MainMenu extends React.Component {
         onStateChange={state => this.handleStateChange(state)}
       >
         <nav>
-          <ScrollTo onClick={() => this.closeMenu()} href="about">
+          <ScrollTo
+            className="navigation-item"
+            onClick={() => this.closeMenu()}
+            href="about"
+          >
             About
           </ScrollTo>
-          <ScrollTo onClick={() => this.closeMenu()} href="team">
+          <ScrollTo
+            className="navigation-item"
+            onClick={() => this.closeMenu()}
+            href="team"
+          >
             Team
           </ScrollTo>
-          <ScrollTo onClick={() => this.closeMenu()} href="join-us">
+          <a className="navigation-item" href="mailto:jobs@synadia.com">
             Join us
-          </ScrollTo>
+          </a>
         </nav>
-        <SocialItems />
+        <HeaderSocialItems />
         <style jsx global>{`
           /* Position and sizing of burger button */
           .bm-burger-button {
@@ -170,15 +179,6 @@ export default class MainMenu extends React.Component {
             transition: all 400ms ease;
           }
 
-          .bm-menu button {
-            width: 80%;
-            margin: 1rem 0;
-          }
-
-          .bm-menu button:first-of-type {
-            margin-top: 30%;
-          }
-
           .bm-menu-wrap {
             background: var(--color-quaternary) !important;
             top: 0;
@@ -197,6 +197,14 @@ export default class MainMenu extends React.Component {
             height: 100vh !important;
             z-index: 1001 !important;
             background: var(--color-quaternary) !important;
+          }
+
+          .bm-item .navigation-item {
+            margin: 1rem 0;
+            display: block;
+            padding: 0;
+            width: auto;
+            font-size: 1.15em;
           }
         `}</style>
       </Menu>

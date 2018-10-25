@@ -1,13 +1,13 @@
 import React from 'react';
 
-export default class SocialItems extends React.Component {
+export default class FooterSocialItems extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
     return (
-      <ul className="social-links">
+      <ul className="social-links--footer">
         <li>
           <a href="linkedin">
             <svg
@@ -25,6 +25,7 @@ export default class SocialItems extends React.Component {
                 />
               </g>
             </svg>
+            <h6 className="desktop--only">Linkedin</h6>
           </a>
         </li>
         <li>
@@ -51,6 +52,7 @@ export default class SocialItems extends React.Component {
                 </g>
               </g>
             </svg>
+            <h6 className="desktop--only">Twitter</h6>
           </a>
         </li>
         <li>
@@ -74,6 +76,7 @@ export default class SocialItems extends React.Component {
                 </g>
               </g>
             </svg>
+            <h6 className="desktop--only">Github</h6>
           </a>
         </li>
         <li>
@@ -100,31 +103,52 @@ export default class SocialItems extends React.Component {
                 </g>
               </g>
             </svg>
+            <h6 className="desktop--only">NATSio</h6>
           </a>
         </li>
         <style jsx global>{`
-          .social-links {
+          .social-links--footer {
             display: flex !important;
             align-items: center;
             list-style-type: none;
             padding: 0;
-            margin: 0;
+            margin: 2rem 0;
           }
-          .social-links li {
+
+          .social-links--footer li {
             display: inline-block;
             margin: 0 1rem;
           }
-          .social-links li:first-child {
+
+          .social-links--footer li:first-child {
             margin-left: 0;
           }
-          .social-links li:last-child {
+
+          .social-links--footer li:last-child {
             margin-right: 0;
           }
-          .social-links li a svg path {
+
+          .social-links--footer li a {
+            display: inline-flex;
+            align-items: center;
+          }
+
+          .social-links--footer li a svg {
+            margin-right: 1rem;
+          }
+
+          .social-links--footer li a svg path {
             transition: all 200ms ease;
           }
-          .social-links li a:hover svg path {
+
+          .social-links--footer li a:hover svg path {
             fill: var(--color-secondary);
+          }
+
+          @media (min-width: 768px) {
+            .social-links--footer {
+              margin: 0;
+            }
           }
         `}</style>
       </ul>
