@@ -1,0 +1,229 @@
+@font-face {
+  font-family: 'Circular Std';
+  src: url('../static/fonts/CircularStd-Book.woff2') format('woff2'),
+    url('../static/fonts/CircularStd-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Circular Std';
+  src: url('../static/fonts/CircularStd-Bold.woff2') format('woff2'),
+    url('../static/fonts/CircularStd-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+:root {
+  --font-primary: 'Circular Std', -apple-system, system-ui, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --color-primary: #199bfc;
+  --color-secondary: #25dbe2;
+  --color-tertiary: #0e0e0e;
+  --color-quaternary: #000;
+  --color-font: #fff;
+  --diagonal-gradient: linear-gradient(
+    45deg,
+    transparent,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  --horizontal-gradient: linear-gradient(
+    90deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  --max-width: 1360px;
+  --z-index-1: 500;
+  --z-index-2: 1000;
+  --z-index-3: 10000;
+  font-size: calc(14px + (16 - 14) * ((100vw - 320px) / (1440 - 320)));
+}
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-family: var(--font-primary);
+  scroll-behavior: smooth;
+  margin: 0;
+  color: var(--color-font);
+  background-color: var(--color-quaternary);
+}
+main {
+  margin: 0 auto;
+}
+
+input {
+  caret-color: var(--color-tertiary);
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #fff;
+  opacity: 0.5;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #fff;
+  opacity: 0.5;
+}
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #fff;
+  opacity: 0.5;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #fff;
+  opacity: 0.5;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.33em;
+  text-align: center;
+  margin: 0;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  max-width: 30ch;
+  font-size: 1.66rem;
+  line-height: 1.28em;
+  text-align: center;
+  margin-top: 1em;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.2em;
+  text-align: center;
+  margin: 0;
+}
+
+h4 {
+  font-size: 0.73rem;
+  text-align: center;
+  margin: 0;
+  margin-top: 1em;
+  color: var(--color-tertiary);
+}
+
+h4.primary {
+  color: #dadff6;
+  opacity: 0.4;
+}
+
+h4.secondary {
+  color: var(--color-secondary);
+}
+
+h5 {
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.26em;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.66em;
+  text-align: center;
+}
+
+p.small {
+  font-size: 0.81em;
+  line-height: 2.23;
+}
+
+p.primary {
+  color: var(--color-primary);
+}
+
+p.secondary {
+  color: var(--color-secondary);
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  border-radius: 0;
+}
+button[disabled] {
+  filter: grayscale(1);
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  outline-color: var(--color-primary);
+}
+
+::-moz-selection {
+  background-color: var(--color-secondary);
+}
+::selection {
+  background: rgba(25, 155, 252, 0.99);
+}
+
+.appear {
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  animation-name: appear;
+  animation-duration: 800ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+@media (min-width: 768px) {
+  main {
+    padding: 2rem 0;
+    padding-bottom: 0;
+  }
+  h1 {
+    font-size: 5rem;
+    line-height: 1.03;
+    text-align: left;
+  }
+  h2 {
+    font-size: 3.44rem;
+    letter-spacing: -1px;
+    line-height: 1.44em;
+    text-align: left;
+  }
+  h3 {
+    font-size: 2rem;
+    letter-spacing: -1px;
+    line-height: 1.3em;
+    text-align: left;
+  }
+  h4 {
+    font-size: 0.94rem;
+    text-align: left;
+  }
+  h5 {
+    text-align: left;
+  }
+  p {
+    line-height: 1.94em;
+    text-align: left;
+  }
+}
