@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from './Logo';
+import NewsletterForm from './NewsletterForm';
 import FooterSocialItems from './FooterSocialItems';
 
 export default class Footer extends React.Component {
@@ -15,6 +16,7 @@ export default class Footer extends React.Component {
         </div>
         <div className="contact">
           <h5>Sign up for our newsletter</h5>
+          <NewsletterForm />
         </div>
         <div className="copyright">
           <p>&copy; {new Date().getFullYear()} Synadia. All rights reserved.</p>
@@ -58,6 +60,18 @@ export default class Footer extends React.Component {
               grid-template-areas: 'logo . contact' 'copyright . social';
               align-items: start;
               justify-items: start;
+              margin: 0 2vw;
+            }
+
+            .contact {
+              width: 100%;
+              padding-bottom: 4rem;
+            }
+          }
+
+          @media (min-width: 1400px) {
+            footer {
+              margin: 0 auto;
             }
           }
         `}</style>
