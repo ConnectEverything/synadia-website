@@ -106,6 +106,7 @@ export default class MainMenu extends React.Component {
     return (
       <Menu
         right
+        width={'100%'}
         isOpen={this.state.menuOpen}
         onStateChange={state => this.handleStateChange(state)}
       >
@@ -186,6 +187,9 @@ export default class MainMenu extends React.Component {
 
           /* Wrapper for item list */
           .bm-item-list {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             padding: 0.8em;
           }
 
@@ -200,11 +204,11 @@ export default class MainMenu extends React.Component {
           }
 
           .bm-item .navigation-item {
-            margin: 1rem 0;
+            margin: 2rem 0;
             display: block;
             padding: 0;
             width: auto;
-            font-size: 1.15em;
+            font-size: 1.15rem;
           }
         `}</style>
       </Menu>
