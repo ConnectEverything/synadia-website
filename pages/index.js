@@ -171,13 +171,19 @@ export default class Index extends React.Component {
         </section>
         <section id="about" className="about">
           <h3>
-            At Synadia, we believe there is an opportunity to create the first
-            decentralized, secure global utility, powered by NATSio, to connect
-            all digital systems, services and devices.
+            At Synadia, we believe there is an opportunity <br />
+            to create the first decentralized,
+            <br />
+            <span className="highlight">
+              secure global utility, powered by NATSio,
+            </span>
+            <br />
+            to connect all digital systems, services and devices.
           </h3>
           <h3>
-            This offering will be decentralized by design, secure by default,
-            globally available, and easy to use and manage.
+            This offering will be decentralized by design, <br />
+            secure by default, globally available, <br />
+            and easy to use and manage.
           </h3>
         </section>
         <section id="team">
@@ -227,6 +233,10 @@ export default class Index extends React.Component {
 
           .letter {
             display: inline-block;
+          }
+
+          .highlight {
+            color: var(--color-secondary);
           }
 
           @media (min-width: 768px) {
