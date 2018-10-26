@@ -32,8 +32,9 @@ export default class Footer extends React.Component {
             grid-template-areas: 'logo' 'contact' 'social' 'copyright';
             align-items: center;
             justify-items: center;
-            max-width: 1400px;
+            width: 80vw;
             margin: 0 auto;
+            margin-top: 5rem;
             padding: 3.49rem 0;
             border-top: 2px solid #052034;
           }
@@ -60,7 +61,6 @@ export default class Footer extends React.Component {
               grid-template-areas: 'logo . contact' 'copyright . social';
               align-items: start;
               justify-items: start;
-              margin: 0 2vw;
             }
 
             .contact {
@@ -72,6 +72,7 @@ export default class Footer extends React.Component {
           @media (min-width: 1400px) {
             footer {
               margin: 0 auto;
+              max-width: 1400px;
             }
           }
         `}</style>

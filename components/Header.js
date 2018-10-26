@@ -37,6 +37,17 @@ export default class Header extends React.Component {
             background-color: var(--color-quaternary);
             padding: 1.8rem 0;
             border-bottom: 2px solid #052034;
+            transform: translateY(-100%);
+            animation: fadeDown 800ms ease 1.5s forwards;
+          }
+
+          @keyframes fadeDown {
+            from {
+              transform: translateY(-100%);
+            }
+            to {
+              transform: translateY(0);
+            }
           }
         `}</style>
       </header>

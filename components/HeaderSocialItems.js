@@ -11,7 +11,11 @@ export default class HeaderSocialItems extends React.Component {
         <h5 className="mobile--only">Connect with us</h5>
         <ul className="social-links--header">
           <li>
-            <a href="linkedin">
+            <a
+              href="https://www.linkedin.com/company/synadia-communications/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg
                 width="25px"
                 height="25px"
@@ -30,7 +34,11 @@ export default class HeaderSocialItems extends React.Component {
             </a>
           </li>
           <li>
-            <a href="twitter">
+            <a
+              href="https://twitter.com/_synadia_"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg
                 width="25px"
                 height="22px"
@@ -56,7 +64,11 @@ export default class HeaderSocialItems extends React.Component {
             </a>
           </li>
           <li>
-            <a href="github">
+            <a
+              href="https://github.com/ConnectEverything"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg
                 width="25px"
                 height="25px"
@@ -79,7 +91,7 @@ export default class HeaderSocialItems extends React.Component {
             </a>
           </li>
           <li>
-            <a href="NATSio">
+            <a href="https://nats.io" target="_blank" rel="noopener noreferrer">
               <svg
                 width="27px"
                 height="28px"

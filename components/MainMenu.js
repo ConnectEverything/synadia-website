@@ -138,6 +138,17 @@ export default class MainMenu extends React.Component {
             height: 14px;
           }
 
+          .bm-burger-button:before {
+            content: 'MENU';
+            font-family: var(--font-primary);
+            font-size: 1rem;
+            color: var(--color-font);
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(-120%, -50%);
+          }
+
           /* Color/shape of burger icon bars */
           .bm-burger-bars {
             position: absolute;
@@ -162,7 +173,7 @@ export default class MainMenu extends React.Component {
 
           .bm-cross-button {
             right: 4vw !important;
-            top: 4vw !important;
+            top: 7vw !important;
           }
 
           /* Color/shape of close button cross */

@@ -1,4 +1,5 @@
 import React from 'react';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 export default class ScrollTo extends React.Component {
   constructor(props) {
@@ -22,11 +23,6 @@ export default class ScrollTo extends React.Component {
   }
 
   handleClick(cb) {
-    this.state.element.scrollIntoView({
-      behavior: 'smooth',
-      alignToTop: true
-    });
-
     if (this.state.event_category && this.state.event_label) {
       gtag('event', 'Click', {
         event_category: this.state.event_category,
@@ -45,7 +41,9 @@ export default class ScrollTo extends React.Component {
         onClick={() => this.handleClick(this.props.onClick)}
         className={this.props.className}
       >
-        {this.props.children}
+        <AnchorLink offset="150" href={`#${this.props.href}`}>
+          {this.props.children}
+        </AnchorLink>
         <style jsx>{`
           button {
             cursor: pointer;

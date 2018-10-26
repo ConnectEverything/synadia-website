@@ -9,7 +9,11 @@ export default class FooterSocialItems extends React.Component {
     return (
       <ul className="social-links--footer">
         <li>
-          <a href="linkedin">
+          <a
+            href="https://www.linkedin.com/company/synadia-communications/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <svg
               width="25px"
               height="25px"
@@ -29,7 +33,11 @@ export default class FooterSocialItems extends React.Component {
           </a>
         </li>
         <li>
-          <a href="twitter">
+          <a
+            href="https://twitter.com/_synadia_"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <svg
               width="25px"
               height="22px"
@@ -56,7 +64,11 @@ export default class FooterSocialItems extends React.Component {
           </a>
         </li>
         <li>
-          <a href="github">
+          <a
+            href="https://github.com/ConnectEverything"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <svg
               width="25px"
               height="25px"
@@ -80,7 +92,7 @@ export default class FooterSocialItems extends React.Component {
           </a>
         </li>
         <li>
-          <a href="NATSio">
+          <a href="https://nats.io" target="_blank" rel="noopener noreferrer">
             <svg
               width="27px"
               height="28px"

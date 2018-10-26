@@ -69,6 +69,7 @@ input {
   text-transform: uppercase;
   caret-color: var(--color-primary);
   border: none;
+  font-family: var(--font-primary);
   font-size: 0.857rem;
   font-weight: 700;
   width: 100%;
@@ -193,7 +194,6 @@ img {
 }
 
 section {
-  max-width: 90vw;
   margin: 0 auto;
 }
 
@@ -242,11 +242,12 @@ h5 {
   line-height: 1.428em;
   letter-spacing: 3px;
   text-transform: uppercase;
-  text-align: center;
 }
 
 h5.primary {
+  display: inline;
   padding: 0.2em 1.3em;
+  text-align: center;
   background-color: var(--color-primary);
 }
 
@@ -335,7 +336,6 @@ a:hover {
   h5 {
     font-size: 0.875rem;
     margin: 0;
-    text-align: left;
   }
 
   h6 {
