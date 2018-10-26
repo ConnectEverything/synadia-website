@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
+import Team from '../components/Team';
 import Footer from '../components/Footer';
 
 export default class Index extends React.Component {
@@ -35,6 +36,7 @@ export default class Index extends React.Component {
             the good people of Synadia provide a wealth of knowledge aimed at
             challenging how the world connects.
           </h4>
+          <Team />
         </section>
         <Footer />
         <style jsx>{`

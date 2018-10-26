@@ -23,7 +23,7 @@ export default class Header extends React.Component {
   render() {
     return (
       <header className={this.state.isTop ? ' ' : 'sticky'}>
-        <Logo />
+        <Logo responsive />
         <MainMenu />
         <style jsx>{`
           header {

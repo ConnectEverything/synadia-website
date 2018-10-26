@@ -32,7 +32,7 @@ export default class Footer extends React.Component {
             justify-items: center;
             max-width: 1400px;
             margin: 0 auto;
-            padding: 8.93rem 0;
+            padding: 3.49rem 0;
             border-top: 2px solid #052034;
           }
 
