@@ -1,6 +1,7 @@
 import React from 'react';
 import AOS from 'aos';
 import Header from '../components/Header';
+import ParticleWave from '../components/Particles/ParticleWave';
 import Team from '../components/Team';
 import Footer from '../components/Footer';
 
@@ -107,6 +108,7 @@ export default class Index extends React.Component {
       <main>
         <Header />
         <section className="first-fold">
+          <ParticleWave />
           <h1>
             <div className="word">
               <div className="letter" data-aos="fade-up" data-aos-delay="0">

@@ -385,3 +385,12 @@ a:hover {
     width: 240px;
   }
 }
+
+@keyframes wave {
+  from {
+    transform: perspective(30rem) rotateX(5deg) rotateY(10deg);
+  }
+  to {
+    transform: perspective(30rem) rotateX(-10deg) rotateY(-10deg);
+  }
+}
