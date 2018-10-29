@@ -130,7 +130,7 @@ export default class TeamMember extends React.Component {
             margin-right: 3vw;
             min-width: 80vw;
             min-height: 24.28rem;
-            padding: 1px;
+            padding: 2px;
             background: var(--horizontal-gradient);
           }
 

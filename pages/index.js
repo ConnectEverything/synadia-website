@@ -1,5 +1,6 @@
 import React from 'react';
 import AOS from 'aos';
+import Plx from 'react-plx';
 import Header from '../components/Header';
 import ParticleWave from '../components/Particles/ParticleWave';
 import Team from '../components/Team';
@@ -104,6 +105,22 @@ export default class Index extends React.Component {
   }
 
   render() {
+    const foregroundParallax = [
+      {
+        start: 'self',
+        startOffset: 0,
+        duration: 1000,
+        easing: 'easeInOut',
+        properties: [
+          {
+            startValue: 100,
+            endValue: -50,
+            property: 'translateY'
+          }
+        ]
+      }
+    ];
+
     return (
       <main>
         <Header />
@@ -172,29 +189,38 @@ export default class Index extends React.Component {
           </h1>
         </section>
         <section id="about" className="about">
-          <h3>
-            At Synadia, we believe there is an opportunity <br />
-            to create the first decentralized,
-            <br />
-            <span className="highlight">
-              secure global utility, powered by NATSio,
-            </span>
-            <br />
-            to connect all digital systems, services and devices.
-          </h3>
-          <h3>
-            This offering will be decentralized by design, <br />
-            secure by default, globally available, <br />
-            and easy to use and manage.
-          </h3>
+          <Plx className="foreground" parallaxData={foregroundParallax}>
+            <h3>
+              At Synadia, we believe there is an opportunity{' '}
+              <br className="desktop--only" />
+              to create the first decentralized,{' '}
+              <br className="desktop--only" />
+              <span className="highlight">
+                secure global utility, powered by NATSio,{' '}
+              </span>
+              <br className="desktop--only" />
+              to connect all digital systems, services and devices.
+            </h3>
+          </Plx>
+          <Plx className="foreground" parallaxData={foregroundParallax}>
+            <h3>
+              This offering will be decentralized by design,{' '}
+              <br className="desktop--only" />
+              secure by default, globally available,{' '}
+              <br className="desktop--only" />
+              and easy to use and manage.
+            </h3>
+          </Plx>
         </section>
         <section id="team">
-          <h2>Meet the Team</h2>
-          <h4>
-            With 100+ years of combined experience in engineering and messaging,
-            the good people of Synadia provide a wealth of knowledge aimed at
-            challenging how the world connects.
-          </h4>
+          <Plx className="foreground" parallaxData={foregroundParallax}>
+            <h2>Meet the Team</h2>
+            <h4>
+              With 100+ years of combined experience in engineering and
+              messaging, the good people of Synadia provide a wealth of
+              knowledge aimed at challenging how the world connects.
+            </h4>
+          </Plx>
           <Team members={this.state.team} />
         </section>
         <Footer />
@@ -204,9 +230,9 @@ export default class Index extends React.Component {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: calc(100vh - 100px);
+            height: calc(100vh - 200px);
             width: 100vw;
-            margin: 105px auto 0 auto;
+            margin: 100px auto 0 auto;
           }
 
           h1 .freckle {
@@ -242,6 +268,9 @@ export default class Index extends React.Component {
           }
 
           @media (min-width: 768px) {
+            .first-fold {
+              height: calc(100vh - 100px);
+            }
             .freckle:after {
               content: '';
             }

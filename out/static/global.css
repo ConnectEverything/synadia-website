@@ -206,6 +206,7 @@ h1 {
   margin: 0;
   margin-top: 0;
   margin-bottom: 0.5em;
+  pointer-events: none;
 }
 
 h2 {
@@ -216,12 +217,13 @@ h2 {
 }
 
 h3 {
+  max-width: 90vw;
   font-size: 1.428rem;
   font-weight: 500;
   line-height: 1.75em;
   letter-spacing: -0.5px;
   text-align: center;
-  margin: 0;
+  margin: 0 auto;
 }
 
 h3 + h3 {
@@ -292,6 +294,12 @@ a:hover {
 
 .navigation-item {
   font-size: 1.5rem;
+}
+
+.foreground {
+  position: relative;
+  pointer-events: none;
+  z-index: 10;
 }
 
 @media (min-width: 768px) {

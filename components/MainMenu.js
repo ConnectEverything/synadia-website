@@ -214,6 +214,11 @@ export default class MainMenu extends React.Component {
             background: var(--color-quaternary) !important;
           }
 
+          .bm-menu-wrap {
+            width: 100vw !important;
+            height: 80vh !important;
+          }
+
           .bm-item .navigation-item {
             margin: 2rem 0;
             display: block;

@@ -18,13 +18,14 @@ export default class Team extends React.Component {
   }
 
   populateMemberArray() {
-    let orderedMembers =
-      this.state.vpWidth > 1024
-        ? this.props.members
-        : this.props.members
-            .map(a => ({ sort: Math.random(), value: a }))
-            .sort((a, b) => a.sort - b.sort)
-            .map(a => a.value);
+    let orderedMembers = this.props.members;
+
+    if (this.state.vpWidth < 1024) {
+      orderedMembers = this.props.members
+        .map(a => ({ sort: Math.random(), value: a }))
+        .sort((a, b) => a.sort - b.sort)
+        .map(a => a.value);
+    }
 
     return orderedMembers;
   }

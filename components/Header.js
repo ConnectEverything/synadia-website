@@ -38,6 +38,7 @@ export default class Header extends React.Component {
             padding: 1.8rem 0;
             border-bottom: 2px solid #052034;
             transform: translateY(-100%);
+            z-index: 1000;
             animation: fadeDown 800ms ease 1.5s forwards;
           }
 
