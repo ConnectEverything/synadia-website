@@ -255,14 +255,6 @@ export default class Index extends React.Component {
             margin-bottom: 12rem;
           }
 
-          .word {
-            display: inline-block;
-          }
-
-          .letter {
-            display: inline-block;
-          }
-
           .highlight {
             color: var(--color-secondary);
           }

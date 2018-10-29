@@ -33,7 +33,7 @@ export default class ParticleWave extends React.Component {
       left: '0',
       top: '0',
       willChange: 'transform',
-      animation: 'wave 10s infinite alternate'
+      animation: this.props.static ? 'none' : 'wave 10s infinite alternate'
     };
 
     return (

@@ -1,9 +1,9 @@
 {
   "particles": {
     "number": {
-      "value": 100,
+      "value": 200,
       "density": {
-        "enable": true,
+        "enable": false,
         "value_area": 1500
       }
     },
@@ -49,7 +49,7 @@
     },
     "move": {
       "enable": true,
-      "speed": 4,
+      "speed": 3,
       "direction": "top",
       "random": true,
       "straight": true,
@@ -79,7 +79,7 @@
       "grab": {
         "distance": 500,
         "line_linked": {
-          "opacity": 1
+          "opacity": 0.8
         }
       },
       "bubble": {
