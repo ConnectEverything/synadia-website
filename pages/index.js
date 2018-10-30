@@ -113,8 +113,8 @@ export default class Index extends React.Component {
         easing: 'easeInOut',
         properties: [
           {
-            startValue: 100,
-            endValue: -50,
+            startValue: -50,
+            endValue: 0,
             property: 'translateY'
           }
         ]
@@ -144,8 +144,6 @@ export default class Index extends React.Component {
               <br className="desktop--only" />
               to connect all digital systems, services and devices.
             </h3>
-          </Plx>
-          <Plx className="foreground" parallaxData={foregroundParallax}>
             <h3>
               This offering will be decentralized by design,{' '}
               <br className="desktop--only" />

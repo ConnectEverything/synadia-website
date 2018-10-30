@@ -224,7 +224,7 @@ export default class MainMenu extends React.Component {
             display: block;
             padding: 0;
             width: auto;
-            font-size: 1.15rem;
+            font-size: 1.3rem;
           }
         `}</style>
       </Menu>
