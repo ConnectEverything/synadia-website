@@ -132,26 +132,23 @@ export default class Index extends React.Component {
           </h1>
         </section>
         <section id="about" className="about">
-          <Plx className="foreground" parallaxData={foregroundParallax}>
-            <h3>
-              At Synadia, we believe there is an opportunity{' '}
-              <br className="desktop--only" />
-              to create the first decentralized,{' '}
-              <br className="desktop--only" />
-              <span className="highlight">
-                secure global utility, powered by NATSio,{' '}
-              </span>
-              <br className="desktop--only" />
-              to connect all digital systems, services and devices.
-            </h3>
-            <h3>
-              This offering will be decentralized by design,{' '}
-              <br className="desktop--only" />
-              secure by default, globally available,{' '}
-              <br className="desktop--only" />
-              and easy to use and manage.
-            </h3>
-          </Plx>
+          <h3>
+            At Synadia, we believe there is an opportunity{' '}
+            <br className="desktop--only" />
+            to create the first decentralized, <br className="desktop--only" />
+            <span className="highlight">
+              secure global utility, powered by NATSio,{' '}
+            </span>
+            <br className="desktop--only" />
+            to connect all digital systems, services and devices.
+          </h3>
+          <h3>
+            This offering will be decentralized by design,{' '}
+            <br className="desktop--only" />
+            secure by default, globally available,{' '}
+            <br className="desktop--only" />
+            and easy to use and manage.
+          </h3>
         </section>
         <section id="team">
           <Plx className="foreground" parallaxData={foregroundParallax}>
