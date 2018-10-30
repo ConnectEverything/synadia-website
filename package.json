@@ -5,10 +5,9 @@
   "license": "MIT",
   "scripts": {
     "dev": "NODE_ENV=development PORT=3000 node server.js",
-    "build": "next build",
     "start": "node server.js",
-    "export": "next build && next export",
-    "postinstall": "next build"
+    "build": "next build && next export -o /public",
+    "alias": "now alias"
   },
   "postcss": {
     "plugins": {
