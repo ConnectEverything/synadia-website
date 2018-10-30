@@ -202,7 +202,7 @@ export default class Index extends React.Component {
             .first-fold {
               justify-content: center;
               height: 65vh;
-              margin-bottom: 25vh;
+              margin-bottom: 35vh;
             }
             .freckle:after {
               content: '';
