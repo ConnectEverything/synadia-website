@@ -11,4 +11,4 @@ RUN yarn
 COPY . .
 
 # Build and export the app
-RUN yarn build && yarn alias
+RUN yarn build
