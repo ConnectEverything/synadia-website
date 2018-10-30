@@ -127,65 +127,8 @@ export default class Index extends React.Component {
         <section className="first-fold">
           <ParticleWave />
           <h1>
-            <div className="word">
-              <div className="letter" data-aos="fade-up" data-aos-delay="0">
-                C
-              </div>
-              <div className="letter" data-aos="fade-up" data-aos-delay="50">
-                o
-              </div>
-              <div className="letter" data-aos="fade-up" data-aos-delay="100">
-                n
-              </div>
-              <div className="letter" data-aos="fade-up" data-aos-delay="150">
-                n
-              </div>
-              <div className="letter" data-aos="fade-up" data-aos-delay="200">
-                e
-              </div>
-              <div className="letter" data-aos="fade-up" data-aos-delay="250">
-                c
-              </div>
-              <div className="letter" data-aos="fade-up" data-aos-delay="300">
-                t
-              </div>
-            </div>
-            {` `}
-            <div className="word">
-              <div className="letter" data-aos="fade-up" data-aos-delay="350">
-                E
-              </div>
-              <div className="letter" data-aos="fade-up" data-aos-delay="400">
-                v
-              </div>
-              <div className="letter" data-aos="fade-up" data-aos-delay="450">
-                e
-              </div>
-              <div className="letter" data-aos="fade-up" data-aos-delay="500">
-                r
-              </div>
-              <div className="letter" data-aos="fade-up" data-aos-delay="550">
-                y
-              </div>
-              <div className="letter" data-aos="fade-up" data-aos-delay="600">
-                t
-              </div>
-              <div className="letter" data-aos="fade-up" data-aos-delay="650">
-                h
-              </div>
-              <div className="letter" data-aos="fade-up" data-aos-delay="700">
-                i
-              </div>
-              <div className="letter" data-aos="fade-up" data-aos-delay="750">
-                n
-              </div>
-              <div className="letter" data-aos="fade-up" data-aos-delay="800">
-                g
-              </div>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="850" className="freckle">
-              .
-            </div>
+            Connect Everything
+            <div className="freckle">.</div>
           </h1>
         </section>
         <section id="about" className="about">
@@ -228,11 +171,12 @@ export default class Index extends React.Component {
           .first-fold {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
-            height: calc(100vh - 200px);
+            height: 74vh;
             width: 100vw;
             margin: 100px auto 0 auto;
+            margin-bottom: 5vh;
           }
 
           h1 .freckle {
@@ -261,7 +205,9 @@ export default class Index extends React.Component {
 
           @media (min-width: 768px) {
             .first-fold {
-              height: calc(100vh - 100px);
+              justify-content: center;
+              height: 65vh;
+              margin-bottom: 25vh;
             }
             .freckle:after {
               content: '';

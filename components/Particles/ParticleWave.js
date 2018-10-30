@@ -1,6 +1,5 @@
 import React from 'react';
 import Particles from 'react-particles-js';
-import settings from './settings.json';
 
 export default class ParticleWave extends React.Component {
   constructor(props) {
@@ -21,26 +20,102 @@ export default class ParticleWave extends React.Component {
   }
 
   render() {
-    const mobileStyles = {
-      position: 'absolute',
-      left: '0',
-      top: '90px',
+    const styles = {
+      height: '40vh',
       animation: 'none'
     };
 
-    const desktopStyles = {
-      position: 'absolute',
-      left: '0',
-      top: '0',
-      willChange: 'transform',
-      animation: this.props.static ? 'none' : 'wave 10s infinite alternate'
-    };
-
     return (
-      <Particles
-        params={settings}
-        style={this.state.vpWidth > 1024 ? desktopStyles : mobileStyles}
-      />
+      <div className="particles__wrapper">
+        <Particles
+          params={{
+            particles: {
+              number: {
+                value: 100,
+                density: {
+                  enable: this.state.vpWidth < 1024 ? true : false
+                }
+              },
+              color: {
+                value: '#25dbe2'
+              },
+              shape: {
+                type: 'circle',
+                stroke: {
+                  width: 0,
+                  color: '#000000'
+                },
+                polygon: {
+                  nb_sides: 8
+                }
+              },
+              opacity: {
+                value: 0.5,
+                random: true
+              },
+              size: {
+                value: 5,
+                random: true,
+                anim: {
+                  enable: true,
+                  speed: 30,
+                  size_min: 0.1,
+                  sync: false
+                }
+              },
+              line_linked: {
+                enable: true,
+                distance: 150,
+                color: '#25dbe2',
+                opacity: 0.5,
+                width: 2
+              },
+              move: {
+                enable: true,
+                speed: 1,
+                direction: 'top',
+                random: true,
+                straight: true,
+                out_mode: 'bounce',
+                bounce: true
+              }
+            },
+            interactivity: {
+              detect_on: 'canvas',
+              events: {
+                onhover: {
+                  enable: true,
+                  mode: 'grab'
+                },
+                resize: true
+              },
+              modes: {
+                grab: {
+                  distance: 200,
+                  line_linked: {
+                    opacity: 0.6
+                  }
+                }
+              }
+            },
+            retina_detect: true
+          }}
+          style={styles}
+        />
+
+        <style jsx global>{`
+          .particles__wrapper {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 40vh;
+          }
+          .particles__wrapper > div {
+            height: 40vh;
+            opacity: 0.6;
+          }
+        `}</style>
+      </div>
     );
   }
 }

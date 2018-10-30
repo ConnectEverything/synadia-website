@@ -1,42 +1,23 @@
 import React from 'react';
-import AOS from 'aos';
 
 export default class TeamMember extends React.Component {
   constructor(props) {
     super(props);
   }
 
-  componentDidMount() {
-    AOS.init({
-      once: true,
-      duration: 800,
-      easing: 'ease-in-out'
-    });
-  }
-
   render() {
     return (
-      <div
-        className="outer"
-        data-aos="fade-up"
-        data-aos-delay={`${this.props.id}00`}
-      >
+      <div className="outer">
         <div className="inner">
           <div className="content">
             <figure className="thumbnail">
-              <div
-                data-aos="fade-down"
-                data-aos-delay={`${this.props.id}00`}
-                data-aos-duration={`${this.props.id * 3}00`}
-              >
-                <img
-                  className="thumbnail__image"
-                  src={`static/images/people/${this.props.name
-                    .split(' ')
-                    .join('')}.png`}
-                  alt={`${this.props.name} profile picture`}
-                />
-              </div>
+              <img
+                className="thumbnail__image"
+                src={`static/images/people/${this.props.name
+                  .split(' ')
+                  .join('')}.png`}
+                alt={`${this.props.name} profile picture`}
+              />
             </figure>
             <h4>{this.props.name}</h4>
             {this.props.position && (

@@ -132,7 +132,7 @@ export default class HeaderSocialItems extends React.Component {
 
           .social-links--header li {
             display: inline-block;
-            margin: 0 1rem;
+            margin: 0 1.2rem;
           }
 
           .social-links--header li:first-child {
@@ -141,6 +141,14 @@ export default class HeaderSocialItems extends React.Component {
 
           .social-links--header li:last-child {
             margin-right: 0;
+          }
+
+          .social-links--header li a {
+            display: inline-block;
+          }
+
+          .social-links--header li a svg {
+            transform: scale(0.8);
           }
 
           .social-links--header li a svg path {
