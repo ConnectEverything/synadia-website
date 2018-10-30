@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "NODE_ENV=development PORT=3000 node server.js",
     "start": "node server.js",
-    "build": "next build && next export -o /public"
+    "build": "next build && next export -o /public",
+    "alias": "now alias"
   },
   "postcss": {
     "plugins": {
@@ -28,6 +29,7 @@
     "express": "^4.16.4",
     "formik": "^1.3.1",
     "next": "^7.0.2",
+    "now": "^11.4.6",
     "prettier": "^1.14.3",
     "prop-types": "^15.6.2",
     "react": "^16.6.0",
