@@ -8,46 +8,27 @@ export default class Team extends React.Component {
     this.state = {
       vpWidth: null
     };
-
-    this.populateMemberArray = this.populateMemberArray.bind(this);
-    this.renderTeam = this.renderTeam.bind(this);
   }
 
   componentDidMount() {
     this.setState({ vpWidth: window.innerWidth });
   }
 
-  populateMemberArray() {
-    let orderedMembers = this.props.members;
-
-    if (this.state.vpWidth < 1024) {
-      orderedMembers = this.props.members
-        .map(a => ({ sort: Math.random(), value: a }))
-        .sort((a, b) => a.sort - b.sort)
-        .map(a => a.value);
-    }
-
-    return orderedMembers;
-  }
-
-  renderTeam() {
-    const members = this.populateMemberArray();
-    return members.map((item, i) => (
-      <TeamMember
-        key={i}
-        id={i}
-        name={item.name}
-        position={item.position}
-        bio={item.bio}
-        links={item.links}
-      />
-    ));
-  }
-
   render() {
     return (
       <div className="outer">
-        <div className="inner">{this.renderTeam()}</div>
+        <div className="inner">
+          {this.props.members.map((item, i) => (
+            <TeamMember
+              key={i}
+              id={i}
+              name={item.name}
+              position={item.position}
+              bio={item.bio}
+              links={item.links}
+            />
+          ))}
+        </div>
         <style jsx>{`
           .outer {
             position: relative;

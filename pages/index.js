@@ -124,7 +124,7 @@ export default class Index extends React.Component {
     return (
       <main>
         <Header />
-        <section className="first-fold">
+        <section id="home" className="first-fold">
           <ParticleWave />
           <h1>
             Connect Everything
