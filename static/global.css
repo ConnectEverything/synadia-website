@@ -277,6 +277,16 @@ a:not(.button):hover {
   color: var(--color-secondary);
 }
 
+a.link {
+  color: var(--color-secondary);
+  text-decoration: underline;
+  transition: all 200ms ease;
+}
+
+a.link:hover {
+  opacity: 0.8;
+}
+
 *,
 *:before,
 *:after {

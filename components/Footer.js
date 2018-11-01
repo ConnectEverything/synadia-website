@@ -13,13 +13,11 @@ export default class Footer extends React.Component {
       <footer>
         <div className="logo">
           <Logo />
+          <p>&copy; {new Date().getFullYear()} Synadia. All rights reserved.</p>
         </div>
         <div className="contact">
           <h5>Sign up for our newsletter</h5>
           <NewsletterForm />
-        </div>
-        <div className="copyright">
-          <p>&copy; {new Date().getFullYear()} Synadia. All rights reserved.</p>
         </div>
         <div className="social">
           <h5>Connect with us</h5>
@@ -29,7 +27,8 @@ export default class Footer extends React.Component {
           footer {
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-areas: 'logo' 'contact' 'social' 'copyright';
+            grid-template-areas: 'contact' 'social' 'logo';
+            grid-column-gap: 2vw;
             align-items: center;
             justify-items: center;
             width: 80vw;
@@ -45,10 +44,6 @@ export default class Footer extends React.Component {
 
           .contact {
             grid-area: contact;
-          }
-
-          .copyright {
-            grid-area: copyright;
           }
 
           .social {

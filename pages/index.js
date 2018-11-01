@@ -137,7 +137,11 @@ export default class Index extends React.Component {
             <br className="desktop--only" />
             to create the first decentralized, <br className="desktop--only" />
             <span className="highlight">
-              secure global utility, powered by NATSio,{' '}
+              secure global utility,powered by{' '}
+              <a className="link" href="https://nats.io">
+                NATS.io
+              </a>
+              ,{' '}
             </span>
             <br className="desktop--only" />
             to connect all digital systems, services and devices.
@@ -188,6 +192,17 @@ export default class Index extends React.Component {
             border-radius: 100%;
             background: var(--horizontal-gradient);
             transform: translate(-15%, -65%);
+            opacity: 0;
+            animation: appear 1s ease 50ms forwards;
+          }
+
+          @keyframes appear {
+            from {
+              opacity: 0;
+            }
+            to {
+              opacity: 1;
+            }
           }
 
           .about {
