@@ -1,6 +1,5 @@
 import React from 'react';
 import AOS from 'aos';
-import Plx from 'react-plx';
 import Header from '../components/Header';
 import ParticleWave from '../components/Particles/ParticleWave';
 import Team from '../components/Team';
@@ -155,14 +154,12 @@ export default class Index extends React.Component {
           </h3>
         </section>
         <section id="team">
-          <Plx className="foreground" parallaxData={foregroundParallax}>
-            <h2>Meet the Team</h2>
-            <h4>
-              With 100+ years of combined experience in engineering and
-              messaging, the good people of Synadia provide a wealth of
-              knowledge aimed at challenging how the world connects.
-            </h4>
-          </Plx>
+          <h2>Meet the Team</h2>
+          <h4>
+            With 100+ years of combined experience in engineering and messaging,
+            the good people of Synadia provide a wealth of knowledge aimed at
+            challenging how the world connects.
+          </h4>
           <Team members={this.state.team} />
         </section>
         <Footer />
