@@ -4,6 +4,7 @@ import Particles from 'react-particles-js';
 export default class ParticleWave extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       vpWidth: null
     };

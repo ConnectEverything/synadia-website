@@ -1,6 +1,9 @@
 import React from 'react';
 import { Formik } from 'formik';
 
+const SCRIPT_URL =
+  'https://script.google.com/a/synadia.com/macros/s/AKfycbw_7yaqcnWQJRI3AJ5hkwLTBrKYPXPS2s_tWMfzqyTG1k4tzH4/exec';
+
 export default class NewsletterForm extends React.Component {
   constructor(props) {
     super(props);
@@ -23,10 +26,17 @@ export default class NewsletterForm extends React.Component {
             return errors;
           }}
           onSubmit={(values, { setSubmitting }) => {
-            setTimeout(() => {
-              alert(JSON.stringify(values, null, 2));
+            fetch(SCRIPT_URL, {
+              method: 'POST',
+              mode: 'no-cors',
+              body: JSON.stringify(values),
+              headers: {
+                'Content-Type': 'application/json'
+              }
+            }).then(() => {
               setSubmitting(false);
-            }, 400);
+              alert('Thanks for subscribing!');
+            });
           }}
         >
           {({
@@ -34,11 +44,11 @@ export default class NewsletterForm extends React.Component {
             errors,
             touched,
             handleChange,
-            handleBlur,
             handleSubmit,
+            handleBlur,
             isSubmitting
           }) => (
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="gform">
               <div className="input__wrapper">
                 <input
                   type="email"

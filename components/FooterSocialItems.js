@@ -104,6 +104,7 @@ export default class FooterSocialItems extends React.Component {
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
+              className="nats-logo"
             >
               <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                 <g
@@ -145,7 +146,7 @@ export default class FooterSocialItems extends React.Component {
             margin-right: 0;
           }
 
-          .social-links--footer li a svg {
+          .social-links--footer li a svg:not(.nats-logo) {
             transform: scale(0.9);
           }
 

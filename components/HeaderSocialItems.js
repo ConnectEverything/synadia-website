@@ -103,6 +103,7 @@ export default class HeaderSocialItems extends React.Component {
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink"
+                className="nats-logo"
               >
                 <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                   <g
@@ -153,8 +154,12 @@ export default class HeaderSocialItems extends React.Component {
             align-items: center;
           }
 
-          .social-links--header li a svg {
+          .social-links--header li a svg:not(.nats-logo) {
             transform: scale(0.9);
+          }
+
+          .social-links--header li a svg.nats-logo {
+            transform: translateY(3px);
           }
 
           .social-links--header li a svg path {
@@ -168,6 +173,9 @@ export default class HeaderSocialItems extends React.Component {
           @media (min-width: 1024px) {
             .social-links--header {
               margin: 0;
+            }
+            .social-links--header li {
+              max-height: 25px;
             }
           }
         `}</style>
