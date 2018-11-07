@@ -104,22 +104,6 @@ export default class Index extends React.Component {
   }
 
   render() {
-    const foregroundParallax = [
-      {
-        start: 'self',
-        startOffset: 0,
-        duration: 1000,
-        easing: 'easeInOut',
-        properties: [
-          {
-            startValue: -50,
-            endValue: 0,
-            property: 'translateY'
-          }
-        ]
-      }
-    ];
-
     return (
       <main>
         <Header />
