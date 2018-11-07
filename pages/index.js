@@ -25,7 +25,8 @@ export default class Index extends React.Component {
         {
           name: 'Colin Sullivan',
           position: 'Product Management',
-          bio: 'Product Manager',
+          bio:
+            'Colin loves to make complex software easy for people to use and understand. He has extensive experience developing messaging products and designing distributed systems and has been solving tough problems for over 20 years. Prior to Synadia, Colin has worked at Apcera, TIBCO Software, Talarian, and PLATINUM technology. In his spare time, Colin is an outdoor enthusiast and still occasionally tries to climb mountains.',
           links: {
             twitter: 'ColinSullivan01',
             linkedin: 'colinsullivan',
@@ -45,7 +46,8 @@ export default class Index extends React.Component {
         {
           name: 'Ivan Kozlovic',
           position: 'Engineering',
-          bio: 'Software Engineer',
+          bio:
+            'A software engineer who has been working in Messaging for the last 17 years, so he knows a thing or two about the challenges of building distributed systems.',
           links: {
             twitter: 'ivankozlovic',
             linkedin: 'ivankozlovic',
@@ -55,7 +57,8 @@ export default class Index extends React.Component {
         {
           name: 'Waldemar Quevedo',
           position: 'Engineering',
-          bio: 'Software Engineer',
+          bio:
+            'Waldemar works on the NATS project and its ecosystem and is the author of "Practical NATS", one of the first books about the project. Previously at Apcera, he worked on a container orchestration system that used NATS for its control plane and also formed part of the PaaS team at Rakuten in Tokyo which was one of the early adopters of CloudFoundry for production usage.',
           links: {
             twitter: 'wallyqs',
             linkedin: 'waldemarquevedo',
@@ -65,7 +68,8 @@ export default class Index extends React.Component {
         {
           name: 'Alberto Ricart',
           position: 'Engineering',
-          bio: 'Software Engineer',
+          bio:
+            "A software engineer who has been fitting round pegs in square holes for over 26 years, Alberto is a lead architect and maintainer for NATS anything Nodejs, and Synadia's cloud-based applications and tools.",
           links: {
             twitter: 'albertoricart',
             linkedin: 'albertoricart',
@@ -75,7 +79,8 @@ export default class Index extends React.Component {
         {
           name: 'Stephen Asbury',
           position: 'Engineering',
-          bio: 'Software Engineer',
+          bio:
+            'Before joining Synadia Stephen was an engineering manager at Google, engineer at Fog Creek, architect at TIBCO, and maniac at NeXT. For some reason he has a PhD in Nuclear Engineering, and is trying to figure out how to use that with NATS.',
           links: {
             twitter: 'thesasbury',
             linkedin: 'stasbury',
@@ -85,7 +90,8 @@ export default class Index extends React.Component {
         {
           name: 'David Kemper',
           position: 'Engineering',
-          bio: 'Software Engineer',
+          bio:
+            'An engineer leveraging over 20 years of systems development experience into public cloud devops.',
           links: {
             linkedin: 'david-kemper-531bb038',
             github: 'davidkemper'
