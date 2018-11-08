@@ -125,14 +125,11 @@ export default class Index extends React.Component {
             At Synadia, we believe there is an opportunity{' '}
             <br className="desktop--only" />
             to create the first decentralized, <br className="desktop--only" />
-            <span className="highlight">
-              secure global utility,powered by{' '}
-              <a className="link" href="https://nats.io">
-                NATS.io
-              </a>
-              ,{' '}
-            </span>
-            <br className="desktop--only" />
+            secure global utility, powered by{' '}
+            <a className="link" href="https://nats.io">
+              NATS.io
+            </a>
+            , <br className="desktop--only" />
             to connect all digital systems, services and devices.
           </h3>
           <h3>
