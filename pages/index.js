@@ -15,7 +15,7 @@ export default class Index extends React.Component {
           name: 'Derek Collison',
           position: 'Founder & CEO',
           bio:
-            'Entrepreneur, Investor, and Technologist. Creator of @nats_io and @cloudfoundry',
+            "Derek is an industry veteran and pioneer in large-scale distributed systems. He has held executive positions at Google, VMware, and TIBCO Software. He is the creator of NATS.io and his goal is to provide a secure global utility to connect all of the world's digital systems, services and devices.",
           links: {
             twitter: 'derekcollison',
             linkedin: 'derekcollison',
@@ -26,7 +26,7 @@ export default class Index extends React.Component {
           name: 'Colin Sullivan',
           position: 'Product Management',
           bio:
-            'Colin loves to make complex software easy for people to use and understand. He has extensive experience developing messaging products and designing distributed systems and has been solving tough problems for over 20 years. Prior to Synadia, Colin has worked at Apcera, TIBCO Software, Talarian, and PLATINUM technology. In his spare time, Colin is an outdoor enthusiast and still occasionally tries to climb mountains.',
+            'Prior to Synadia, Colin had been managing and developing messaging products for over 20 years at Apcera, TIBCO, Talarian, and PLATINUM. In his spare time, Colin is an outdoor enthusiast and still occasionally tries to climb mountains.',
           links: {
             twitter: 'ColinSullivan01',
             linkedin: 'colinsullivan',
@@ -36,7 +36,8 @@ export default class Index extends React.Component {
         {
           name: 'Ginger Collison',
           position: 'Community',
-          bio: 'Developer Advocate & Community Manager',
+          bio:
+            'Self-taught technologist, culinary chef by training, Ginger spent over 20 years in the Oracle bubble and is now basking in the glow of OSS.',
           links: {
             twitter: 'crashgingerly',
             linkedin: 'ginger-collison',
@@ -58,7 +59,7 @@ export default class Index extends React.Component {
           name: 'Waldemar Quevedo',
           position: 'Engineering',
           bio:
-            'Waldemar works on the NATS project and its ecosystem and is the author of "Practical NATS", one of the first books about the project. Previously at Apcera, he worked on a container orchestration system that used NATS for its control plane and also formed part of the PaaS team at Rakuten in Tokyo which was one of the early adopters of CloudFoundry for production usage.',
+            'Waldemar, aka Wally, is a core maintainer of NATS and the author of "Practical NATS". Before joining Synadia, he worked on a container orchestration system that used NATS for its control plane at Apcera and formed part of the PaaS team at Rakuten in Tokyo.',
           links: {
             twitter: 'wallyqs',
             linkedin: 'waldemarquevedo',
@@ -117,7 +118,8 @@ export default class Index extends React.Component {
           <ParticleWave />
           <h1>
             Connect Everything
-            <div className="freckle">.</div>
+            <span className="mobile--only">.</span>
+            <div className="freckle" />
           </h1>
         </section>
         <section id="about" className="about">
@@ -167,24 +169,12 @@ export default class Index extends React.Component {
 
           h1 .freckle:after {
             position: absolute;
-            right: 0;
+            right: -1.4rem;
             bottom: 0;
-            height: 1.25rem;
-            width: 1.25rem;
+            height: 1.3rem;
+            width: 1.3rem;
             border-radius: 100%;
             background: var(--horizontal-gradient);
-            transform: translate(-12%, -61%);
-            opacity: 0;
-            animation: appear 600ms ease 50ms forwards;
-          }
-
-          @keyframes appear {
-            from {
-              opacity: 0;
-            }
-            to {
-              opacity: 1;
-            }
           }
 
           .about {

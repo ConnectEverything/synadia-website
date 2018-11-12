@@ -66,7 +66,8 @@ form {
 
 input {
   position: relative;
-  background: var(--color-tertiary);
+  border-radius: 0;
+  background: #3c3c3c;
   color: var(--color-font);
   text-transform: uppercase;
   caret-color: var(--color-primary);
@@ -305,6 +306,10 @@ a.link:hover {
 .mobile--only {
   display: block;
 }
+h1 .mobile--only {
+  display: inline-block;
+}
+
 .desktop--only {
   display: none;
 }
@@ -334,7 +339,7 @@ a.link:hover {
   }
 
   h1 {
-    font-size: 6.25rem;
+    font-size: 9rem;
     font-weight: 700;
     letter-spacing: -3px;
     line-height: 1em;
@@ -384,10 +389,11 @@ a.link:hover {
     font-size: 1rem;
     line-height: 2.187em;
   }
-
+  h1 .mobile--only,
   .mobile--only {
     display: none;
   }
+
   .desktop--only {
     display: block;
   }

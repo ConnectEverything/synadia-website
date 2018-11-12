@@ -53,7 +53,7 @@ export default class Footer extends React.Component {
           @media (min-width: 768px) {
             footer {
               grid-template-columns: 1fr 1fr 3fr;
-              grid-template-areas: 'logo . contact' 'copyright . social';
+              grid-template-areas: 'logo . contact' 'social social social';
               align-items: start;
               justify-items: start;
             }
@@ -61,6 +61,14 @@ export default class Footer extends React.Component {
             .contact {
               width: 100%;
               padding-bottom: 4rem;
+            }
+
+            .social {
+              justify-self: center;
+            }
+
+            .social h5 {
+              text-align: center;
             }
           }
 

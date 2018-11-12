@@ -6,14 +6,23 @@ export default class ParticleWave extends React.Component {
     super(props);
 
     this.state = {
-      vpWidth: null
+      vpWidth: null,
+      styles: {
+        height: '40vh',
+        animation: 'none'
+      }
     };
 
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
   componentDidMount() {
+    window.addEventListener('resize', this.updateDimensions);
     this.updateWindowDimensions();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateDimensions);
   }
 
   updateWindowDimensions() {
@@ -21,11 +30,6 @@ export default class ParticleWave extends React.Component {
   }
 
   render() {
-    const styles = {
-      height: '40vh',
-      animation: 'none'
-    };
-
     return (
       <div className="particles__wrapper">
         <Particles
@@ -34,7 +38,7 @@ export default class ParticleWave extends React.Component {
               number: {
                 value: 100,
                 density: {
-                  enable: this.state.vpWidth < 1024 ? true : false
+                  enable: false
                 }
               },
               color: {
@@ -66,7 +70,7 @@ export default class ParticleWave extends React.Component {
               },
               line_linked: {
                 enable: true,
-                distance: 150,
+                distance: this.state.vpWidth < 1024 ? 150 : 5,
                 color: '#25dbe2',
                 opacity: 0.5,
                 width: 2
@@ -87,8 +91,7 @@ export default class ParticleWave extends React.Component {
                 onhover: {
                   enable: true,
                   mode: 'grab'
-                },
-                resize: true
+                }
               },
               modes: {
                 grab: {
@@ -101,19 +104,28 @@ export default class ParticleWave extends React.Component {
             },
             retina_detect: true
           }}
-          style={styles}
+          style={this.state.styles}
         />
-
         <style jsx global>{`
           .particles__wrapper {
             position: absolute;
             bottom: 0;
             width: 100%;
             height: 40vh;
+            overflow: hidden;
           }
           .particles__wrapper > div {
+            width: 200vw;
             height: 40vh;
             opacity: 0.6;
+            transform: translateX(-10%);
+          }
+
+          @media (min-width: 768px) {
+            .particles__wrapper > div {
+              width: 100%;
+              transform: translateX(0);
+            }
           }
         `}</style>
       </div>
