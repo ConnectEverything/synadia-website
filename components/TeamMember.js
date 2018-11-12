@@ -122,7 +122,7 @@ export default class TeamMember extends React.Component {
             align-items: center;
             height: 100%;
             position: relative;
-            padding: 5.5rem 3rem 0.5rem 3rem;
+            padding: 5.5rem 1.5rem 0.5rem 1.5rem;
             background-color: var(--color-tertiary);
           }
 
@@ -185,6 +185,10 @@ export default class TeamMember extends React.Component {
               min-height: 21.25rem;
               min-width: 27.187rem;
               margin: 5rem 1%;
+            }
+
+            .inner {
+              padding: 5.5rem 3rem 0.5rem 3rem;
             }
           }
         `}</style>

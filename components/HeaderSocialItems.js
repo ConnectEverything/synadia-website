@@ -170,7 +170,7 @@ export default class HeaderSocialItems extends React.Component {
             fill: var(--color-secondary);
           }
 
-          @media (min-width: 1024px) {
+          @media (min-width: 895px) {
             .social-links--header {
               margin: 0;
             }

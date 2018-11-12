@@ -115,12 +115,12 @@ export default class Index extends React.Component {
       <main>
         <Header />
         <section id="home" className="first-fold">
-          <ParticleWave />
           <h1>
             Connect Everything
             <span className="mobile--only">.</span>
             <div className="freckle" />
           </h1>
+          <ParticleWave />
         </section>
         <section id="about" className="about">
           <h3>
@@ -156,10 +156,16 @@ export default class Index extends React.Component {
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            height: 74vh;
+            position: relative;
             width: 100vw;
             margin: 100px auto 0 auto;
-            margin-bottom: 5vh;
+            height: 65vh;
+            margin-bottom: 15vh;
+          }
+
+          h1 {
+            position: relative;
+            z-index: 10;
           }
 
           h1 .freckle {
@@ -171,8 +177,8 @@ export default class Index extends React.Component {
             position: absolute;
             right: -1.4rem;
             bottom: 0;
-            height: 1.3rem;
-            width: 1.3rem;
+            height: 20px;
+            width: 20px;
             border-radius: 100%;
             background: var(--horizontal-gradient);
           }
@@ -186,13 +192,15 @@ export default class Index extends React.Component {
           }
 
           @media (min-width: 768px) {
-            .first-fold {
-              justify-content: center;
-              height: 65vh;
-              margin-bottom: 35vh;
-            }
             .freckle:after {
               content: '';
+            }
+          }
+
+          @media (min-width: 895px) {
+            .first-fold {
+              justify-content: center;
+              margin-bottom: 35vh;
             }
           }
         `}</style>
