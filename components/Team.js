@@ -4,10 +4,6 @@ import TeamMember from './TeamMember';
 export default class Team extends React.Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      scrambledArray: this.shuffle(this.props.members)
-    };
   }
 
   shuffle(originalArray) {
@@ -23,33 +19,39 @@ export default class Team extends React.Component {
     return shuffledArray;
   }
 
+  renderDesktopMembers() {
+    return this.props.members.map((item, i) => (
+      <TeamMember
+        key={i}
+        id={i}
+        name={item.name}
+        position={item.position}
+        bio={item.bio}
+        links={item.links}
+      />
+    ));
+  }
+
+  renderMobileMembers() {
+    const scrambledArray = this.shuffle(this.props.members);
+
+    return scrambledArray.map((item, i) => (
+      <TeamMember
+        key={i}
+        id={i}
+        name={item.name}
+        position={item.position}
+        bio={item.bio}
+        links={item.links}
+      />
+    ));
+  }
+
   render() {
     return (
       <div className="outer">
-        <div className="inner desktop">
-          {this.props.members.map((item, i) => (
-            <TeamMember
-              key={i}
-              id={i}
-              name={item.name}
-              position={item.position}
-              bio={item.bio}
-              links={item.links}
-            />
-          ))}
-        </div>
-        <div className="inner mobile">
-          {this.state.scrambledArray.map((item, i) => (
-            <TeamMember
-              key={i}
-              id={i}
-              name={item.name}
-              position={item.position}
-              bio={item.bio}
-              links={item.links}
-            />
-          ))}
-        </div>
+        <div className="inner desktop">{this.renderDesktopMembers()}</div>
+        <div className="inner mobile">{this.renderMobileMembers()}</div>
         <style jsx>{`
           .outer {
             position: relative;
@@ -95,6 +97,7 @@ export default class Team extends React.Component {
           .mobile {
             display: flex;
           }
+
           .desktop {
             display: none;
           }
@@ -103,6 +106,7 @@ export default class Team extends React.Component {
             .outer {
               background-size: contain;
             }
+
             .inner {
               max-width: 1400px;
               flex-wrap: wrap;
@@ -111,9 +115,11 @@ export default class Team extends React.Component {
               margin-left: auto;
               margin-right: auto;
             }
+
             .mobile {
               display: none;
             }
+
             .desktop {
               display: flex;
             }
