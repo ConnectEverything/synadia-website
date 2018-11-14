@@ -122,12 +122,13 @@ export default class HeaderSocialItems extends React.Component {
         </ul>
         <style jsx global>{`
           .social-links__wrapper h5 {
-            text-align: left;
+            text-align: center;
           }
 
           .social-links--header {
             display: flex !important;
             align-items: center;
+            justify-content: center;
             list-style-type: none;
             padding: 0;
             margin: 2rem 0;
