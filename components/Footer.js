@@ -52,7 +52,7 @@ export default class Footer extends React.Component {
 
           @media (min-width: 768px) {
             footer {
-              grid-template-columns: 1fr 1fr 3fr;
+              grid-template-columns: 2fr 0.5fr 3fr;
               grid-template-areas: 'logo . contact' 'social social social';
               align-items: start;
               justify-items: start;

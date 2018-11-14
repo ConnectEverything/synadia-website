@@ -38,7 +38,7 @@ export default class ParticleWave extends React.Component {
           params={{
             particles: {
               number: {
-                value: 90,
+                value: 100,
                 density: {
                   enable: false
                 }

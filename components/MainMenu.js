@@ -172,6 +172,8 @@ export default class MainMenu extends React.Component {
           }
 
           .bm-cross-button {
+            width: 30px !important;
+            height: 45px !important;
             right: 50px !important;
             top: 40px !important;
           }
