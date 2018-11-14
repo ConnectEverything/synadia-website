@@ -50,8 +50,7 @@ export default class Team extends React.Component {
   render() {
     return (
       <div className="outer">
-        <div className="inner desktop">{this.renderDesktopMembers()}</div>
-        <div className="inner mobile">{this.renderMobileMembers()}</div>
+        <div className="inner">{this.renderDesktopMembers()}</div>
         <style jsx>{`
           .outer {
             position: relative;

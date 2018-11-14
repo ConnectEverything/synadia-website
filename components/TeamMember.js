@@ -3,6 +3,10 @@ import React from 'react';
 export default class TeamMember extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      imgUrl: `static/images/people/${this.props.name.split(' ').join('')}.png`
+    };
   }
 
   render() {
@@ -13,9 +17,7 @@ export default class TeamMember extends React.Component {
             <figure className="thumbnail">
               <img
                 className="thumbnail__image"
-                src={`static/images/people/${this.props.name
-                  .split(' ')
-                  .join('')}.png`}
+                src={this.state.imgUrl}
                 alt={`${this.props.name} profile picture`}
               />
             </figure>
