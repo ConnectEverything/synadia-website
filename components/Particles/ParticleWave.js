@@ -38,7 +38,7 @@ export default class ParticleWave extends React.Component {
           params={{
             particles: {
               number: {
-                value: 100,
+                value: 90,
                 density: {
                   enable: false
                 }
@@ -57,8 +57,8 @@ export default class ParticleWave extends React.Component {
                 }
               },
               opacity: {
-                value: 0.5,
-                random: true
+                value: 1,
+                random: false
               },
               size: {
                 value: 5,
@@ -72,8 +72,8 @@ export default class ParticleWave extends React.Component {
               },
               line_linked: {
                 enable: true,
-                distance: 150,
-                color: '#25dbe2',
+                distance: 130,
+                color: '#199bfc',
                 opacity: 0.5,
                 width: 2
               },
@@ -141,16 +141,16 @@ export default class ParticleWave extends React.Component {
                 random: true,
                 anim: {
                   enable: true,
-                  speed: 30,
+                  speed: 15,
                   size_min: 0.1,
                   sync: false
                 }
               },
               line_linked: {
                 enable: true,
-                distance: 150,
-                color: '#25dbe2',
-                opacity: 0.5,
+                distance: 85,
+                color: '#199bfc',
+                opacity: 0.45,
                 width: 2
               },
               move: {

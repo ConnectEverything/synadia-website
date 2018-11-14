@@ -1,9 +1,11 @@
 import App, { Container } from 'next/app';
 import Head from 'next/head';
+import Router from 'next/router';
 import React from 'react';
 import settings from '../settings.json';
+import withGA from 'next-ga';
 
-export default class MyApp extends App {
+class MyApp extends App {
   static async getInitialProps({ Component, router, ctx }) {
     let pageProps = {};
 
@@ -26,3 +28,5 @@ export default class MyApp extends App {
     );
   }
 }
+
+export default withGA('UA-111730698-1', Router)(MyApp);

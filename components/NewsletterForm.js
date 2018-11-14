@@ -49,19 +49,19 @@ export default class NewsletterForm extends React.Component {
             isSubmitting
           }) => (
             <form onSubmit={handleSubmit} className="gform">
-              <div className="input__wrapper">
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Enter your email address"
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  value={values.email}
-                />
-                <span className="error">
-                  {errors.email && touched.email && errors.email}
-                </span>
+              {/* <div className="input__wrapper"> */}
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email address"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.email}
+              />
+              <div className={errors.email ? 'error' : 'error hidden'}>
+                {errors.email}
               </div>
+              {/* </div> */}
               <button
                 type="submit"
                 disabled={isSubmitting}
@@ -73,6 +73,28 @@ export default class NewsletterForm extends React.Component {
             </form>
           )}
         </Formik>
+        <style jsx global>{`
+          .error {
+            margin: 1em 10px;
+            margin-bottom: 0;
+            transform: scaleY(1);
+            transform-origin: top center;
+            transition: transform 300ms ease-in;
+          }
+          .error.hidden {
+            transform: scaleY(0);
+          }
+          .error:not(.hidden) + .button {
+            transition: all 300ms ease-in;
+            transform: translateY(1em);
+          }
+
+          @media (min-width: 895px) {
+            .error:not(.hidden) + .button {
+              transform: none;
+            }
+          }
+        `}</style>
       </React.Fragment>
     );
   }

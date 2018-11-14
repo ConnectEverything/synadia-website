@@ -38,7 +38,8 @@ export default class Team extends React.Component {
             scroll-snap-points-x: repeat(80vw);
             background-image: url('/static/images/bg.png');
             background-repeat: no-repeat;
-            background-size: contain;
+            background-size: 200%;
+
             background-position: 50% 10%;
           }
 
@@ -62,7 +63,6 @@ export default class Team extends React.Component {
             display: flex;
             flex-wrap: nowrap;
             scroll-snap-align: start;
-            overflow-x: auto;
             -webkit-overflow-scrolling: touch;
             margin-top: 5rem;
             margin-bottom: -50px; /* maximum width of scrollbar */
@@ -73,6 +73,9 @@ export default class Team extends React.Component {
           }
 
           @media (min-width: 768px) {
+            .outer {
+              background-size: contain;
+            }
             .inner {
               max-width: 1400px;
               flex-wrap: wrap;

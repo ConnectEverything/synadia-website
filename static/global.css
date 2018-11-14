@@ -24,16 +24,12 @@
   --color-tertiary: #0e0e0e;
   --color-quaternary: #000;
   --color-font: #fff;
-  --diagonal-gradient: linear-gradient(
-    45deg,
+  --diagonal-gradient: linear-gradient(45deg,
     var(--color-primary),
-    var(--color-secondary)
-  );
-  --horizontal-gradient: linear-gradient(
-    0deg,
+    var(--color-secondary));
+  --horizontal-gradient: linear-gradient(0deg,
     var(--color-primary),
-    var(--color-secondary)
-  );
+    var(--color-secondary));
   --max-width: 1360px;
   --z-index-1: 500;
   --z-index-2: 1000;
@@ -77,18 +73,7 @@ input {
   font-weight: 700;
   width: 100%;
   padding: 1.5em 1.08em;
-  margin-bottom: 2.5em;
   transition: all 200ms ease;
-}
-
-.input__wrapper {
-  position: relative;
-}
-
-.input__wrapper .error {
-  position: absolute;
-  left: 0;
-  bottom: 0;
 }
 
 input:focus {
@@ -170,6 +155,7 @@ button[disabled] {
   color: var(--color-font);
   padding: 1em 0;
   margin: 1em 0;
+  margin-top: 0;
   width: 100%;
 }
 
@@ -201,7 +187,7 @@ section {
 }
 
 h1 {
-  font-size: 3.857rem;
+  font-size: 4.2rem;
   font-weight: 700;
   line-height: 1.11em;
   letter-spacing: -1.5px;
@@ -209,6 +195,7 @@ h1 {
   margin: 0 2rem;
   margin-top: 1em;
   margin-bottom: 0.5em;
+  padding-top: 1em;
   pointer-events: none;
 }
 
@@ -229,7 +216,7 @@ h3 {
   margin: 0 auto;
 }
 
-h3 + h3 {
+h3+h3 {
   margin-top: 3rem;
 }
 
@@ -306,6 +293,7 @@ a.link:hover {
 .mobile--only {
   display: block;
 }
+
 h1 .mobile--only {
   display: inline-block;
 }
@@ -339,7 +327,7 @@ h1 .mobile--only {
   }
 
   h1 {
-    font-size: 9rem;
+    font-size: 7rem;
     font-weight: 700;
     letter-spacing: -3px;
     line-height: 1em;
@@ -360,7 +348,7 @@ h1 .mobile--only {
     margin: 0 auto;
   }
 
-  h3 + h3 {
+  h3+h3 {
     margin-top: 5rem;
   }
 
@@ -389,6 +377,7 @@ h1 .mobile--only {
     font-size: 1rem;
     line-height: 2.187em;
   }
+
   h1 .mobile--only,
   .mobile--only {
     display: none;
@@ -401,6 +390,7 @@ h1 .mobile--only {
 
 @media (min-width: 895px) {
   form {
+    position: relative;
     flex-direction: row;
     width: 100%;
     margin: 1em 0 2.5em 0;
@@ -411,12 +401,11 @@ h1 .mobile--only {
     height: 100%;
   }
 
-  .input__wrapper {
-    flex-grow: 1;
-  }
-
-  .input__wrapper .error {
-    bottom: -30%;
+  input+.error {
+    width: 100%;
+    position: absolute;
+    bottom: -40%;
+    left: 3px;
   }
 
   .button {
@@ -427,10 +416,18 @@ h1 .mobile--only {
   }
 }
 
+@media (min-width: 1441px) {
+  h1 {
+    font-size: 9rem;
+    padding-top: 0;
+  }
+}
+
 @keyframes wave {
   from {
     transform: perspective(30rem) rotateX(5deg) rotateY(10deg);
   }
+
   to {
     transform: perspective(30rem) rotateX(-10deg) rotateY(-10deg);
   }

@@ -134,17 +134,17 @@ export default class MainMenu extends React.Component {
           /* Position and sizing of burger button */
           .bm-burger-button {
             position: relative;
-            width: 1.4rem;
-            height: 14px;
+            width: 3rem;
+            height: 30px;
           }
 
           .bm-burger-button:before {
-            content: 'MENU';
+            content: 'Menu';
             font-family: var(--font-primary);
-            font-size: 1rem;
+            font-size: 1.2rem;
             color: var(--color-font);
             position: absolute;
-            left: 0;
+            left: -5px;
             top: 50%;
             transform: translate(-120%, -50%);
           }
@@ -172,15 +172,15 @@ export default class MainMenu extends React.Component {
           }
 
           .bm-cross-button {
-            right: 4vw !important;
-            top: 7vw !important;
+            right: 50px !important;
+            top: 40px !important;
           }
 
           /* Color/shape of close button cross */
           .bm-cross {
             cursor: pointer;
             background: var(--color-font);
-            height: 20px !important;
+            height: 40px !important;
           }
 
           /* General sidebar styles */
@@ -220,11 +220,11 @@ export default class MainMenu extends React.Component {
           }
 
           .bm-item .navigation-item {
-            margin: 2rem 0;
+            margin: 3rem 0;
             display: block;
             padding: 0;
             width: auto;
-            font-size: 1.3rem;
+            font-size: 1.7rem;
           }
         `}</style>
       </Menu>

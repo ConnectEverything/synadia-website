@@ -115,11 +115,7 @@ export default class Index extends React.Component {
       <main>
         <Header />
         <section id="home" className="first-fold">
-          <h1>
-            Connect Everything
-            <span className="mobile--only">.</span>
-            <div className="freckle" />
-          </h1>
+          <h1>Connect Everything</h1>
           <ParticleWave />
         </section>
         <section id="about" className="about">
@@ -168,33 +164,12 @@ export default class Index extends React.Component {
             z-index: 10;
           }
 
-          h1 .freckle {
-            display: inline-block;
-            position: relative;
-          }
-
-          h1 .freckle:after {
-            position: absolute;
-            right: -1.4rem;
-            bottom: 0;
-            height: 20px;
-            width: 20px;
-            border-radius: 100%;
-            background: var(--horizontal-gradient);
-          }
-
           .about {
             margin-bottom: 12rem;
           }
 
           .highlight {
             color: var(--color-secondary);
-          }
-
-          @media (min-width: 768px) {
-            .freckle:after {
-              content: '';
-            }
           }
 
           @media (min-width: 895px) {
