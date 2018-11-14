@@ -36,6 +36,7 @@
     "react-burger-menu": "^2.5.4",
     "react-dom": "^16.6.3",
     "react-particles-js": "^2.3.0",
-    "react-reveal": "^1.2.2"
+    "react-reveal": "^1.2.2",
+    "react-shuffle": "^2.1.0"
   }
 }

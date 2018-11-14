@@ -14,11 +14,36 @@ export default class Team extends React.Component {
     this.setState({ vpWidth: window.innerWidth });
   }
 
+  shuffle(originalArray) {
+    let shuffledArray = originalArray.slice(0);
+
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledArray[i], shuffledArray[j]] = [
+        shuffledArray[j],
+        shuffledArray[i]
+      ];
+    }
+    return shuffledArray;
+  }
+
   render() {
     return (
       <div className="outer">
-        <div className="inner">
+        <div className="inner desktop">
           {this.props.members.map((item, i) => (
+            <TeamMember
+              key={i}
+              id={i}
+              name={item.name}
+              position={item.position}
+              bio={item.bio}
+              links={item.links}
+            />
+          ))}
+        </div>
+        <div className="inner mobile">
+          {this.shuffle(this.props.members).map((item, i) => (
             <TeamMember
               key={i}
               id={i}
@@ -39,7 +64,6 @@ export default class Team extends React.Component {
             background-image: url('/static/images/bg.png');
             background-repeat: no-repeat;
             background-size: 200%;
-
             background-position: 50% 10%;
           }
 
@@ -72,6 +96,13 @@ export default class Team extends React.Component {
             overflow-x: scroll;
           }
 
+          .mobile {
+            display: flex;
+          }
+          .desktop {
+            display: none;
+          }
+
           @media (min-width: 768px) {
             .outer {
               background-size: contain;
@@ -83,6 +114,12 @@ export default class Team extends React.Component {
               padding-left: 0;
               margin-left: auto;
               margin-right: auto;
+            }
+            .mobile {
+              display: none;
+            }
+            .desktop {
+              display: flex;
             }
           }
         `}</style>

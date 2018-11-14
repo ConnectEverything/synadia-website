@@ -10,6 +10,7 @@ export default class Index extends React.Component {
     super(props);
 
     this.state = {
+      vpWidth: null,
       team: [
         {
           name: 'Derek Collison',
@@ -100,6 +101,7 @@ export default class Index extends React.Component {
         }
       ]
     };
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
   }
 
   componentDidMount() {
@@ -108,6 +110,19 @@ export default class Index extends React.Component {
       duration: 800,
       easing: 'ease-in-out'
     });
+
+    this.setState({ vpWidth: window.innerWidth });
+
+    window.addEventListener('resize', this.updateWindowDimensions);
+    this.updateWindowDimensions();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
+  }
+
+  updateWindowDimensions() {
+    this.setState({ vpWidth: window.innerWidth });
   }
 
   render() {
