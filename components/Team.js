@@ -6,12 +6,8 @@ export default class Team extends React.Component {
     super(props);
 
     this.state = {
-      vpWidth: null
+      scrambledArray: this.shuffle(this.props.members)
     };
-  }
-
-  componentDidMount() {
-    this.setState({ vpWidth: window.innerWidth });
   }
 
   shuffle(originalArray) {
@@ -43,7 +39,7 @@ export default class Team extends React.Component {
           ))}
         </div>
         <div className="inner mobile">
-          {this.shuffle(this.props.members).map((item, i) => (
+          {this.state.scrambledArray.map((item, i) => (
             <TeamMember
               key={i}
               id={i}
