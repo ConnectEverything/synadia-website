@@ -92,7 +92,7 @@ export default class Index extends React.Component {
           name: 'David Kemper',
           position: 'Engineering',
           bio:
-            'An engineer leveraging over 20 years of systems development experience into public cloud devops.',
+            'An engineer leveraging over 20 years of systems development experience into public cloud devops. David is an avid sci-fi reader and a master of 80s trivia.',
           links: {
             linkedin: 'david-kemper-531bb038',
             github: 'davidkemper'
