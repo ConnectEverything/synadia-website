@@ -40,6 +40,7 @@ export default class Team extends React.Component {
         key={i}
         id={i}
         name={item.name}
+        thumbnail={`static/images/people/${item.name.split(' ').join('')}.png`}
         position={item.position}
         bio={item.bio}
         links={item.links}
@@ -48,9 +49,26 @@ export default class Team extends React.Component {
   }
 
   render() {
+    const scrambledArray = this.shuffle(this.props.members);
+
     return (
       <div className="outer">
-        <div className="inner">{this.renderDesktopMembers()}</div>
+        <div className="inner desktop">{this.renderDesktopMembers()}</div>
+        <div className="inner mobile">
+          {scrambledArray.map((item, i) => (
+            <TeamMember
+              key={i}
+              id={i}
+              name={item.name}
+              thumbnail={`static/images/people/${item.name
+                .split(' ')
+                .join('')}.png?ver=${new Date().getTime()}`}
+              position={item.position}
+              bio={item.bio}
+              links={item.links}
+            />
+          ))}
+        </div>
         <style jsx>{`
           .outer {
             position: relative;
