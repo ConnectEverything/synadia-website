@@ -11,14 +11,20 @@ export default class Footer extends React.Component {
   render() {
     return (
       <footer>
-        <div className="logo">
-          <Logo />
-          <p>&copy; {new Date().getFullYear()} Synadia. All rights reserved.</p>
-        </div>
-        <div className="contact">
-          <h5>Sign up for our newsletter</h5>
-          <NewsletterForm />
-        </div>
+        {!this.props.simple && (
+          <div className="logo">
+            <Logo />
+            <p>
+              &copy; {new Date().getFullYear()} Synadia. All rights reserved.
+            </p>
+          </div>
+        )}
+        {!this.props.simple && (
+          <div className="contact">
+            <h5>Sign up for our newsletter</h5>
+            <NewsletterForm />
+          </div>
+        )}
         <div className="social">
           <h5>Connect with us</h5>
           <FooterSocialItems />
