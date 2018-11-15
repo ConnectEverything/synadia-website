@@ -101,7 +101,7 @@ export default class Team extends React.Component {
             display: none;
           }
 
-          @media (min-width: 768px) {
+          @media (min-width: 1023px) {
             .outer {
               background-size: contain;
             }

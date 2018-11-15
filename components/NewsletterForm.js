@@ -49,7 +49,6 @@ export default class NewsletterForm extends React.Component {
             isSubmitting
           }) => (
             <form onSubmit={handleSubmit} className="gform">
-              {/* <div className="input__wrapper"> */}
               <input
                 type="email"
                 name="email"
@@ -61,7 +60,6 @@ export default class NewsletterForm extends React.Component {
               <div className={errors.email ? 'error' : 'error hidden'}>
                 {errors.email}
               </div>
-              {/* </div> */}
               <button
                 type="submit"
                 disabled={isSubmitting}
