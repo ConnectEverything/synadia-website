@@ -38,7 +38,7 @@ export default class Ngs extends React.Component {
 
           section {
             height: 75vh;
-            padding: 5rem 0;
+            padding: 5rem 10px;
             margin-bottom: 2rem;
           }
 
@@ -52,13 +52,17 @@ export default class Ngs extends React.Component {
           }
 
           .contact {
-            max-width: 70%;
+            max-width: 95%;
             margin: 4rem auto;
           }
 
           @media (min-width: 768px) {
             main {
               background-size: contain;
+            }
+
+            .contact {
+              max-width: 70%;
             }
           }
         `}</style>

@@ -23,8 +23,10 @@ export default class Header extends React.Component {
   render() {
     return (
       <header className={this.state.isTop ? ' ' : 'sticky'}>
-        <Logo responsive link />
-        <HeaderSocialItems />
+        <Logo link />
+        <div className="social">
+          <HeaderSocialItems />
+        </div>
         <style jsx>{`
           header {
             display: flex;
@@ -38,8 +40,11 @@ export default class Header extends React.Component {
             padding: 1.8rem 0;
             border-bottom: 2px solid #052034;
             transform: translateY(-100%);
-            z-index: 1000;
             animation: fadeDown 800ms ease 1s forwards;
+          }
+
+          .social {
+            display: none;
           }
 
           @keyframes fadeDown {
@@ -48,6 +53,12 @@ export default class Header extends React.Component {
             }
             to {
               transform: translateY(0);
+            }
+          }
+
+          @media (min-width: 768px) {
+            .social {
+              display: block;
             }
           }
         `}</style>
