@@ -26,7 +26,11 @@ export default class TeamMember extends React.Component {
           <ul className="links">
             {this.props.links.twitter && (
               <li>
-                <a href={`https://twitter.com/${this.props.links.twitter}`}>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={`https://twitter.com/${this.props.links.twitter}`}
+                >
                   <svg
                     width="25px"
                     height="22px"
@@ -55,6 +59,8 @@ export default class TeamMember extends React.Component {
             {this.props.links.linkedin && (
               <li>
                 <a
+                  target="_blank"
+                  rel="noopener noreferrer"
                   href={`https://linkedin.com/in/${this.props.links.linkedin}`}
                 >
                   <svg
@@ -77,7 +83,11 @@ export default class TeamMember extends React.Component {
             )}
             {this.props.links.github && (
               <li>
-                <a href={`https://github.com/${this.props.links.github}`}>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={`https://github.com/${this.props.links.github}`}
+                >
                   <svg
                     width="25px"
                     height="25px"
