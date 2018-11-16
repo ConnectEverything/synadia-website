@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next",
     "start": "next start",
-    "build": "next build && next export -o /public"
+    "build": "next build && next export -o public"
   },
   "dependencies": {
     "aos": "^2.3.4",

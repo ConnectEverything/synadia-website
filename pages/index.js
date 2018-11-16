@@ -1,7 +1,7 @@
 import React from 'react';
 import AOS from 'aos';
 import Header from '../components/Header';
-import ParticleWave from '../components/Particles/ParticleWave';
+import ParticleWave from '../components/ParticleWave';
 import Team from '../components/Team';
 import Footer from '../components/Footer';
 

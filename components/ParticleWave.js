@@ -28,10 +28,6 @@ export default class ParticleWave extends React.Component {
   }
 
   render() {
-    const styles = {
-      animation: 'none'
-    };
-
     return (
       <div className="particles__wrapper">
         <Particles
@@ -107,7 +103,6 @@ export default class ParticleWave extends React.Component {
             },
             retina_detect: true
           }}
-          style={styles}
           className="desktop--only"
         />
         <Particles
@@ -148,7 +143,7 @@ export default class ParticleWave extends React.Component {
               },
               line_linked: {
                 enable: true,
-                distance: 85,
+                distance: 100,
                 color: '#199bfc',
                 opacity: 0.45,
                 width: 2
@@ -183,7 +178,6 @@ export default class ParticleWave extends React.Component {
             },
             retina_detect: true
           }}
-          style={styles}
           className="mobile--only"
         />
 
@@ -195,7 +189,7 @@ export default class ParticleWave extends React.Component {
             height: 40vw;
             max-height: 300px;
             overflow: hidden;
-            z-index: 0;
+            z-index: 1;
           }
 
           .particles__wrapper > div {

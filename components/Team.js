@@ -16,6 +16,7 @@ export default class Team extends React.Component {
         shuffledArray[i]
       ];
     }
+
     return shuffledArray;
   }
 
@@ -25,6 +26,7 @@ export default class Team extends React.Component {
         key={i}
         id={i}
         name={item.name}
+        thumbnail={`/static/images/people/${item.name.split(' ').join('')}.png`}
         position={item.position}
         bio={item.bio}
         links={item.links}
@@ -33,14 +35,14 @@ export default class Team extends React.Component {
   }
 
   renderMobileMembers() {
-    const scrambledArray = this.shuffle(this.props.members);
-
-    return scrambledArray.map((item, i) => (
+    return this.shuffle(this.props.members).map((item, i) => (
       <TeamMember
         key={i}
         id={i}
         name={item.name}
-        thumbnail={`static/images/people/${item.name.split(' ').join('')}.png`}
+        thumbnail={`/static/images/people/${item.name
+          .split(' ')
+          .join('')}.png?ver=${new Date().getTime()}`}
         position={item.position}
         bio={item.bio}
         links={item.links}
@@ -55,7 +57,6 @@ export default class Team extends React.Component {
         <div className="inner mobile">{this.renderMobileMembers()}</div>
         <style jsx>{`
           .outer {
-            position: relative;
             width: 100vw;
             overflow: hidden;
             scroll-snap-type: x mandatory;
@@ -93,6 +94,8 @@ export default class Team extends React.Component {
             padding-left: 10vw;
             overflow-y: hidden;
             overflow-x: scroll;
+            opacity: 0;
+            animation: fadeIn 500ms ease 500ms forwards;
           }
 
           .mobile {
@@ -101,6 +104,12 @@ export default class Team extends React.Component {
 
           .desktop {
             display: none;
+          }
+
+          @keyframes fadeIn {
+            to {
+              opacity: 1;
+            }
           }
 
           @media (min-width: 1023px) {
