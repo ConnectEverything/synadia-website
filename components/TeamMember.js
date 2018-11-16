@@ -104,11 +104,11 @@ export default class TeamMember extends React.Component {
         </div>
         <style jsx>{`
           .outer {
+            display: inline-block;
             position: relative;
             margin-top: 5rem;
             margin-right: 3vw;
-            min-width: 80vw;
-            min-height: 24.28rem;
+            width: 70vw;
             padding: 2px;
             background: var(--horizontal-gradient);
           }
@@ -118,6 +118,7 @@ export default class TeamMember extends React.Component {
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
+            width: 100%;
             height: 100%;
             position: relative;
             padding: 5.5rem 1.5rem 0.5rem 1.5rem;
@@ -144,6 +145,8 @@ export default class TeamMember extends React.Component {
 
           .content {
             text-align: center;
+            width: 100%;
+            white-space: normal;
           }
 
           h4 {
@@ -177,7 +180,7 @@ export default class TeamMember extends React.Component {
             fill: var(--color-secondary);
           }
 
-          @media (min-width: 768px) {
+          @media (min-width: 1024px) {
             .outer {
               width: 25.5%;
               min-height: 21.25rem;

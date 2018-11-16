@@ -1,5 +1,6 @@
 import React from 'react';
 import TeamMember from './TeamMember';
+import BackgroundSlider from './BackgroundSlider';
 
 export default class Team extends React.Component {
   constructor(props) {
@@ -54,7 +55,11 @@ export default class Team extends React.Component {
     return (
       <div className="outer">
         <div className="inner desktop">{this.renderDesktopMembers()}</div>
-        <div className="inner mobile">{this.renderMobileMembers()}</div>
+        <div className="inner mobile">
+          <BackgroundSlider duration="100">
+            {this.renderMobileMembers()}
+          </BackgroundSlider>
+        </div>
         <style jsx>{`
           .outer {
             width: 100vw;
@@ -91,11 +96,10 @@ export default class Team extends React.Component {
             margin-top: 5rem;
             margin-bottom: -50px; /* maximum width of scrollbar */
             padding-bottom: 50px; /* maximum width of scrollbar */
-            padding-left: 10vw;
             overflow-y: hidden;
             overflow-x: scroll;
             opacity: 0;
-            animation: fadeIn 500ms ease 500ms forwards;
+            animation: fadeIn 500ms ease 600ms forwards;
           }
 
           .mobile {
