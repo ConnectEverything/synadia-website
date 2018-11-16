@@ -77,7 +77,7 @@ export default class TeamMember extends React.Component {
             )}
             {this.props.links.github && (
               <li>
-                <a href={`https://github.com/${this.props.links.twitter}`}>
+                <a href={`https://github.com/${this.props.links.github}`}>
                   <svg
                     width="25px"
                     height="25px"

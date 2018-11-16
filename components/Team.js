@@ -5,6 +5,10 @@ import BackgroundSlider from './BackgroundSlider';
 export default class Team extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      hash: new Date().getMinutes()
+    };
   }
 
   shuffle(originalArray) {
@@ -27,7 +31,9 @@ export default class Team extends React.Component {
         key={i}
         id={i}
         name={item.name}
-        thumbnail={`/static/images/people/${item.name.split(' ').join('')}.png`}
+        thumbnail={`/static/images/people/${item.name
+          .split(' ')
+          .join('')}.png?ver=${this.state.hash}`}
         position={item.position}
         bio={item.bio}
         links={item.links}
@@ -43,7 +49,7 @@ export default class Team extends React.Component {
         name={item.name}
         thumbnail={`/static/images/people/${item.name
           .split(' ')
-          .join('')}.png?ver=${new Date().getTime()}`}
+          .join('')}.png?ver=${this.state.hash}`}
         position={item.position}
         bio={item.bio}
         links={item.links}

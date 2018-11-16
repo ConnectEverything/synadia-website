@@ -41,7 +41,7 @@ export default class HeaderSocialItems extends React.Component {
           </li>
           <li>
             <a
-              href="https://twitter.com/_synadia_"
+              href="https://github.com/ConnectEverything"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -68,7 +68,7 @@ export default class HeaderSocialItems extends React.Component {
           </li>
           <li>
             <a
-              href="https://github.com/ConnectEverything"
+              href="https://twitter.com/_synadia_"
               target="_blank"
               rel="noopener noreferrer"
             >

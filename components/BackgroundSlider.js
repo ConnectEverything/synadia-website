@@ -22,9 +22,6 @@ class BackgroundSlider extends React.Component {
             display: inline-flex;
           }
           @keyframes slide {
-            from {
-              transform: translate3d(0, 0, 0);
-            }
             to {
               transform: translate3d(-50%, 0, 0);
             }

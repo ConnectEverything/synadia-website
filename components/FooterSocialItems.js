@@ -40,7 +40,7 @@ export default class FooterSocialItems extends React.Component {
         </li>
         <li>
           <a
-            href="https://twitter.com/_synadia_"
+            href="https://github.com/ConnectEverything"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -63,12 +63,12 @@ export default class FooterSocialItems extends React.Component {
                 </g>
               </g>
             </svg>
-            <h6 className="desktop--only">Twitter</h6>
+            <h6 className="desktop--only">Github</h6>
           </a>
         </li>
         <li>
           <a
-            href="https://github.com/ConnectEverything"
+            href="https://twitter.com/_synadia_"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -92,9 +92,10 @@ export default class FooterSocialItems extends React.Component {
                 </g>
               </g>
             </svg>
-            <h6 className="desktop--only">Github</h6>
+            <h6 className="desktop--only">Twitter</h6>
           </a>
         </li>
+
         <li>
           <a href="https://nats.io" target="_blank" rel="noopener noreferrer">
             <svg
