@@ -153,6 +153,10 @@ export default class TeamMember extends React.Component {
             margin-bottom: 0.5rem;
           }
 
+          h5 {
+            white-space: nowrap;
+          }
+
           .links {
             list-style: none;
             padding: 0;
