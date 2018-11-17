@@ -416,10 +416,15 @@ h1 .mobile--only {
   }
 }
 
+@media (min-width: 1366px) {
+  h1 {
+    padding-top: 0;
+  }
+}
+
 @media (min-width: 1441px) {
   h1 {
     font-size: 9rem;
-    padding-top: 0;
   }
 }
 

@@ -187,15 +187,16 @@ export default class ParticleWave extends React.Component {
             bottom: 0;
             width: 100vw;
             height: 40vw;
-            max-height: 300px;
+            max-height: 15rem;
             overflow: hidden;
             z-index: 1;
+            transform: translateY(50%);
           }
 
           .particles__wrapper > div {
             width: 120vw;
             height: 40vw;
-            max-height: 300px;
+            max-height: 15rem;
             opacity: 0.6;
             transform: translateX(-10%);
           }

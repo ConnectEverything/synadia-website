@@ -10,13 +10,15 @@ export default class TeamMember extends React.Component {
       <div className="outer">
         <div className="inner">
           <div className="content">
-            <figure className="thumbnail">
-              <img
-                className="thumbnail__image"
-                src={this.props.thumbnail}
-                alt={`${this.props.name} profile picture`}
-              />
-            </figure>
+            {this.props.thumbnail && (
+              <figure className="thumbnail">
+                <img
+                  className="thumbnail__image"
+                  src={this.props.thumbnail}
+                  alt={`${this.props.name} profile picture`}
+                />
+              </figure>
+            )}
             <h4>{this.props.name}</h4>
             {this.props.position && (
               <h5 className="primary">{this.props.position}</h5>
@@ -118,6 +120,7 @@ export default class TeamMember extends React.Component {
             position: relative;
             margin-top: 5rem;
             margin-right: 3vw;
+            min-width: 270px;
             width: 70vw;
             padding: 2px;
             background: var(--horizontal-gradient);

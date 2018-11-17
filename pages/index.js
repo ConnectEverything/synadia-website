@@ -174,8 +174,13 @@ export default class Index extends React.Component {
 
           @media (min-width: 895px) {
             .first-fold {
-              justify-content: center;
               margin-bottom: 35vh;
+            }
+          }
+
+          @media (min-width: 1366px) {
+            .first-fold {
+              justify-content: center;
             }
           }
         `}</style>
