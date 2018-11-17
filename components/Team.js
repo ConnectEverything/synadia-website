@@ -63,7 +63,7 @@ export default class Team extends React.Component {
         <div className="inner desktop">{this.renderDesktopMembers()}</div>
         <div className="inner mobile">
           <BackgroundSlider duration="100">
-            {this.renderMobileMembers()}
+            {this.renderDesktopMembers()}
           </BackgroundSlider>
         </div>
         <style jsx>{`
