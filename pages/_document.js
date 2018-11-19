@@ -92,6 +92,17 @@ export default class MyDocument extends Document {
 
           <link rel="stylesheet" href="../static/aos.css" />
           <link rel="stylesheet" href="../static/global.css" />
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-111730698-2"
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());gtag('config', 'UA-111730698-2');`
+            }}
+          />
         </Head>
 
         <body>
