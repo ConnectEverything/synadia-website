@@ -3,6 +3,9 @@ import HeaderSimple from '../components/HeaderSimple';
 import Footer from '../components/Footer';
 import NewsletterForm from '../components/NewsletterForm';
 
+const NGS_EARLY_ACCESS_SCRIPT_URL =
+  'https://script.google.com/macros/s/AKfycbwUrDs2x-DHyiUKmRw2aHrQvMsEz2lh4v0jA58uVWPSvjhkvj0R/exec';
+
 export default class Ngs extends React.Component {
   constructor(props) {
     super(props);
@@ -23,7 +26,7 @@ export default class Ngs extends React.Component {
             </p>
             <div className="contact">
               <h5>Sign up for our newsletter</h5>
-              <NewsletterForm />
+              <NewsletterForm url={NGS_EARLY_ACCESS_SCRIPT_URL} />
             </div>
           </div>
         </section>

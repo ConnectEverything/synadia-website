@@ -1,9 +1,6 @@
 import React from 'react';
 import { Formik } from 'formik';
 
-const SCRIPT_URL =
-  'https://script.google.com/a/synadia.com/macros/s/AKfycbw_7yaqcnWQJRI3AJ5hkwLTBrKYPXPS2s_tWMfzqyTG1k4tzH4/exec';
-
 export default class NewsletterForm extends React.Component {
   constructor(props) {
     super(props);
@@ -26,7 +23,7 @@ export default class NewsletterForm extends React.Component {
             return errors;
           }}
           onSubmit={(values, { setSubmitting }) => {
-            fetch(SCRIPT_URL, {
+            fetch(this.props.url, {
               method: 'POST',
               mode: 'no-cors',
               body: JSON.stringify(values),

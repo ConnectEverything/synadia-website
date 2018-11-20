@@ -3,6 +3,9 @@ import Logo from './Logo';
 import NewsletterForm from './NewsletterForm';
 import FooterSocialItems from './FooterSocialItems';
 
+const NEWSLETTER_SCRIPT_URL =
+  'https://script.google.com/a/synadia.com/macros/s/AKfycbw_7yaqcnWQJRI3AJ5hkwLTBrKYPXPS2s_tWMfzqyTG1k4tzH4/exec';
+
 export default class Footer extends React.Component {
   constructor(props) {
     super(props);
@@ -22,7 +25,7 @@ export default class Footer extends React.Component {
         {!this.props.simple && (
           <div className="contact">
             <h5>Sign up for our newsletter</h5>
-            <NewsletterForm />
+            <NewsletterForm url={NEWSLETTER_SCRIPT_URL} />
           </div>
         )}
         <div className="social">
