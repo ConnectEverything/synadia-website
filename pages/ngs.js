@@ -16,13 +16,14 @@ export default class Ngs extends React.Component {
       <main>
         <HeaderSimple />
         <section>
-          <h2>About Synadia</h2>
+          <h2>Sign Up for Early Access</h2>
           <div className="content">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Distinctio, dolorem magni, corporis ipsam quisquam optio qui
-              beatae architecto ex neque dolores dicta asperiores pariatur
-              reprehenderit dolorum facere earum molestiae voluptatibus?
+              Synadia is launching the first global, secure, multi-tenant
+              messaging platform based on the{' '}
+              <a href="https://nats.io">NATS.io</a>. The system will be secure
+              by default and utilizes a single url for geo-aware connectivity on
+              any major cloud provider.
             </p>
             <div className="contact">
               <h5>Sign up for our newsletter</h5>
@@ -51,6 +52,11 @@ export default class Ngs extends React.Component {
 
           .content {
             max-width: 800px;
+            margin: 0 auto;
+          }
+
+          .content p {
+            max-width: 85%;
             margin: 0 auto;
           }
 
