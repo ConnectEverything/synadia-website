@@ -420,6 +420,10 @@ h1 .mobile--only {
     bottom: -40%;
     left: 3px;
   }
+
+  .gform input {
+    height: 57px;
+  }
 }
 
 @media (min-width: 1366px) {
