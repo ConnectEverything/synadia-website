@@ -57,7 +57,7 @@ export default class Ngs extends React.Component {
           }
 
           .content p {
-            max-width: 85%;
+            max-width: 100%;
             margin: 0 auto;
             font-size: 1.2rem;
           }
