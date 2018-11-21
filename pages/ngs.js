@@ -47,7 +47,7 @@ export default class Ngs extends React.Component {
           }
 
           h2 {
-            padding-top: 10rem;
+            padding-top: 4.5vh;
           }
 
           .content {
