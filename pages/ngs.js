@@ -41,13 +41,13 @@ export default class Ngs extends React.Component {
           }
 
           section {
-            height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 75vh;
             padding: 5rem 10px;
-            margin-bottom: 2rem;
-          }
-
-          h2 {
-            padding-top: 4.5vh;
+            padding-bottom: 0;
           }
 
           .content {
