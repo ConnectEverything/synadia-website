@@ -31,7 +31,7 @@ export default class Ngs extends React.Component {
             </p>
             <div className="contact">
               <h5>Sign up for early access</h5>
-              <NewsletterForm url={TEST_URL} />
+              <NewsletterForm url={NGS_EARLY_ACCESS_SCRIPT_URL} />
             </div>
           </div>
         </section>
