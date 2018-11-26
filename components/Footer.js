@@ -18,8 +18,8 @@ export default class Footer extends React.Component {
           <div className="logo">
             <Logo />
             <p>
-              &copy; {new Date().getFullYear()} Synadia Communications. All
-              rights reserved.
+              &copy; {new Date().getFullYear()} Synadia Communications. <br />
+              All rights reserved.
             </p>
           </div>
         )}
