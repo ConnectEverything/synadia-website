@@ -25,8 +25,11 @@ export default class Footer extends React.Component {
         )}
         {!this.props.simple && (
           <div className="contact">
-            <h5>Sign up for our newsletter</h5>
-            <NewsletterForm url={NEWSLETTER_SCRIPT_URL} />
+            <NewsletterForm
+              title="Sign up for our newsletter"
+              url={NEWSLETTER_SCRIPT_URL}
+              thanksMessage="Thank you for subscribing."
+            />
           </div>
         )}
         <div className="social">

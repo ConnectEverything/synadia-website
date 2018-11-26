@@ -30,8 +30,12 @@ export default class Ngs extends React.Component {
               connectivity in a whole new way.
             </p>
             <div className="contact">
-              <h5>Sign up for early access</h5>
-              <NewsletterForm url={NGS_EARLY_ACCESS_SCRIPT_URL} />
+              <NewsletterForm
+                centered
+                title="Sign up for early access"
+                url={NGS_EARLY_ACCESS_SCRIPT_URL}
+                thanksMessage="Thank you for your interest."
+              />
             </div>
           </div>
         </section>
@@ -63,10 +67,6 @@ export default class Ngs extends React.Component {
             max-width: 100%;
             margin: 0 auto;
             font-size: 1.2rem;
-          }
-
-          .content h5 {
-            text-align: center;
           }
 
           .contact {
