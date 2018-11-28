@@ -120,8 +120,8 @@ export default class MyDocument extends Document {
           <meta name="twitter:image" content="/static/og-image.png" />
           <meta name="twitter:creator" content={settings.meta.twitterCreator} />
 
-          <link rel="stylesheet" href="../static/aos.css" />
-          <link rel="stylesheet" href="../static/global.css" />
+          <link rel="stylesheet" href="/static/aos.css" />
+          <link rel="stylesheet" href="/static/global.css" />
           <script
             async
             src="https://www.googletagmanager.com/gtag/js?id=UA-111730698-2"
