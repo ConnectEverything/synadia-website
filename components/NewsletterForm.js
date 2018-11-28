@@ -1,7 +1,6 @@
 import React from 'react';
 import { Formik } from 'formik';
 import AnimateLoad from './AnimateLoad';
-import AnimateUnLoad from './AnimateUnLoad';
 
 export default class NewsletterForm extends React.Component {
   constructor(props) {
