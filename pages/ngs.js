@@ -6,9 +6,6 @@ import NewsletterForm from '../components/NewsletterForm';
 const NGS_EARLY_ACCESS_SCRIPT_URL =
   'https://script.google.com/macros/s/AKfycbwUrDs2x-DHyiUKmRw2aHrQvMsEz2lh4v0jA58uVWPSvjhkvj0R/exec';
 
-const TEST_URL =
-  'https://script.google.com/macros/s/AKfycbzBrBAxiBrkCfA-k1DxaUOJ5pgXFmOT0tN6M6xybtk036reiGQ/exec';
-
 export default class Ngs extends React.Component {
   constructor(props) {
     super(props);

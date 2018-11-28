@@ -116,7 +116,7 @@ export default class Index extends React.Component {
         <Header />
         <section id="home" className="first-fold">
           <h1>Connect Everything</h1>
-          <ParticleWave />
+          <img src="/static/images/bg-first-fold.png" alt="" />
         </section>
         <section id="about" className="about">
           <h3>
@@ -154,14 +154,20 @@ export default class Index extends React.Component {
             align-items: center;
             position: relative;
             width: 100vw;
-            margin: 100px auto 0 auto;
-            height: 65vh;
-            margin-bottom: 15vh;
+            margin: 0 auto;
+            height: 100vh;
+          }
+
+          .first-fold img {
+            max-width: 110%;
+            position: absolute;
+            bottom: 0;
+            z-index: var(--z-index-1);
           }
 
           h1 {
             position: relative;
-            z-index: 10;
+            z-index: var(--z-index-2);
           }
 
           .about {
@@ -170,12 +176,6 @@ export default class Index extends React.Component {
 
           .highlight {
             color: var(--color-secondary);
-          }
-
-          @media (min-width: 895px) {
-            .first-fold {
-              margin-bottom: 35vh;
-            }
           }
 
           @media (min-width: 1366px) {

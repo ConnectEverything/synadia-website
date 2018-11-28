@@ -73,7 +73,7 @@ input {
   font-weight: 700;
   width: 100%;
   padding: 1.5em 1.08em;
-  transition: all 200ms ease;
+  transition: color 200ms ease;
 }
 
 input:focus {
@@ -122,6 +122,18 @@ input:focus:-ms-input-placeholder {
 input:focus:-moz-placeholder {
   /* Firefox 18- */
   opacity: 0.3;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #3c3c3c inset;
+}
+
+/*Change text in autofill textbox*/
+input:-webkit-autofill {
+  -webkit-text-fill-color: #FFFFFF !important;
 }
 
 button {

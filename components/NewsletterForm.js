@@ -1,5 +1,7 @@
 import React from 'react';
 import { Formik } from 'formik';
+import AnimateLoad from './AnimateLoad';
+import AnimateUnLoad from './AnimateUnLoad';
 
 export default class NewsletterForm extends React.Component {
   constructor(props) {
@@ -12,11 +14,19 @@ export default class NewsletterForm extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
-        <h5 className={this.props.centered && 'centered'}>
-          {this.state.successfullySubmitted
-            ? this.props.thanksMessage
-            : this.props.title}
+      <div className="wrapper">
+        {this.state.successfullySubmitted && (
+          <AnimateLoad delay={650}>
+            <h4 className={`${this.props.centered && 'centered'}`}>
+              {this.props.thanksMessage}
+            </h4>
+          </AnimateLoad>
+        )}
+        <h5
+          className={`${this.props.centered && 'centered'} ${this.state
+            .successfullySubmitted && 'hidden'}`}
+        >
+          {this.props.title}
         </h5>
         <Formik
           initialValues={{ email: '' }}
@@ -32,6 +42,9 @@ export default class NewsletterForm extends React.Component {
             return errors;
           }}
           onSubmit={(values, { setSubmitting }) => {
+            setSubmitting(false);
+            this.setState({ successfullySubmitted: true });
+
             fetch(this.props.url, {
               method: 'POST',
               mode: 'no-cors',
@@ -39,10 +52,12 @@ export default class NewsletterForm extends React.Component {
               headers: {
                 'Content-Type': 'application/json'
               }
-            }).then(() => {
-              setSubmitting(false);
-              this.setState({ successfullySubmitted: true });
-            });
+            })
+              .then(() => {
+                setSubmitting(false);
+                this.setState({ successfullySubmitted: true });
+              })
+              .catch(error => console.error('Error:', error));
           }}
         >
           {({
@@ -88,11 +103,30 @@ export default class NewsletterForm extends React.Component {
           )}
         </Formik>
         <style jsx>{`
+          .wrapper {
+            position: relative;
+          }
+
+          h4 {
+            position: absolute;
+            left: 0;
+          }
+
+          h4.centered {
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
           h5 {
             text-align: left;
+            transition: opacity 600ms ease;
           }
+
           h5.centered {
             text-align: center;
+          }
+          h5.hidden {
+            opacity: 0;
           }
         `}</style>
         <style jsx global>{`
@@ -114,13 +148,12 @@ export default class NewsletterForm extends React.Component {
           }
 
           .gform {
-            transition: transform 500ms ease, opacity 600ms ease;
+            transition: opacity 600ms ease-in-out, transform 200ms ease 600ms;
           }
 
           .submitted {
-            transform: scaleY(0);
-            transform-origin: center top;
             opacity: 0;
+            transform: scaleY(0);
           }
 
           @media (min-width: 895px) {
@@ -129,7 +162,7 @@ export default class NewsletterForm extends React.Component {
             }
           }
         `}</style>
-      </React.Fragment>
+      </div>
     );
   }
 }
