@@ -117,7 +117,7 @@ export default class Index extends React.Component {
         <section id="home" className="first-fold">
           <h1>Connect Everything</h1>
           <div className="background">
-            <AnimateLoad>
+            <AnimateLoad delay={100}>
               <img src="/static/images/bg-first-fold.png" alt="" />
             </AnimateLoad>
           </div>
