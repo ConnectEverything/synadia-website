@@ -113,7 +113,11 @@ export default class MyDocument extends Document {
           <meta property="og:url" content={settings.meta.pageUrl} />
           <meta property="og:site_name" content={settings.meta.siteName} />
           <meta property="og:image" content="/static/OG.jpg" />
-          <meta property="og:image:secure_url" content="/static/OG.jpg" />
+
+          <meta
+            property="og:image:secure_url"
+            content="https://synadia.com/static/OG.jpg"
+          />
           <meta name="twitter:card" content="summary" />
 
           <meta
@@ -123,8 +127,11 @@ export default class MyDocument extends Document {
 
           <meta name="twitter:title" content={settings.meta.pageTitle} />
           <meta name="twitter:site" content={settings.meta.twitterUserName} />
-          <meta name="twitter:image" content="/static/og-image.png" />
-          <meta name="twitter:creator" content={settings.meta.twitterCreator} />
+          <meta name="twitter:image" content="/static/OG.jpg" />
+          <meta
+            name="twitter:image:alt"
+            content="A globe with connected nodes and the Synadia logo. Connect everything."
+          />
 
           <link rel="stylesheet" href="/static/aos.css" />
           <link rel="stylesheet" href="/static/global.css" />
