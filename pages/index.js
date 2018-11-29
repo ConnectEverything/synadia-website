@@ -1,9 +1,9 @@
 import React from 'react';
 import AOS from 'aos';
 import Header from '../components/Header';
-import ParticleWave from '../components/ParticleWave';
 import Team from '../components/Team';
 import Footer from '../components/Footer';
+import AnimateLoad from '../components/AnimateLoad';
 
 export default class Index extends React.Component {
   constructor(props) {
@@ -116,7 +116,11 @@ export default class Index extends React.Component {
         <Header />
         <section id="home" className="first-fold">
           <h1>Connect Everything</h1>
-          <img src="/static/images/bg-first-fold.png" alt="" />
+          <div className="background">
+            <AnimateLoad>
+              <img src="/static/images/bg-first-fold.png" alt="" />
+            </AnimateLoad>
+          </div>
         </section>
         <section id="about" className="about">
           <h3>
@@ -158,10 +162,11 @@ export default class Index extends React.Component {
             height: 100vh;
           }
 
-          .first-fold img {
+          .first-fold .background {
             max-width: 110%;
             position: absolute;
             bottom: 0;
+            left: -5%;
             z-index: var(--z-index-1);
           }
 
