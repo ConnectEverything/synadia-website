@@ -127,7 +127,10 @@ export default class MyDocument extends Document {
 
           <meta name="twitter:title" content={settings.meta.pageTitle} />
           <meta name="twitter:site" content={settings.meta.twitterUserName} />
-          <meta name="twitter:image" content="/static/OG.jpg" />
+          <meta
+            name="twitter:image"
+            content="https://synadia.com/static/OG.jpg"
+          />
           <meta
             name="twitter:image:alt"
             content="A globe with connected nodes and the Synadia logo. Connect everything."
