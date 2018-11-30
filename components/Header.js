@@ -40,6 +40,9 @@ export default class Header extends React.Component {
             border-bottom: 2px solid #052034;
             transform: translateY(-100%);
             animation: fadeDown 800ms ease 1s forwards;
+
+            ${this.props.internal &&
+              'animation: none; transform: translateY(0);'};
           }
 
           @keyframes fadeDown {
