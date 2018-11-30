@@ -163,10 +163,10 @@ export default class Index extends React.Component {
           }
 
           .first-fold .background {
-            max-width: 110%;
+            max-width: 100vw;
             position: absolute;
             bottom: 0;
-            left: -5%;
+            left: 0;
             z-index: var(--z-index-1);
           }
 

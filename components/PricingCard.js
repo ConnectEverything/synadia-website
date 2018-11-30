@@ -23,7 +23,7 @@ export default class PricingCard extends React.Component {
           <dt>{this.props.data.connections}</dt>
           <dd>Connections</dd>
           <dt>
-            {this.props.data.montlyData}
+            {this.props.data.monthlyData}
             <span>gb</span>
           </dt>
           <dd>Monthly Data</dd>
@@ -40,6 +40,7 @@ export default class PricingCard extends React.Component {
             background: var(--color-primary);
             width: 20.835vw;
             min-width: 280px;
+            max-width: 400px;
             margin-bottom: 4rem;
           }
 

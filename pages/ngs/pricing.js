@@ -13,11 +13,11 @@ export default class Pricing extends React.Component {
     return (
       <main>
         <Header internal />
-        <div className="background">
-          <AnimateLoad delay={100}>
+        {/* <div className="background">
+          <AnimateLoad delay={200}>
             <img src="/static/images/bg.png" alt="" />
           </AnimateLoad>
-        </div>
+        </div> */}
         <section>
           <PricingCard
             data={{
@@ -27,7 +27,7 @@ export default class Pricing extends React.Component {
               messageSize: '256',
               messageUnit: 'b',
               connections: '2',
-              montlyData: '1',
+              monthlyData: '1',
               dataSharing: false,
               ctaText: 'Get Started'
             }}
@@ -40,7 +40,7 @@ export default class Pricing extends React.Component {
               messageSize: '2',
               messageUnit: 'k',
               connections: '10',
-              montlyData: '5',
+              monthlyData: '5',
               dataSharing: true,
               ctaText: 'Signup'
             }}
@@ -53,7 +53,7 @@ export default class Pricing extends React.Component {
               messageSize: '128',
               messageUnit: 'k',
               connections: '100',
-              montlyData: '25',
+              monthlyData: '25',
               dataSharing: true,
               ctaText: 'Signup'
             }}
@@ -66,7 +66,7 @@ export default class Pricing extends React.Component {
               messageSize: '1',
               messageUnit: 'mb',
               connections: '1000',
-              montlyData: '200',
+              monthlyData: '200',
               dataSharing: true,
               ctaText: 'Signup'
             }}
@@ -85,15 +85,21 @@ export default class Pricing extends React.Component {
           main {
             padding-top: 25vh;
             position: relative;
+            background-image: url('/static/images/bg.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 50% 10%;
           }
 
           .background {
-            max-width: 100%;
+            max-width: 100vw;
             position: absolute;
             top: 10vh;
+            left: 0;
           }
 
           section {
+            max-width: 1920px;
             margin: 0 auto;
             display: flex;
             justify-content: space-evenly;
