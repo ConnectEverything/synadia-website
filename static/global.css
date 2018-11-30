@@ -27,6 +27,12 @@
   --diagonal-gradient: linear-gradient(45deg,
     var(--color-primary),
     var(--color-secondary));
+  --diagonal-gradient-inverted: linear-gradient(-45deg,
+    var(--color-primary),
+    var(--color-primary),
+    var(--color-primary),
+    var(--color-secondary),
+    var(--color-secondary));
   --horizontal-gradient: linear-gradient(0deg,
     var(--color-primary),
     var(--color-secondary));
@@ -57,8 +63,15 @@ main {
 form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 1em 0 2em 0;
 }
+
+dl,
+dd {
+  margin: 0;
+}
+
 
 input {
   position: relative;
@@ -189,7 +202,7 @@ button[disabled] {
   top: 2px;
   right: 2px;
   bottom: 2px;
-  transition: all 200ms ease;
+  transition: all 300ms ease;
   background-color: var(--color-quaternary);
   max-width: 320px;
   margin-left: auto;
@@ -284,8 +297,8 @@ a:not(.button):hover {
 }
 
 a.link {
-  color: var(--color-secondary);
-  text-decoration: underline;
+  color: var(--color-primary);
+  text-decoration: none;
   transition: all 200ms ease;
 }
 
@@ -302,10 +315,12 @@ a.link:hover {
 
 ::-moz-selection {
   background-color: var(--color-secondary);
+  color: var(--color-font);
 }
 
 ::selection {
   background: rgba(25, 155, 252, 0.99);
+  color: var(--color-font);
 }
 
 .mobile--only {
@@ -321,7 +336,7 @@ h1 .mobile--only {
 }
 
 .navigation-item {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .word {

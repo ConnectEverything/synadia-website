@@ -1,6 +1,5 @@
 import React from 'react';
 import { slide as Menu } from 'react-burger-menu';
-import ScrollTo from './ScrollTo';
 import HeaderSocialItems from './HeaderSocialItems';
 
 export default class MainMenu extends React.Component {
@@ -18,8 +17,6 @@ export default class MainMenu extends React.Component {
   componentDidMount() {
     this.updateWindowDimensions();
     window.addEventListener('resize', this.updateWindowDimensions);
-
-    console.log(window.location.pathname.split('/'));
   }
 
   updateWindowDimensions() {
@@ -55,14 +52,14 @@ export default class MainMenu extends React.Component {
         <nav>
           <ul className="navigation">
             <li>
-              <ScrollTo className="navigation-item" href="about">
+              <a className="navigation-item" href="/#about">
                 About
-              </ScrollTo>
+              </a>
             </li>
             <li>
-              <ScrollTo className="navigation-item" href="team">
+              <a className="navigation-item" href="/#team">
                 Team
-              </ScrollTo>
+              </a>
             </li>
             <li>
               <a className="navigation-item" href="/ngs/pricing">
@@ -115,20 +112,13 @@ export default class MainMenu extends React.Component {
         onStateChange={state => this.handleStateChange(state)}
       >
         <nav>
-          <ScrollTo
-            className="navigation-item"
-            onClick={() => this.closeMenu()}
-            href="about"
-          >
+          <a className="navigation-item" href="/#about">
             About
-          </ScrollTo>
-          <ScrollTo
-            className="navigation-item"
-            onClick={() => this.closeMenu()}
-            href="team"
-          >
+          </a>
+
+          <a className="navigation-item" href="/#team">
             Team
-          </ScrollTo>
+          </a>
 
           <a className="navigation-item" href="/ngs/pricing">
             Pricing

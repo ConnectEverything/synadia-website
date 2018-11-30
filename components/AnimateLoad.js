@@ -23,6 +23,7 @@ export default class AnimateLoad extends React.Component {
           .fade-in {
             opacity: 0;
             animation: fadeIn 1s ease-in-out forwards;
+            z-index: var(--z-index-2);
           }
 
           @keyframes fadeIn {

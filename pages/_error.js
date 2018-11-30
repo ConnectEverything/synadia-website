@@ -1,6 +1,6 @@
 import React from 'react';
 import AOS from 'aos';
-import HeaderSimple from '../components/HeaderSimple';
+import Header from '../components/Header';
 import ParticleWave from '../components/ParticleWave';
 
 class error extends React.Component {
@@ -15,7 +15,7 @@ class error extends React.Component {
   render() {
     return (
       <section>
-        <HeaderSimple />
+        <Header internal />
         <ParticleWave static />
         <h1 className="word" data-aos="fade-up" data-aos-delay="0">
           404

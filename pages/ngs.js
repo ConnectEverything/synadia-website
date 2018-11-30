@@ -1,5 +1,5 @@
 import React from 'react';
-import HeaderSimple from '../components/HeaderSimple';
+import Header from '../components/Header';
 import Footer from '../components/Footer';
 import NewsletterForm from '../components/NewsletterForm';
 
@@ -14,7 +14,7 @@ export default class Ngs extends React.Component {
   render() {
     return (
       <main>
-        <HeaderSimple />
+        <Header internal />
         <section>
           <h2>Early Access</h2>
           <div className="content">

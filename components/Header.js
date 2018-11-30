@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from './Logo';
 import MainMenu from './MainMenu';
+import InternalMenu from './InternalMenu';
 
 export default class Header extends React.Component {
   constructor(props) {
@@ -23,8 +24,8 @@ export default class Header extends React.Component {
   render() {
     return (
       <header className={this.state.isTop ? ' ' : 'sticky'}>
-        <Logo responsive />
-        <MainMenu />
+        <Logo responsive link={this.props.internal} />
+        {this.props.internal ? <InternalMenu /> : <MainMenu />}
         <style jsx>{`
           header {
             display: flex;

@@ -154,7 +154,7 @@ export default class Index extends React.Component {
           .first-fold {
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
             position: relative;
             width: 100vw;
@@ -181,12 +181,6 @@ export default class Index extends React.Component {
 
           .highlight {
             color: var(--color-secondary);
-          }
-
-          @media (min-width: 1366px) {
-            .first-fold {
-              justify-content: center;
-            }
           }
         `}</style>
       </main>
