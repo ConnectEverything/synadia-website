@@ -13,11 +13,6 @@ export default class Pricing extends React.Component {
     return (
       <main>
         <Header internal />
-        {/* <div className="background">
-          <AnimateLoad delay={200}>
-            <img src="/static/images/bg.png" alt="" />
-          </AnimateLoad>
-        </div> */}
         <section>
           <PricingCard
             data={{
@@ -89,13 +84,6 @@ export default class Pricing extends React.Component {
             background-repeat: no-repeat;
             background-size: contain;
             background-position: 50% 10%;
-          }
-
-          .background {
-            max-width: 100vw;
-            position: absolute;
-            top: 10vh;
-            left: 0;
           }
 
           section {
