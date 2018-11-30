@@ -130,10 +130,12 @@ export default class PricingCard extends React.Component {
             font-weight: 600;
             background: var(--horizontal-gradient);
             transform: translate(-50%, 50%);
+            transition: transform 200ms ease-in-out;
           }
 
           .action:hover {
             color: var(--color-font);
+            transform: translate(-50%, 37%);
           }
         `}</style>
       </div>

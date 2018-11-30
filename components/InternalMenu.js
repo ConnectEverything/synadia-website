@@ -1,6 +1,7 @@
 import React from 'react';
 import { slide as Menu } from 'react-burger-menu';
 import HeaderSocialItems from './HeaderSocialItems';
+import Link from './ActiveLink';
 
 export default class MainMenu extends React.Component {
   constructor(props) {
@@ -17,22 +18,6 @@ export default class MainMenu extends React.Component {
   componentDidMount() {
     this.updateWindowDimensions();
     window.addEventListener('resize', this.updateWindowDimensions);
-
-    const mainMenu = Array.from(
-      document.getElementsByClassName('main-menu')[0].children
-    );
-
-    let activeItem;
-
-    mainMenu.forEach(item => {
-      if (item.pathname === window.location.pathname) {
-        activeItem = item;
-      }
-    });
-
-    if (window.location.pathname !== '/' && activeItem) {
-      activeItem.classList.add('active');
-    }
   }
 
   updateWindowDimensions() {
@@ -65,7 +50,7 @@ export default class MainMenu extends React.Component {
   renderDesktopMenu() {
     return (
       <React.Fragment>
-        <nav className="main-menu">
+        <nav>
           <ul className="navigation">
             <li>
               <a className="navigation-item" href="/#about">
@@ -78,14 +63,14 @@ export default class MainMenu extends React.Component {
               </a>
             </li>
             <li>
-              <a className="navigation-item" href="/ngs/pricing">
-                Pricing
-              </a>
+              <Link activeClassName="active" href="/ngs/pricing">
+                <a className="navigation-item">Pricing</a>
+              </Link>
             </li>
             <li>
-              <a className="navigation-item" href="/howitworks">
-                How it works
-              </a>
+              <Link activeClassName="active" href="/howitworks">
+                <a className="navigation-item">How it works</a>
+              </Link>
             </li>
             <li>
               <a className="navigation-item" href="mailto:jobs@synadia.com">
@@ -127,7 +112,7 @@ export default class MainMenu extends React.Component {
         isOpen={this.state.menuOpen}
         onStateChange={state => this.handleStateChange(state)}
       >
-        <nav className="main-menu">
+        <nav>
           <a className="navigation-item" href="/#about">
             About
           </a>
@@ -136,13 +121,13 @@ export default class MainMenu extends React.Component {
             Team
           </a>
 
-          <a className="navigation-item" href="/ngs/pricing">
-            Pricing
-          </a>
+          <Link activeClassName="active" href="/ngs/pricing">
+            <a className="navigation-item">Pricing</a>
+          </Link>
 
-          <a className="navigation-item" href="/howitworks">
-            How it works
-          </a>
+          <Link activeClassName="active" href="/howitworks">
+            <a className="navigation-item">How it works</a>
+          </Link>
 
           <a className="navigation-item" href="mailto:jobs@synadia.com">
             Join us
