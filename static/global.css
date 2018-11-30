@@ -340,7 +340,7 @@ h1 .mobile--only {
 }
 
 .navigation-item.active {
-  color: var(--color-secondary);
+  color: var(--color-secondary) !important;
 }
 
 .word {

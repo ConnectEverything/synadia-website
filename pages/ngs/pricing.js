@@ -69,7 +69,7 @@ export default class Pricing extends React.Component {
 
         <h3>
           Need customized options? <br className="mobile--only" />
-          <a className="link" href="">
+          <a className="link" href="mailto:info@synadia.com">
             Contact Us
           </a>
         </h3>
