@@ -7,13 +7,14 @@ export default class PricingCard extends React.Component {
 
   render() {
     return (
-      <div className={`wrapper ${this.props.data.special && 'special'}`}>
-        <p className="label">Most Popular</p>
+      <div className="wrapper">
         <dl className="content">
           <dt className="title">{this.props.data.title}</dt>
           <dd className="price">
-            <span>$</span>
-            {this.props.data.price}
+            <p>
+              <span>$</span>
+              {this.props.data.price}
+            </p>
           </dd>
           <dt>
             {this.props.data.messageSize}
@@ -44,38 +45,12 @@ export default class PricingCard extends React.Component {
             margin-bottom: 4rem;
           }
 
-          .wrapper.special {
-            background: var(--diagonal-gradient-inverted);
-          }
-
-          .wrapper.special .content {
-            clip-path: polygon(0% 0%, 63% 0%, 100% 20%, 100% 100%, 0% 100%);
-          }
-
-          .wrapper.special .label {
-            display: block;
-          }
-
           .content {
             background: #1a1c1d;
             margin: 1px;
             padding: 1rem 2rem;
             padding-bottom: 5rem;
             height: 99.5%;
-          }
-
-          .label {
-            display: none;
-            max-width: 7ch;
-            position: absolute;
-            top: 3.5%;
-            right: 0;
-            margin: 0;
-            line-height: 1.1rem;
-            letter-spacing: -0.69px;
-            font-size: 1.125rem;
-            font-weight: 600;
-            transform: rotate(45deg);
           }
 
           dt,
@@ -99,15 +74,23 @@ export default class PricingCard extends React.Component {
             letter-spacing: 1.6px;
           }
 
-          .price {
-            color: var(--color-primary);
+          .price p {
+            position: relative;
+            display: inline-block;
             font-size: 5.375rem;
+            line-height: 1em;
             font-weight: 600;
+            margin: 0;
+            color: var(--color-primary);
           }
 
           .price span {
+            position: absolute;
+            top: 0;
+            left: 0;
             vertical-align: super;
             font-size: 40%;
+            transform: translate(-100%, -10%);
           }
 
           dt:not(.title) {
@@ -136,13 +119,6 @@ export default class PricingCard extends React.Component {
             letter-spacing: -0.5px;
           }
 
-          .wrapper.special .price,
-          .wrapper.special dt:not(.title) {
-            background: var(--horizontal-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-          }
-
           .action {
             position: absolute;
             bottom: 0;
@@ -157,12 +133,7 @@ export default class PricingCard extends React.Component {
           }
 
           .action:hover {
-          }
-
-          @media (min-width: 1560px) {
-            .wrapper.special .content {
-              clip-path: polygon(0% 0%, 69% 0%, 100% 20%, 100% 100%, 0% 100%);
-            }
+            color: var(--color-font);
           }
         `}</style>
       </div>

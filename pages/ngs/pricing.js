@@ -2,7 +2,6 @@ import React from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import PricingCard from '../../components/PricingCard';
-import AnimateLoad from '../../components/AnimateLoad';
 
 export default class Pricing extends React.Component {
   constructor(props) {

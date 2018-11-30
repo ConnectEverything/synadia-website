@@ -19,7 +19,21 @@ export default class MainMenu extends React.Component {
     this.updateWindowDimensions();
     window.addEventListener('resize', this.updateWindowDimensions);
 
-    console.log(window.location.pathname.split('/'));
+    const mainMenu = Array.from(
+      document.getElementsByClassName('main-menu')[0].children
+    );
+
+    let activeItem;
+
+    mainMenu.forEach(item => {
+      if (item.pathname === window.location.pathname) {
+        activeItem = item;
+      }
+    });
+
+    if (window.location.pathname !== '/' && activeItem) {
+      activeItem.classList.add('active');
+    }
   }
 
   updateWindowDimensions() {
@@ -43,16 +57,10 @@ export default class MainMenu extends React.Component {
     this.setState({ menuOpen: false });
   }
 
-  renderMenu() {
-    return this.state.vpWidth > 1024
-      ? this.renderDesktopMenu()
-      : this.renderMobileMenu();
-  }
-
   renderDesktopMenu() {
     return (
       <React.Fragment>
-        <nav>
+        <nav className="main-menu">
           <ul className="navigation">
             <li>
               <ScrollTo className="navigation-item" href="about">
@@ -114,7 +122,7 @@ export default class MainMenu extends React.Component {
         isOpen={this.state.menuOpen}
         onStateChange={state => this.handleStateChange(state)}
       >
-        <nav>
+        <nav className="main-menu">
           <ScrollTo
             className="navigation-item"
             onClick={() => this.closeMenu()}
@@ -247,6 +255,8 @@ export default class MainMenu extends React.Component {
   }
 
   render() {
-    return <React.Fragment>{this.renderMenu()}</React.Fragment>;
+    return this.state.vpWidth > 1024
+      ? this.renderDesktopMenu()
+      : this.renderMobileMenu();
   }
 }

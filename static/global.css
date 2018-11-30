@@ -339,6 +339,10 @@ h1 .mobile--only {
   font-size: 1.3rem;
 }
 
+.navigation-item.active {
+  color: var(--color-secondary);
+}
+
 .word {
   display: inline-block;
 }

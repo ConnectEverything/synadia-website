@@ -17,6 +17,22 @@ export default class MainMenu extends React.Component {
   componentDidMount() {
     this.updateWindowDimensions();
     window.addEventListener('resize', this.updateWindowDimensions);
+
+    const mainMenu = Array.from(
+      document.getElementsByClassName('main-menu')[0].children
+    );
+
+    let activeItem;
+
+    mainMenu.forEach(item => {
+      if (item.pathname === window.location.pathname) {
+        activeItem = item;
+      }
+    });
+
+    if (window.location.pathname !== '/' && activeItem) {
+      activeItem.classList.add('active');
+    }
   }
 
   updateWindowDimensions() {
@@ -49,7 +65,7 @@ export default class MainMenu extends React.Component {
   renderDesktopMenu() {
     return (
       <React.Fragment>
-        <nav>
+        <nav className="main-menu">
           <ul className="navigation">
             <li>
               <a className="navigation-item" href="/#about">
@@ -111,7 +127,7 @@ export default class MainMenu extends React.Component {
         isOpen={this.state.menuOpen}
         onStateChange={state => this.handleStateChange(state)}
       >
-        <nav>
+        <nav className="main-menu">
           <a className="navigation-item" href="/#about">
             About
           </a>
