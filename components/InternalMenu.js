@@ -62,7 +62,7 @@ export default class MainMenu extends React.Component {
                 Team
               </a>
             </li>
-            <li>
+            {/* <li>
               <Link activeClassName="active" href="/ngs/pricing">
                 <a className="navigation-item">Pricing</a>
               </Link>
@@ -71,7 +71,7 @@ export default class MainMenu extends React.Component {
               <Link activeClassName="active" href="/howitworks">
                 <a className="navigation-item">How it works</a>
               </Link>
-            </li>
+            </li> */}
             <li>
               <a className="navigation-item" href="mailto:jobs@synadia.com">
                 Join us
@@ -121,13 +121,13 @@ export default class MainMenu extends React.Component {
             Team
           </a>
 
-          <Link activeClassName="active" href="/ngs/pricing">
+          {/* <Link activeClassName="active" href="/ngs/pricing">
             <a className="navigation-item">Pricing</a>
           </Link>
 
           <Link activeClassName="active" href="/howitworks">
             <a className="navigation-item">How it works</a>
-          </Link>
+          </Link> */}
 
           <a className="navigation-item" href="mailto:jobs@synadia.com">
             Join us

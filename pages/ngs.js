@@ -14,7 +14,7 @@ export default class Ngs extends React.Component {
   render() {
     return (
       <main>
-        <Header internal />
+        <Header simple />
         <section>
           <h2>Early Access</h2>
           <div className="content">
