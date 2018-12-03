@@ -14,6 +14,7 @@ export default class PricingCard extends React.Component {
             <p>
               <span>$</span>
               {this.props.data.price}
+              <span className="period">/mo</span>
             </p>
           </dd>
           <dt>
@@ -29,7 +30,11 @@ export default class PricingCard extends React.Component {
           </dt>
           <dd>Monthly Data</dd>
           <dt className="appendix">
-            {this.props.data.dataSharing && <a href="#">Data Sharing *</a>}
+            {this.props.data.dataSharing ? (
+              <a href="#">Data Sharing *</a>
+            ) : (
+              <a>No credit card required</a>
+            )}
           </dt>
         </dl>
         <a className="action" href="#">
@@ -91,6 +96,14 @@ export default class PricingCard extends React.Component {
             vertical-align: super;
             font-size: 40%;
             transform: translate(-100%, -10%);
+          }
+
+          .price .period {
+            font-size: 18.8%;
+            left: initial;
+            right: 0;
+            vertical-align: baseline;
+            transform: translate(100%, 25%);
           }
 
           dt:not(.title) {
