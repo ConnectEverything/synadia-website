@@ -33,10 +33,6 @@ export default class Pricing extends React.Component {
             prompt and type the following:
           </p>
 
-          {/* <code>
-            $ curl -L https://downloads.synadia.com/ngs/install.py | python
-          </code> */}
-
           <CopyCode content="$ curl -L https://downloads.synadia.com/ngs/install.py | python" />
 
           <p>
@@ -66,8 +62,8 @@ export default class Pricing extends React.Component {
             want to use.
           </p>
 
-          <code>$ mkdir myproject</code>
-          <code>$ cd myproject</code>
+          <CopyCode content="$ mkdir myproject" />
+          <CopyCode content="$ cd myproject" />
 
           <h3 className="inner">The Free Plan</h3>
 
@@ -76,7 +72,7 @@ export default class Pricing extends React.Component {
             <span className="highlight">ngs signup</span> command
           </p>
 
-          <code>$ ngs signup --free</code>
+          <CopyCode content="$ ngs signup --free" />
 
           <p>
             You'll see information about creating your private account on the
@@ -101,7 +97,7 @@ export default class Pricing extends React.Component {
             about current plans locally with the following command:
           </p>
 
-          <code>$ ngs account plans</code>
+          <CopyCode content="$ ngs account plans" />
 
           <p>
             You'll see a list of available plans. Check out the plan details and
@@ -109,7 +105,7 @@ export default class Pricing extends React.Component {
             the next step when we create your account.
           </p>
 
-          <code>$ ngs signup</code>
+          <CopyCode content="$ ngs signup" />
 
           <p>
             You'll see the list of available plans, select the one that most
@@ -142,7 +138,7 @@ export default class Pricing extends React.Component {
             account status with:
           </p>
 
-          <code>$ ngs account status</code>
+          <CopyCode content="$ ngs account status" />
 
           <p>
             Information about your NGS subscription account status will be
@@ -202,7 +198,6 @@ export default class Pricing extends React.Component {
 
           code {
             display: block;
-            width: 100%;
             padding: 1.2em 1.3em;
             background-color: #1a1c1d;
             color: var(--color-secondary);
