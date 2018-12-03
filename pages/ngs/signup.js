@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../../components/Header';
+import CopyCode from '../../components/CopyCode';
 import Footer from '../../components/Footer';
 
 export default class Pricing extends React.Component {
@@ -32,9 +33,11 @@ export default class Pricing extends React.Component {
             prompt and type the following:
           </p>
 
-          <code>
+          {/* <code>
             $ curl -L https://downloads.synadia.com/ngs/install.py | python
-          </code>
+          </code> */}
+
+          <CopyCode content="$ curl -L https://downloads.synadia.com/ngs/install.py | python" />
 
           <p>
             This will install the <span className="highlight">ngs</span> utility
@@ -167,7 +170,7 @@ export default class Pricing extends React.Component {
           }
 
           section {
-            max-width: 1366px;
+            max-width: 1280px;
             margin: 0 auto;
           }
 
@@ -189,13 +192,17 @@ export default class Pricing extends React.Component {
             font-size: 1.25rem;
           }
 
+          p:last-of-type {
+            margin-bottom: 8rem;
+          }
+
           .highlight {
             color: var(--color-secondary);
           }
 
           code {
             display: block;
-            width: 50%;
+            width: 60%;
             padding: 1.2em 1.3em;
             background-color: #1a1c1d;
             color: var(--color-secondary);

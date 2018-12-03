@@ -15,7 +15,7 @@ export default class CopyCode extends React.Component {
         <style jsx>{`
           code {
             display: block;
-            width: 50%;
+            width: 60%;
             padding: 1.2em 1.3em;
             background-color: #1a1c1d;
             color: var(--color-secondary);
