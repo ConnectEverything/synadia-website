@@ -49,20 +49,26 @@ export default class CopyCode extends React.Component {
             position: relative;
             padding: 1.2em 1.3em;
             background-color: #1a1c1d;
+            margin: 2.5rem 0;
           }
 
           code {
             color: var(--color-secondary);
+            word-break: break-all;
+            line-height: 1.5em;
           }
 
           svg {
             transform: scale(0.7);
             cursor: pointer;
+            flex: 0 0 auto;
+            margin-left: 1rem;
           }
 
           span {
             position: absolute;
-            right: -10%;
+            top: 0;
+            right: 4%;
             animation: fadeUp 400ms ease-in-out 500ms forwards;
             transform-origin: bottom center;
           }
@@ -77,6 +83,9 @@ export default class CopyCode extends React.Component {
           @media (min-width: 1024px) {
             .wrapper {
               width: 60%;
+            }
+            span {
+              right: -10%;
             }
           }
         `}</style>

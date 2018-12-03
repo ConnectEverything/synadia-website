@@ -168,6 +168,7 @@ export default class Pricing extends React.Component {
           section {
             max-width: 1280px;
             margin: 0 auto;
+            padding: 2rem;
           }
 
           p,
