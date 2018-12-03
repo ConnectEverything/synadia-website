@@ -26,7 +26,10 @@ export default class CopyCode extends React.Component {
     return (
       <div className="wrapper">
         <code>{this.props.content}</code>
-        <CopyToClipboard text={this.props.content} onCopy={this.copyAction}>
+        <CopyToClipboard
+          text={this.props.content.replace(/\$/g, '')}
+          onCopy={this.copyAction}
+        >
           <svg xmlns="http://www.w3.org/2000/svg" width="35" height="41">
             <g fill="none" fillRule="evenodd">
               <path fill="#199BFC" d="M28.7 0H0v34.746h3.5V3.475h25.2z" />
