@@ -85,6 +85,7 @@ export default class CopyCode extends React.Component {
               width: 60%;
             }
             span {
+              top: initial;
               right: -10%;
             }
           }
