@@ -202,10 +202,16 @@ export default class Pricing extends React.Component {
 
           code {
             display: block;
-            width: 60%;
+            width: 100%;
             padding: 1.2em 1.3em;
             background-color: #1a1c1d;
             color: var(--color-secondary);
+          }
+
+          @media (min-width: 1024px) {
+            code {
+              width: 60%;
+            }
           }
         `}</style>
       </main>
