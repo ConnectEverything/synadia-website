@@ -12,7 +12,6 @@ module.exports = {
     // This will copy robots.txt from your project root into the out directory
     await copyFile(join(dir, 'robots.txt'), join(outDir, 'robots.txt'));
     await copyFile(join(dir, 'sitemap.xml'), join(outDir, 'sitemap.xml'));
-    await copyFile(join(dir, '.htaccess'), join(outDir, '.htaccess'));
     return defaultPathMap;
   }
 };
