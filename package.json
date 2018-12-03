@@ -15,9 +15,10 @@
     "next": "^7.0.2",
     "next-ga": "^2.3.4",
     "prop-types": "^15.6.2",
-    "react": "^16.6.1",
+    "react": "^16.6.3",
     "react-anchor-link-smooth-scroll": "^1.0.11",
     "react-burger-menu": "^2.5.4",
+    "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.6.3",
     "react-particles-js": "^2.3.0",
     "react-spring": "^6.1.9"
