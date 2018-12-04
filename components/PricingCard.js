@@ -37,7 +37,7 @@ export default class PricingCard extends React.Component {
             )}
           </dt>
         </dl>
-        <a className="action" href="#">
+        <a className="action" href="/ngs/signup">
           {this.props.data.ctaText}
         </a>
         <style jsx>{`
