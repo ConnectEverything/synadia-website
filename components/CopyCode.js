@@ -82,7 +82,7 @@ export default class CopyCode extends React.Component {
 
           @media (min-width: 1024px) {
             .wrapper {
-              width: 60%;
+              width: 70%;
             }
             span {
               top: initial;
