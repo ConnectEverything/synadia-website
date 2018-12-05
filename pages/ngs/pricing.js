@@ -23,6 +23,7 @@ export default class Pricing extends React.Component {
               connections: '2',
               monthlyData: '1',
               dataSharing: false,
+              to: '/ngs/signup',
               ctaText: 'Get Started'
             }}
           />
@@ -36,6 +37,7 @@ export default class Pricing extends React.Component {
               connections: '10',
               monthlyData: '5',
               dataSharing: true,
+              to: '/ngs/signup',
               ctaText: 'Signup'
             }}
           />
@@ -49,6 +51,7 @@ export default class Pricing extends React.Component {
               connections: '100',
               monthlyData: '25',
               dataSharing: true,
+              to: '/ngs/signup',
               ctaText: 'Signup'
             }}
           />
@@ -62,6 +65,7 @@ export default class Pricing extends React.Component {
               connections: '1000',
               monthlyData: '200',
               dataSharing: true,
+              to: '/ngs/signup',
               ctaText: 'Signup'
             }}
           />

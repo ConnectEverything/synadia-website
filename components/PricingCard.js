@@ -37,7 +37,11 @@ export default class PricingCard extends React.Component {
             )}
           </dt>
         </dl>
-        <a className="action" href="/ngs/signup">
+        <a
+          className="action"
+          href={this.props.data.to}
+          id={this.props.data.title.replace(/\s+/g, '-').toLowerCase()}
+        >
           {this.props.data.ctaText}
         </a>
         <style jsx>{`
