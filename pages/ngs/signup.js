@@ -47,24 +47,6 @@ export default class Pricing extends React.Component {
             <span className="highlight">ngs -h</span>.
           </p>
 
-          <h3 className="inner">Setting up your project directory</h3>
-
-          <p>
-            Behind each NGS subscription is a NATS project which requires its
-            own directory, so we’ll first make a NATS project directory. This is
-            where your account files will reside, and should only be accessible
-            to your NGS subscription account administrators.
-          </p>
-
-          <p>
-            Open a command prompt and create your project directory,
-            substituting your NATS project name with the account name you’ll
-            want to use.
-          </p>
-
-          <CopyCode content="$ mkdir myproject" />
-          <CopyCode content="$ cd myproject" />
-
           <h3 className="inner">The Free Plan</h3>
 
           <p>
@@ -122,10 +104,11 @@ export default class Pricing extends React.Component {
           </p>
 
           <p>
-            First you’ll be prompted to choose a plan, followed by a request for
-            an email; enter the email for which you'd like to get the NGS
-            project confirmation and account updates. You’ll be able to confirm
-            the plan you’ve selected; select OK if everything is accurate.
+            First you’ll be prompted to choose a plan, followed by a request
+            for an email; enter the email for which you'd like to get the NGS
+            project confirmation and account updates. You’ll be able to
+            confirm the plan you’ve selected; select OK if everything is
+            accurate.
           </p>
 
           <p>
@@ -169,6 +152,11 @@ export default class Pricing extends React.Component {
             max-width: 1280px;
             margin: 0 auto;
             padding: 2rem;
+          }
+
+          h2 {
+            margin-top: -1em;
+            margin-bottom: 2em;
           }
 
           p,
