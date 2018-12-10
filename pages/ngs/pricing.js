@@ -12,6 +12,12 @@ export default class Pricing extends React.Component {
     return (
       <main>
         <Header internal />
+        <h3>
+          Transparent, flexible pricing for the first decentralized, secure
+          global utility to connect all digital systems, services and devices.
+          Test drive with our completely free tier, or choose a business plans
+          that is best for you. Upgrade anytime.
+        </h3>
         <section>
           <PricingCard
             data={{
@@ -100,6 +106,7 @@ export default class Pricing extends React.Component {
           h3 {
             margin-top: 6rem;
             margin-bottom: 5rem;
+            max-width: 1400px;
           }
         `}</style>
       </main>
