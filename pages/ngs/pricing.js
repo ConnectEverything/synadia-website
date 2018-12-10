@@ -87,7 +87,7 @@ export default class Pricing extends React.Component {
         <Footer simple />
         <style jsx>{`
           main {
-            padding-top: 25vh;
+            padding-top: 15vh;
             position: relative;
             background-image: url('/static/images/bg.png');
             background-repeat: no-repeat;
@@ -106,7 +106,9 @@ export default class Pricing extends React.Component {
           h3 {
             margin-top: 6rem;
             margin-bottom: 5rem;
-            max-width: 1400px;
+            max-width: 1920px;
+            margin: 0 auto;
+            padding: 2rem 3rem 4rem 3rem;
           }
         `}</style>
       </main>
