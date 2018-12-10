@@ -53,6 +53,7 @@ export default class CopyCode extends React.Component {
           }
 
           code {
+            font-size: 1.25rem;
             color: var(--color-secondary);
             word-break: break-all;
             line-height: 1.5em;

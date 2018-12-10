@@ -15,7 +15,7 @@ export default class Index extends React.Component {
           name: 'Derek Collison',
           position: 'Founder & CEO',
           bio:
-            "Derek is an industry veteran and pioneer in large-scale distributed systems. He has held executive positions at Google, VMware, and TIBCO Software. He is the creator of NATS.io and his goal is to provide a secure global utility to connect all of the world's digital systems, services and devices.",
+            "Derek is an entrepreneur, industry veteran, and pioneer in large-scale distributed systems. He has held executive positions at Google, VMware, and TIBCO Software. He is the creator of NATS.io and his goal is to provide a secure global utility to connect all of the world's digital systems, services and devices.",
           links: {
             twitter: 'derekcollison',
             linkedin: 'derekcollison',
