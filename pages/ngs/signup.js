@@ -37,8 +37,9 @@ export default class Pricing extends React.Component {
 
           <p>
             This will install the <span className="highlight">ngs</span> utility
-	    into  ~/.ngs/bin. Follow the instructions provided by the ngs utility after
-	    the download completes to get signed up, and to send your first message!
+            into ~/.ngs/bin. Follow the instructions provided by the ngs utility
+            after the download completes to get signed up, and to send your
+            first message!
           </p>
 
           <p>
@@ -60,9 +61,12 @@ export default class Pricing extends React.Component {
           <p>
             Signing up for paid plans is similar to signing up for the free plan
             except with a few more steps. In addition to finding plan
-            information
-            on <a href='https://synadia.com/ngs/pricing'>synadia.com/ngs/pricing</a>,
-	    you can view information about current plans locally with the following command: FIXME(dlc)
+            information on{' '}
+            <a href="https://synadia.com/ngs/pricing">
+              synadia.com/ngs/pricing
+            </a>
+            , you can view information about current plans locally with the
+            following command: FIXME(dlc)
           </p>
 
           <CopyCode content="$ ngs account plans" />
@@ -77,11 +81,11 @@ export default class Pricing extends React.Component {
 
           <CopyCode content="$ ngs signup" />
 
-	   <p>
+          <p>
             Check your email, within a minute or so you will receive an email
-            with a link to a secure payment page. There you can enter your payment
-            information and activate your account. Follow the instructions to
-            complete the signup process with{' '}
+            with a link to a secure payment page. There you can enter your
+            payment information and activate your account. Follow the
+            instructions to complete the signup process with{' '}
             <span className="highlight">ngs signup</span>. If you leave ngs
             signup running, it will auto-complete. Otherwise you can check your
             account status with:
@@ -90,30 +94,26 @@ export default class Pricing extends React.Component {
           <CopyCode content="$ ngs account status" />
 
           <p>
-            Information about your NGS account status will be
-            displayed. We bill on a monthly basis, so you will see a four week
-            expiry, which will be renewed on the next automatic credit card
-            payment.
+            Information about your NGS account status will be displayed. We bill
+            on a monthly basis, so you will see a four week expiry, which will
+            be renewed on the next automatic credit card payment.
           </p>
 
           <p>
-            The signup process will generate the necessary credentials
-	    to activate your account. To test that everything is
-	    working, let's send our first message.
+            The signup process will generate the necessary credentials to
+            activate your account. To test that everything is working, let's
+            send our first message.
           </p>
 
           <CopyCode content="$ ngs demo echo <some text>" />
 
           <p>
-	    If successful, you will see something like the
-	    following:
-	    <code>
-	        > ngs demo echo HELLO
-
-		Published [ngs.echo] : 'HELLO'
-		Received  [_INBOX.IUAKVmH8SZfgJc6M666obM.wn1hGbsk] :
-		'[California, US]: "HELLO"'
-	    </code>
+            If successful, you will see something like the following:
+            <code>
+              > ngs demo echo HELLO Published [ngs.echo] : 'HELLO' Received
+              [_INBOX.IUAKVmH8SZfgJc6M666obM.wn1hGbsk] : '[California, US]:
+              "HELLO"'
+            </code>
           </p>
 
           <p>
@@ -135,12 +135,10 @@ export default class Pricing extends React.Component {
           }
 
           section {
-            max-width: 1280px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
             align-items: center;
-
+            max-width: 1280px;
             margin: 0 auto;
             padding: 2rem;
           }
@@ -154,8 +152,7 @@ export default class Pricing extends React.Component {
           h2,
           h3 {
             display: block;
-            text-align: left;
-            max-width: 80%;
+            max-width: none;
           }
 
           h3.inner {
@@ -165,7 +162,7 @@ export default class Pricing extends React.Component {
           }
 
           p {
-            font-size: 1.50rem;
+            font-size: 1.5rem;
           }
 
           p:last-of-type {
@@ -181,11 +178,12 @@ export default class Pricing extends React.Component {
             padding: 1.2em 1.3em;
             background-color: #1a1c1d;
             color: var(--color-secondary);
+            margin: 0 auto;
           }
 
           @media (min-width: 1024px) {
             code {
-              width: 60%;
+              max-width: 80%;
             }
           }
         `}</style>

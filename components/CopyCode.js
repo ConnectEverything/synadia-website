@@ -1,4 +1,5 @@
 import React from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 export default class CopyCode extends React.Component {
@@ -83,7 +84,7 @@ export default class CopyCode extends React.Component {
 
           @media (min-width: 1024px) {
             .wrapper {
-              width: 70%;
+              width: 80%;
             }
             span {
               top: initial;
