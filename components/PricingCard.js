@@ -31,9 +31,9 @@ export default class PricingCard extends React.Component {
           <dd>Monthly Data</dd>
           <dt className="appendix">
             {this.props.data.dataSharing ? (
-              <a href="#">Data Sharing *</a>
+              <a href="#">Sharing Options*</a>
             ) : (
-              <a>No credit card required</a>
+              <a>No Credit Card Required</a>
             )}
           </dt>
         </dl>

@@ -66,7 +66,7 @@ export default class Pricing extends React.Component {
               synadia.com/ngs/pricing
             </a>
             , you can view information about current plans locally with the
-            following command: FIXME(dlc)
+            following command:
           </p>
 
           <CopyCode content="$ ngs account plans" />
@@ -110,7 +110,7 @@ export default class Pricing extends React.Component {
           <p>
             If successful, you will see something like the following:
             <code>
-              > ngs demo echo HELLO Published [ngs.echo] : 'HELLO' Received
+              > ngs demo echo HELLO <br/>Published [ngs.echo] : 'HELLO' Received
               [_INBOX.IUAKVmH8SZfgJc6M666obM.wn1hGbsk] : '[California, US]:
               "HELLO"'
             </code>

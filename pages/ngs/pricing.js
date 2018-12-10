@@ -12,12 +12,7 @@ export default class Pricing extends React.Component {
     return (
       <main>
         <Header internal />
-        <h3>
-          Transparent, flexible pricing for the first decentralized, secure
-          global utility to connect all digital systems, services and devices.
-          Test drive with our completely free tier, or choose a business plans
-          that is best for you. Upgrade anytime.
-        </h3>
+	<h2>Welcome to NGS!</h2>
         <section>
           <PricingCard
             data={{
@@ -78,6 +73,12 @@ export default class Pricing extends React.Component {
         </section>
 
         <h3>
+          Transparent, flexible pricing for the first decentralized, secure
+	  global utility to connect all digital systems, services and devices.
+	  Chose the plan that is best for you, upgrade at anytime.
+        </h3>
+
+        <h3>
           Need customized options? <br className="mobile--only" />
           <a className="link" href="mailto:info@synadia.com">
             Contact Us
@@ -102,10 +103,12 @@ export default class Pricing extends React.Component {
             justify-content: space-evenly;
             flex-wrap: wrap;
           }
-
+          h2 {
+	  font-weight: normal;
+	  }
           h3 {
-            margin-top: 6rem;
-            margin-bottom: 5rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
             max-width: 1920px;
             margin: 0 auto;
             padding: 2rem 3rem 4rem 3rem;
