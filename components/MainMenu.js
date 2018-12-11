@@ -61,12 +61,13 @@ export default class MainMenu extends React.Component {
               <Link activeClassName="active" href="/ngs/pricing">
                 <a className="navigation-item">Pricing</a>
               </Link>
-            </li> */}
+            </li>
             <li>
               <Link activeClassName="active" href="/ngs/how-it-works">
                 <a className="navigation-item">How it works</a>
               </Link>
             </li>
+            */}
             <li>
               <a className="navigation-item" href="mailto:jobs@synadia.com">
                 Join us
@@ -125,11 +126,12 @@ export default class MainMenu extends React.Component {
 
           {/* <Link activeClassName="active" href="/ngs/pricing">
             <a className="navigation-item">Pricing</a>
-          </Link> */}
+          </Link>
 
           <Link activeClassName="active" href="/ngs/how-it-works">
             <a className="navigation-item">How it works</a>
           </Link>
+           */}
 
           <a className="navigation-item" href="mailto:jobs@synadia.com">
             Join us
