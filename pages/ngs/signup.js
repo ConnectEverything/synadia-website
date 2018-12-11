@@ -141,6 +141,7 @@ export default class Pricing extends React.Component {
             max-width: 1280px;
             margin: 0 auto;
             padding: 2rem;
+            text-align: left;
           }
 
           h2 {
@@ -162,10 +163,6 @@ export default class Pricing extends React.Component {
             font-weight: 600;
             color: var(--color-secondary);
             margin-top: 2em;
-          }
-
-          h3 {
-            text-align: left;
           }
 
           p {
