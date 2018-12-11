@@ -22,22 +22,30 @@ export default class Pricing extends React.Component {
             <a hre="https://nats.io">NATS.io</a>. It allows digital systems,
             services and devices to communicate through the exchange of
             messages. To connect to the system, users need a single worldwide
-            accessible url, and their credentials. Once connected, messages are
-            sent and received via subjects. Subjects are comprised of one or
-            more tokens. See{' '}
+            accessible URL, <span className="highlight">connect.ngs.global</span>, and their
+            credentials. Once connected, messages are sent and received via 
+            subjects. A subject is a string that represents interest 
+            in data and supports wildcard matching for a rich and flexible
+            way to direct message flow between your applications.  
+            See{' '}
             <a href="https://nats.io/documentation/writing_applications/subjects/">
               NATS subjects
             </a>{' '}
-            for more information. Subscribers in the system that subscribe to a
-            matching subject will receive the message. Subscribers can listen to
-            subjects that have wildcards that can match multiple publish
-            subjects. Core NATS is an At-Most-Once QoS system. NGS/NATS supports
-            three basic communication primitives. Publish/Subscribe,
-            Request/Reply, and Distributed Queues. See{' '}
-            <a href="https://nats.io/documentation/writing_applications/concepts/">
-              NATS Concepts
-            </a>{' '}
-            for mor information.
+            for more information.
+            </p><p>
+            NGS is powered by core NATS, an At-Most-Once delivery system supporting
+            three basic communication patterns:
+            <ul>
+              <li>Publish Subscribe</li>
+              <li>Request/Reply</li>
+              <li>Distributed Load Balanced Queue</li>
+            </ul>
+
+            See{' '}
+             <a href="https://nats.io/documentation/writing_applications/concepts/">
+               NATS Concepts
+             </a>{' '}
+            for more information.
           </p>
 
           <h3 className="inner">Authentication and Authorization</h3>
@@ -78,35 +86,36 @@ export default class Pricing extends React.Component {
           </code>
 
           <p>
-            When you create a new user, an nkey is generated to represent that
-            user in NGS/NATS. This Nkey pair allows a user to prove that it is
-            who its says it is. The user credemtials will be signed for by the
-            account owner, which is your default account that was granted at
-            signup. You can setup permissions for a user, set activation time,
-            expiration time, and set other limits. For more information, use the{' '}
+            When you create a new user, an nkey pair (a public key and 
+            private seed) is generated to represent that user in NGS.
+            This Nkey pair allows a user to prove that they are who they say
+            they are. The user credentials will be signed for by the account owner,
+            which is your default account that was created at signup. You can setup 
+            permissions for a user, set activation time, expiration time, 
+            and set other limits. For more information, use the{' '}
             <span className="highlight">ngs add user --help</span> command.
           </p>
 
           <h3 className="inner">Accounts</h3>
 
           <p>
-            When you signed up with NGS, the NGS system created an account for
-            you and a default user. The account credentials were signed by the
-            operator, in this case Synadia. The account is the owner of the
-            users we were creating above. Accounts define the subject space that
-            users will operate in. More specifically, by default only users in
-            the same account can send and receive messages. This provides a
-            default secure isolation context for the subject space.
+          When you signed up with NGS, the NGS system created an account
+          and default user for you. The account credentials were signed
+          by the operator, in this case Synadia, and the account is the owner
+          of the users we were creating above. Accounts define the subject
+          space that users will operate in. More specifically, by default ONLY
+          users in the same account can send and receive messages to each other.
+          This provides a secure isolation context for your subject space.
           </p>
 
           <h3 className="inner">Accounts and Sharing Options</h3>
 
           <p>
-            NGS is a secure multi-tenant system. Many accounts will be present
-            in the system at any given time. As we stated above, the default
-            mode is that any messages sent from an account can only be received
-            bny users in the same account. However, there are ways to share data
-            between accounts in an easy but highly secure way.
+          NGS is a secure multi-tenant system. Many accounts will be present 
+          in the system at any given time and the default mode is that any 
+          messages sent from an account can only be received only users in
+          the same account. However, there are ways to securely share data 
+          between accounts in an easy yet highly secure way.
           </p>
 
           <h3 className="inner">Streams and Services</h3>
@@ -124,20 +133,23 @@ export default class Pricing extends React.Component {
 
           <p>
             The way an account offers streams and services for use by other
-            accounts is through an export statement. And export statement
-            specifies which subject ios being exported, if it is a stream or a
-            service, and whether or not authorization is required by the account
-            owner for another account to access. The way an account would
-            consume these streams or services is through an import statement.
-            The import statement specifies the source account, the subject and
-            type of the import and where the system should map the subject into
-            the new accounts subject space. This allows the consuming account to
-            maintain ownership and control over its own subject space. Lastly,
-            if an export is not considered to be public, the source account must
-            sign an authorization for the destination account, subject and type
-            that is included, or referenced, in the destination account's import
-            statment. Without authroization for non-public exports, the import
-            statement will fail once checked by the NGS system.
+            accounts is through an exports. And export specifies which subject
+            is being exported, whether it is a stream or a service, and if
+            authorization is required by the account owner for another
+            account to access. The way an account would consume these streams 
+            or services is through an import.  An import specifies the source 
+            account, the subject and type of the import, and where the system 
+            will map the subject into the new accounts subject space.
+            This allows the consuming account to maintain ownership and control 
+            over its own subject space, opening the door to decentralized account
+            management easing the burden on operators. Lastly, if an export is not
+            considered to be public, the source account must sign an authorization
+            for the destination account, subject and type that is included, or
+            referenced, in the destination account's import statment. Without 
+            authroization for non-public exports, the import will fail 
+            when checked by the NGS system, thus requiring mutual agreement for 
+            data to flow between accounts.
+
           </p>
 
           <h3 className="inner">Stream Exports</h3>
