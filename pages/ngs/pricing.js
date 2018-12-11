@@ -12,7 +12,7 @@ export default class Pricing extends React.Component {
     return (
       <main>
         <Header internal />
-	<h2>Welcome to NGS!</h2>
+        <h2>Welcome to NGS!</h2>
         <section>
           <PricingCard
             data={{
@@ -74,8 +74,8 @@ export default class Pricing extends React.Component {
 
         <h3>
           Transparent, flexible pricing for the first decentralized, secure
-	  global utility to connect all digital systems, services and devices.
-	  Choose the plan that is best for you, upgrade at anytime.
+          global utility to connect all digital systems, services and devices.
+          Choose the plan that is best for you, upgrade at anytime.
         </h3>
 
         <h3>
@@ -103,9 +103,11 @@ export default class Pricing extends React.Component {
             justify-content: space-evenly;
             flex-wrap: wrap;
           }
+
           h2 {
-	  font-weight: normal;
-	  }
+            font-weight: normal;
+          }
+
           h3 {
             margin-top: 2rem;
             margin-bottom: 2rem;

@@ -110,9 +110,11 @@ export default class Pricing extends React.Component {
           <p>
             If successful, you will see something like the following:
             <code>
-              > ngs demo echo HELLO <br/>Published [ngs.echo] : 'HELLO'<br/>Received
-              [_INBOX.IUAKVmH8SZfgJc6M666obM.wn1hGbsk] : '[California, US]:
-              "HELLO"'
+              > ngs demo echo HELLO <br />
+              Published [ngs.echo] : 'HELLO'
+              <br />
+              Received [_INBOX.IUAKVmH8SZfgJc6M666obM.wn1hGbsk] : '[California,
+              US]: "HELLO"'
             </code>
           </p>
 
@@ -135,9 +137,6 @@ export default class Pricing extends React.Component {
           }
 
           section {
-            display: flex;
-            flex-direction: column;
-            align-items: left;
             max-width: 1280px;
             margin: 0 auto;
             padding: 2rem;
@@ -156,7 +155,6 @@ export default class Pricing extends React.Component {
             display: block;
             max-width: none;
             text-align: left;
-            max-width: none;
           }
 
           h3.inner {
