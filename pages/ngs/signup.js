@@ -110,7 +110,7 @@ export default class Pricing extends React.Component {
           <p>
             If successful, you will see something like the following:
             <code>
-              > ngs demo echo HELLO <br/>Published [ngs.echo] : 'HELLO' Received
+              > ngs demo echo HELLO <br/>Published [ngs.echo] : 'HELLO'<br/>Received
               [_INBOX.IUAKVmH8SZfgJc6M666obM.wn1hGbsk] : '[California, US]:
               "HELLO"'
             </code>
@@ -137,7 +137,7 @@ export default class Pricing extends React.Component {
           section {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: left;
             max-width: 1280px;
             margin: 0 auto;
             padding: 2rem;
@@ -150,8 +150,11 @@ export default class Pricing extends React.Component {
 
           p,
           h2,
-          h3 {
+          h3,
+          h4 {
             display: block;
+            max-width: none;
+            text-align: left;
             max-width: none;
           }
 
@@ -161,8 +164,13 @@ export default class Pricing extends React.Component {
             margin-top: 2em;
           }
 
+          h3 {
+            text-align: left;
+          }
+
           p {
             font-size: 1.5rem;
+            max-width: 80%;
           }
 
           p:last-of-type {
@@ -178,7 +186,9 @@ export default class Pricing extends React.Component {
             padding: 1.2em 1.3em;
             background-color: #1a1c1d;
             color: var(--color-secondary);
+            text-align: left;
             margin: 0 auto;
+            min-width: 80%;
           }
 
           @media (min-width: 1024px) {

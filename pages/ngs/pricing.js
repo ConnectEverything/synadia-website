@@ -75,7 +75,7 @@ export default class Pricing extends React.Component {
         <h3>
           Transparent, flexible pricing for the first decentralized, secure
 	  global utility to connect all digital systems, services and devices.
-	  Chose the plan that is best for you, upgrade at anytime.
+	  Choose the plan that is best for you, upgrade at anytime.
         </h3>
 
         <h3>
