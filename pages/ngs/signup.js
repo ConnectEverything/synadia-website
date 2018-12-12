@@ -125,7 +125,7 @@ export default class Pricing extends React.Component {
           <p>
             The ngs tool also has built in publishers, subscribers,
 	    queue subscribers and request and reply. Feel free to try
-	    them out. nd joins the <a href="https://join.slack.com/t/natsio/shared_invite/enQtMzE2NDkxNDI2NTE1LTc5ZDEzYTkwYWZkYWQ5YjY1MzBjMWZmYzA5OGQxMzlkMGQzMjYxNGM3MWYxMjNiYmNjNzIwMTVjMWE2ZDgxZGM"><span className="highlight">NGS Slack Channel</span></a> to get help and information.
+	    them out and join the <a href="https://join.slack.com/t/natsio/shared_invite/enQtMzE2NDkxNDI2NTE1LTc5ZDEzYTkwYWZkYWQ5YjY1MzBjMWZmYzA5OGQxMzlkMGQzMjYxNGM3MWYxMjNiYmNjNzIwMTVjMWE2ZDgxZGM"><span className="highlight">NATS Slack Channel</span></a> to get help and information.
           </p>
 
 	  <code>
