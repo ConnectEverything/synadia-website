@@ -23,10 +23,10 @@ export default class Pricing extends React.Component {
             services and devices to communicate through the exchange of
             messages. To connect to the system, users need a single worldwide
             accessible URL, <span className="highlight">connect.ngs.global</span>, and their
-            credentials. Once connected, messages are sent and received via 
-            subjects. A subject is a string that represents interest 
+            credentials. Once connected, messages are sent and received via
+            subjects. A subject is a string that represents interest
             in data and supports wildcard matching for a rich and flexible
-            way to direct message flow between your applications.  
+            way to direct message flow between your applications.
             See{' '}
             <a href="https://nats.io/documentation/writing_applications/subjects/">
               NATS subjects
@@ -86,12 +86,12 @@ export default class Pricing extends React.Component {
           </code>
 
           <p>
-            When you create a new user, an nkey pair (a public key and 
+            When you create a new user, an nkey pair (a public key and
             private seed) is generated to represent that user in NGS.
             This Nkey pair allows a user to prove that they are who they say
             they are. The user credentials will be signed for by the account owner,
-            which is your default account that was created at signup. You can setup 
-            permissions for a user, set activation time, expiration time, 
+            which is your default account that was created at signup. You can setup
+            permissions for a user, set activation time, expiration time,
             and set other limits. For more information, use the{' '}
             <span className="highlight">ngs add user --help</span> command.
           </p>
@@ -111,10 +111,10 @@ export default class Pricing extends React.Component {
           <h3 className="inner">Accounts and Sharing Options</h3>
 
           <p>
-          NGS is a secure multi-tenant system. Many accounts will be present 
-          in the system at any given time and the default mode is that any 
+          NGS is a secure multi-tenant system. Many accounts will be present
+          in the system at any given time and the default mode is that any
           messages sent from an account can only be received only users in
-          the same account. However, there are ways to securely share data 
+          the same account. However, there are ways to securely share data
           between accounts in an easy yet highly secure way.
           </p>
 
@@ -136,18 +136,18 @@ export default class Pricing extends React.Component {
             accounts is through an exports. And export specifies which subject
             is being exported, whether it is a stream or a service, and if
             authorization is required by the account owner for another
-            account to access. The way an account would consume these streams 
-            or services is through an import.  An import specifies the source 
-            account, the subject and type of the import, and where the system 
+            account to access. The way an account would consume these streams
+            or services is through an import.  An import specifies the source
+            account, the subject and type of the import, and where the system
             will map the subject into the new accounts subject space.
-            This allows the consuming account to maintain ownership and control 
+            This allows the consuming account to maintain ownership and control
             over its own subject space, opening the door to decentralized account
             management easing the burden on operators. Lastly, if an export is not
             considered to be public, the source account must sign an authorization
             for the destination account, subject and type that is included, or
-            referenced, in the destination account's import statment. Without 
-            authroization for non-public exports, the import will fail 
-            when checked by the NGS system, thus requiring mutual agreement for 
+            referenced, in the destination account's import statment. Without
+            authroization for non-public exports, the import will fail
+            when checked by the NGS system, thus requiring mutual agreement for
             data to flow between accounts.
 
           </p>
@@ -229,14 +229,12 @@ export default class Pricing extends React.Component {
           <code>
             // Go client
             <br />
-            nc, err := Connect(url,
-            UserCreds(“~/.nkeys/synadia/accounts/ngs/users/bob.creds”)
+            nc, err := Connect(url, UserCreds(“~/.nkeys/synadia/accounts/ngs/users/ngs.creds”)
             <br />
             <br />
             // Node.js client
             <br />
-            var nc = NATS.connect(uri,
-            NATS.creds('~/.nkeys/synadia/accounts/ngs/users/bob.creds'));
+            var nc = NATS.connect(url, NATS.creds('~/.nkeys/synadia/accounts/ngs/users/ngs.creds'));
           </code>
         </section>
 
