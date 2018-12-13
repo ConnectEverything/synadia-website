@@ -168,10 +168,9 @@ export default class Index extends React.Component {
           }
 
           .first-fold .button {
-	    margin-top: 2rem;
-	    margin-left: 0;
-	    font-size: 1.5rem;
-	  }
+            margin-top: 2rem;
+            font-size: 1.5rem;
+          }
 
           .first-fold .background {
             max-width: 100vw;
