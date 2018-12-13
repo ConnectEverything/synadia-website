@@ -20,14 +20,14 @@ export default class Ngs extends React.Component {
           <div className="content">
             <p>
               NGS is a global communications system built on{' '}
-              <a hre="https://nats.io">NATS.io</a>. NGS is easy to
-              use, secure by default, and globally available in all
-              major cloud providers.<br/> Get connected and send your first
-              message in under a minute.
+              <a hre="https://nats.io">NATS.io</a>. NGS is easy to use, secure
+              by default, and globally available in all major cloud providers.
+              <br /> Get connected and send your first message in under a
+              minute.
             </p>
-            <div>
-              <a className="action" href="/ngs/pricing">Get Started</a>
-            </div>
+            <a className="button" href="/ngs/pricing" data-text="Get Started">
+              Get Started
+            </a>
           </div>
         </section>
         <Footer simple />
@@ -50,6 +50,9 @@ export default class Ngs extends React.Component {
           }
 
           .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             max-width: 800px;
             margin: 0 auto;
           }
@@ -60,9 +63,8 @@ export default class Ngs extends React.Component {
             font-size: 1.5rem;
           }
 
-          .contact {
-            max-width: 95%;
-            margin: 4rem auto;
+          .button {
+            margin: 1em;
           }
 
           @media (min-width: 768px) {
