@@ -18,7 +18,7 @@ export default class Pricing extends React.Component {
           <h3 className="inner">Concepts</h3>
 
           <p>
-            NGS is a communications system built on{' '}
+            NGS is a global communications system built on{' '}
             <a hre="https://nats.io">NATS.io</a>. It allows digital systems,
             services and devices to communicate through the exchange of
             messages. To connect to the system, users need a single worldwide

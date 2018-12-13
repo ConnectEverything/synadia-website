@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import NewsletterForm from '../components/NewsletterForm';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import NewsletterForm from '../../components/NewsletterForm';
 
 const NGS_EARLY_ACCESS_SCRIPT_URL =
   'https://script.google.com/macros/s/AKfycbwUrDs2x-DHyiUKmRw2aHrQvMsEz2lh4v0jA58uVWPSvjhkvj0R/exec';
@@ -16,17 +16,23 @@ export default class Ngs extends React.Component {
       <main>
         <Header internal />
         <section>
-          <h2>Introducing NGS!</h2>
+          <h2>Early Access</h2>
           <div className="content">
             <p>
-              NGS is a global communications system built on{' '}
-              <a hre="https://nats.io">NATS.io</a>. NGS is easy to
-              use, secure by default, and globally available in all
-              major cloud providers.<br/> Get connected and send your first
-              message in under a minute.
+              Synadia is launching the first global, secure, multi-tenant
+              messaging platform based on <a href="https://nats.io">NATS.io</a>.
+              The system will be secure by default and utilizes a single url for
+              geo-aware connectivity on any major cloud provider. <br />
+              Sign up now to be one of the first to experience global
+              connectivity in a whole new way.
             </p>
-            <div>
-              <a className="action" href="/ngs/pricing">Get Started</a>
+            <div className="contact">
+              <NewsletterForm
+                centered
+                title="Sign up for early access"
+                url={NGS_EARLY_ACCESS_SCRIPT_URL}
+                thanksMessage="Thank you for your interest."
+              />
             </div>
           </div>
         </section>
@@ -57,7 +63,7 @@ export default class Ngs extends React.Component {
           .content p {
             max-width: 100%;
             margin: 0 auto;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
           }
 
           .contact {
