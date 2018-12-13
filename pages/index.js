@@ -117,7 +117,9 @@ export default class Index extends React.Component {
         <section id="home" className="first-fold">
           <h1>Connect Everything</h1>
 
-            <a className="button" href="/ngs" data-text="Introducing NGS">Introducing NGS</a>
+          <a className="button" href="/ngs" data-text="Introducing NGS">
+            Introducing NGS
+          </a>
 
           <div className="background">
             <AnimateLoad delay={100}>
@@ -173,13 +175,14 @@ export default class Index extends React.Component {
             z-index: var(--z-index-1);
           }
 
-	  .first-fold h1 {
-	    margin-top: -10rem;
-	  }
-
+          .first-fold .button,
           h1 {
             position: relative;
             z-index: var(--z-index-2);
+          }
+
+          h1 {
+            margin-top: -10rem;
           }
 
           .about {
