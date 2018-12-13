@@ -119,7 +119,6 @@ export default class Pricing extends React.Component {
             </code>
           <p>
             You have succesfully registered with NGS and sent your first message on the NGS secure global messaging system.<br/>Congrats!
-	    To learn more about NGS and the NATS technology, please visist <a href="/ngs/how-it-works"><span className="highlight">How it Works</span></a>.
           </p>
 
           <p>
@@ -142,6 +141,26 @@ export default class Pricing extends React.Component {
 	      &nbsp;&nbsp;req&nbsp;&nbsp;&nbsp;&nbsp; Send a request to a subject on your NGS account<br/>
 	      &nbsp;&nbsp;sub&nbsp;&nbsp;&nbsp;&nbsp; Subscribe to a subject on your NGS account<br/>
 	  </code>
+
+	  <p>
+	    When you are ready to program your own NGS client, you can
+	    get started with one of our NGS aware clients.
+	  </p>
+
+	            <code>
+            // Go client
+            <br />
+            nc, err := Connect(url, UserCreds(“~/.nkeys/synadia/accounts/ngs/users/ngs.creds”)
+            <br />
+            <br />
+            // Node.js client
+            <br />
+            var nc = NATS.connect(url, NATS.creds('~/.nkeys/synadia/accounts/ngs/users/ngs.creds'));
+          </code>
+
+          <p>
+	    To learn more about NGS and the NATS technology, please visist <a href="/ngs/how-it-works"><span className="highlight">How it Works</span></a>.
+          </p>
 
 	  <p></p>
         </section>

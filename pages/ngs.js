@@ -1,10 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import NewsletterForm from '../components/NewsletterForm';
-
-const NGS_EARLY_ACCESS_SCRIPT_URL =
-  'https://script.google.com/macros/s/AKfycbwUrDs2x-DHyiUKmRw2aHrQvMsEz2lh4v0jA58uVWPSvjhkvj0R/exec';
 
 export default class Ngs extends React.Component {
   constructor(props) {
@@ -25,8 +21,8 @@ export default class Ngs extends React.Component {
               <br /> Get connected and send your first message in under a
               minute.
             </p>
-            <a className="button" href="/ngs/pricing" data-text="Get Started">
-              Get Started
+            <a className="button" href="/ngs/pricing" data-text="Get Started Today!">
+              Get Started Today!
             </a>
           </div>
         </section>
@@ -62,6 +58,10 @@ export default class Ngs extends React.Component {
             margin: 0 auto;
             font-size: 1.5rem;
           }
+
+	  .content a {
+            font-size: 1.5rem;
+	  }
 
           .button {
             margin: 1em;
