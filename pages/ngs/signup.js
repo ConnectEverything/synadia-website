@@ -118,7 +118,7 @@ export default class Pricing extends React.Component {
               US]: "HELLO"'
             </code>
           <p>
-            You have succesfully registered with NGS and sent your first message on the NGS secure global messaging system.<br/>Congrats!
+            Congratulations! You have succesfully registered with NGS and sent your first message on the NGS secure global messaging system.
           </p>
 
           <p>
@@ -144,10 +144,14 @@ export default class Pricing extends React.Component {
 
 	  <p>
 	    When you are ready to program your own NGS client, you can
-	    get started with one of our NGS aware clients.
+	    get started with one of our NGS aware clients. We have
+	    support
+	    for <a href="https://github.com/nats-io/go-nats#new-authentication-nkeys-and-user-credentials"><span className="highlight">Go </span></a>
+	    and <a href="https://github.com/nats-io/node-nats#new-authentication-nkeys-and-user-credentials"><span className="highlight">Node.js </span></a>
+	    for launch, with more clients to be released soon.
 	  </p>
 
-	            <code>
+	  <code>
             // Go client
             <br />
             nc, err := Connect(url, UserCreds(“~/.nkeys/synadia/accounts/ngs/users/ngs.creds”)
@@ -159,7 +163,7 @@ export default class Pricing extends React.Component {
           </code>
 
           <p>
-	    To learn more about NGS and the NATS technology, please visist <a href="/ngs/how-it-works"><span className="highlight">How it Works</span></a>.
+	    To learn more about NGS and the NATS technology, please visit <a href="/ngs/how-it-works"><span className="highlight">How it Works</span></a>.
           </p>
 
 	  <p></p>

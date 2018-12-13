@@ -167,6 +167,12 @@ export default class Index extends React.Component {
             height: 100vh;
           }
 
+          .first-fold .button {
+	    margin-top: 2rem;
+	    margin-left: 0;
+	    font-size: 1.5rem;
+	  }
+
           .first-fold .background {
             max-width: 100vw;
             position: absolute;
