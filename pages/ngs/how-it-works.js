@@ -113,7 +113,7 @@ export default class Pricing extends React.Component {
           <p>
           NGS is a secure multi-tenant system. Many accounts will be present
           in the system at any given time and the default mode is that any
-          messages sent from an account can only be received only users in
+          messages sent from an account can only be received by users in
           the same account. However, there are ways to securely share data
           between accounts in an easy yet highly secure way.
           </p>
@@ -133,7 +133,7 @@ export default class Pricing extends React.Component {
 
           <p>
             The way an account offers streams and services for use by other
-            accounts is through an exports. And export specifies which subject
+            accounts is through an export. An export specifies which subject
             is being exported, whether it is a stream or a service, and if
             authorization is required by the account owner for another
             account to access. The way an account would consume these streams
@@ -145,8 +145,8 @@ export default class Pricing extends React.Component {
             management easing the burden on operators. Lastly, if an export is not
             considered to be public, the source account must sign an authorization
             for the destination account, subject and type that is included, or
-            referenced, in the destination account's import statment. Without
-            authroization for non-public exports, the import will fail
+            referenced, in the destination account's import statement. Without
+            authorization for non-public exports, the import will fail
             when checked by the NGS system, thus requiring mutual agreement for
             data to flow between accounts.
 

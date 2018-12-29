@@ -118,7 +118,7 @@ export default class Pricing extends React.Component {
               US]: "HELLO"'
             </code>
           <p>
-            Congratulations! You have succesfully registered with NGS and sent your first message on the NGS secure global messaging system.
+            Congratulations! You have successfully registered with NGS and sent your first message on the NGS secure global messaging system.
           </p>
 
           <p>
