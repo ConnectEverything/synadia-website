@@ -28,7 +28,7 @@ export default class Pricing extends React.Component {
             in data and supports wildcard matching for a rich and flexible
             way to direct message flow between your applications.
             See{' '}
-            <a href="https://nats.io/documentation/writing_applications/subjects/">
+            <a href="https://nats-io.github.io/docs/developer/concepts/subjects.html">
               NATS subjects
             </a>{' '}
             for more information.
@@ -42,7 +42,7 @@ export default class Pricing extends React.Component {
             </ul>
 
             See{' '}
-             <a href="https://nats.io/documentation/writing_applications/concepts/">
+             <a href="https://nats-io.github.io/docs/developer/concepts/intro.html">
                NATS Concepts
              </a>{' '}
             for more information.
