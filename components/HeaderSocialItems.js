@@ -41,7 +41,7 @@ export default class HeaderSocialItems extends React.Component {
           </li>
           <li>
             <a
-              href="https://github.com/ConnectEverything"
+              href="https://github.com/nats-io"
               target="_blank"
               rel="noopener noreferrer"
             >

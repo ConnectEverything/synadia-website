@@ -138,19 +138,16 @@ export default class Index extends React.Component {
             to connect all digital systems, services and devices.
           </h3>
           <h3>
-            This offering will be decentralized by design,{' '}
-            <br className="desktop--only" />
-            secure by default, globally available,{' '}
-            <br className="desktop--only" />
-            and easy to use and manage.
+            Synadia maintains and leads development of <a href="https://nats.io">NATS.io</a>. <br className="desktop--only" />
+	    Along with the NGS offering, Synadia also provides Commercial Support, Consulting, NRE, and Training. <br className="desktop--only" />
+            Feel free to <a className="link" href="mailto:info@synadia.com" target="_blank">Contact Us</a> for more information.
           </h3>
         </section>
         <section id="team">
           <h2>Meet the Team</h2>
           <h4>
-            With 100+ years of combined experience in engineering and messaging,
-            the good people of Synadia provide a wealth of knowledge aimed at
-            challenging how the world connects.
+            With over a century of combined experience in distributed systems and messaging technologies,
+            the team at Synadia can provide a wealth of knowledge aimed at challenging how the world connects.
           </h4>
           <Team members={this.state.team} />
         </section>
