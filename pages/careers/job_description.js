@@ -116,6 +116,7 @@ export default class Pricing extends React.Component {
 
           p {
             font-size: 1.20rem;
+            text-align: left;
           }
 
           p:last-of-type {
