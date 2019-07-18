@@ -73,7 +73,7 @@ export default class MainMenu extends React.Component {
               </Link>
             </li>
             <li>
-              <Link activeClassName="active" href="/careers">
+              <Link activeClassName="active" href="/careers/careers">
                 <a className="navigation-item">Careers</a>
               </Link>
             </li>

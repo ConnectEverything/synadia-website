@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import PricingCard from '../components/CareerCard';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import PricingCard from '../../components/CareerCard';
 
-export default class Careers_2 extends React.Component {
+export default class Careers extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -54,21 +54,21 @@ export default class Careers_2 extends React.Component {
                 connections: '2',
                 monthlyData: '1',
                 dataSharing: false,
-                to: '',
+                to: '/careers/job_description',
                 ctaText: 'Apply'
 
                            }}
                          />
         <PricingCard
            data={{special: false,
-                title: 'Sales/Marketing',
+                title: 'Business Development',
                 price: '0',
                 messageSize: '256',
                 messageUnit: 'b',
                 connections: '2',
                 monthlyData: '1',
                 dataSharing: false,
-                to: '',
+                to: '/careers/job_description',
                 ctaText: 'Apply'
 
                            }}
