@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
-export default class Careers extends React.Component {
+export default class Pricing extends React.Component {
   constructor(props) {
     super(props);
   }
