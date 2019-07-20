@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "description": "Synadia website",
   "license": "MIT",
+  "engines": {
+    "node": ">=10.x"
+  },
   "scripts": {
     "dev": "next",
-    "start": "next start",
-    "build": "next build && next export -o /public",
-    "now-build": "next build && next export -o dist"
+    "build": "next build && next export -o ./dist"
   },
   "dependencies": {
     "acorn": "^6.2.0",
