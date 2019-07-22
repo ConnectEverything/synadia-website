@@ -39,7 +39,7 @@ export default class Pricing extends React.Component {
               price: '0',
               messageSize: '2',
               messageUnit: 'k',
-              connections: '10 + 2 *',
+              connections: '10 + 2*',
               monthlyData: '5',
               importUnits: "10 ",
               importType: "Public",
@@ -90,14 +90,15 @@ export default class Pricing extends React.Component {
 
         <h4>
           * <a href="https://nats-io.github.io/docs/leafnodes/" target="_blank">Leaf Node Connections</a><br />
-           Get two months free with an annual subscription. Commercial support is available for Business Plans.
+           
 
         </h4>
 
         <h3>
           Transparent, flexible pricing for the first decentralized, secure
           global utility to connect all digital systems, services and devices.
-          Choose the plan that is best for you, upgrade at anytime.
+          Choose the plan that is best for you, upgrade at anytime. Get two months free with an annual subscription. 
+          Commercial support is available for Business Plans.
 
         </h3>
 
