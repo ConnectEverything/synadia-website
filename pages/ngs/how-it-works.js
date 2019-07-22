@@ -110,7 +110,7 @@ export default class Pricing extends React.Component {
 
           <h3 className="inner">Accounts and Sharing Options</h3>
 
-          <p>
+          <p id="streams">
           NGS is a secure multi-tenant system. Many accounts will be present
           in the system at any given time and the default mode is that any
           messages sent from an account can only be received by users in
