@@ -33,12 +33,12 @@ export default class PricingCard extends React.Component {
                 {this.props.data.importUnits}
                 <span className="period">{this.props.data.importType}</span>
               </dt>
-               <dd>Import Streams or Services</dd>
+               <dd><a href="/ngs/how-it-works#streams">Import Streams or Services</a></dd>
               <dt>
                {this.props.data.exportUnits}
                <span className="period">{this.props.data.exportType}</span>
              </dt>
-              <dd>Export Streams or Services</dd>
+              <dd><a href="/ngs/how-it-works#streams">Export Streams or Services</a></dd>
           {/*<dt className="appendix">
             {this.props.data.dataSharing ? (
               <a href="#">Sharing Options*</a>
