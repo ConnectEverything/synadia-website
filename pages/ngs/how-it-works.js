@@ -75,14 +75,17 @@ export default class Pricing extends React.Component {
 
           <p>
             You can add new users to your account through{' '}
-            <span className="highlight">ngs add user</span> command.
+            <span className="highlight">nsc add user</span> command.
           </p>
 
           <code>
-            $ ngs add user --name bob
+            $ nsc add user --name bob
             <br />
-            Generated user credentials
-            "~/.nkeys/synadia/accounts/ngs/users/bob.creds"
+            Generated user key - private key stored "~/.test_nkeys/keys/U/BS/UBS6SOAHWCW6KGANVXUY3SO4P7GI7ZPXNERP6FXTERETMGNWNVVVHPDW.nk"
+            <br />
+            Generated user creds file "~/.test_nkeys/creds/first/initd_account/bob.creds"
+            <br />
+            Success! - added user "bob" to "First"
           </code>
 
           <p>
@@ -93,7 +96,7 @@ export default class Pricing extends React.Component {
             which is your default account that was created at signup. You can setup
             permissions for a user, set activation time, expiration time,
             and set other limits. For more information, use the{' '}
-            <span className="highlight">ngs add user --help</span> command.
+            <span className="highlight">nsc add user --help</span> command.
           </p>
 
           <h3 className="inner">Accounts</h3>
@@ -160,7 +163,7 @@ export default class Pricing extends React.Component {
           </p>
 
           <code>
-            $ ngs add export --account myaccount --subject "weather.CA"
+            $ nsc add export --account myaccount --subject "weather.CA"
           </code>
 
           <p>
@@ -172,7 +175,7 @@ export default class Pricing extends React.Component {
           <h3 className="inner">Service Exports</h3>
 
           <code>
-            $ ngs add export --service --account myaccount --subject "ip.geo "
+            $ nsc add export --service --account myaccount --subject "ip.geo "
           </code>
 
           <p>
@@ -182,7 +185,7 @@ export default class Pricing extends React.Component {
 
           <p>
             There are more options for exporting streams and services, see{' '}
-            <span className="highlight">ngs add export --help</span> for more
+            <span className="highlight">nsc add export --help</span> for more
             information.
           </p>
 
@@ -197,45 +200,34 @@ export default class Pricing extends React.Component {
             public.
           </p>
 
-          <code>$ ngs add import</code>
+          <code>$ nsc add import</code>
 
           <p>
             There are more options for importing streams and services, see{' '}
-            <span className="highlight">ngs add import --help</span> for more
+            <span className="highlight">nsc add import --help</span> for more
             information.
           </p>
 
           <h3 className="inner">Additional Commands</h3>
 
           <p>
-            The <span className="highlight">ngs</span> utility can be used to
+            The <span className="highlight">nsc</span> utility can be used to
             add, remove, and edit users, imports, and exports. See{' '}
-            <span className="highlight">ngs --help</span> for more information.
-            Note that while NGS is a general NATS utility, only commands related
-            to signup, users, import, and exports will be supported on the
-            Synadia operated global digital network.
+            <span className="highlight">nsc --help</span> for more information.
+            Note that NSC is a general NATS utility, the NGS tool provides commands
+            to manage your billing account.
           </p>
 
           <h3 className="inner">Connecting an Application</h3>
 
           <p>
-            Supported Clients use the standard NATS APIs, except there is a new
-            credentials option available to connect with and accept a
+            Supported Clients use the standard NATS APIs, except there is a
+            new <a className="highlight" href="https://nats-io.github.io/docs/developer/security/creds.html">credentials option</a> available
+             to connect with and accept a
             credentials file. This is required to connect to NGS. The
             credentials file is a chained file with both a user JWT and the
             seed/private Nkey for signing the challenge from the server.
           </p>
-
-          <code>
-            // Go client
-            <br />
-	    nc, err := nats.Connect(url, nats.UserCredentials(“/Users/sam/.nkeys/synadia/accounts/ngs/users/ngs.creds”)
-            <br />
-            <br />
-            // Node.js client
-            <br />
-            var nc = NATS.connect(url, NATS.creds('/Users/sam/.nkeys/synadia/accounts/ngs/users/ngs.creds'));
-          </code>
         </section>
 
         <Footer simple />

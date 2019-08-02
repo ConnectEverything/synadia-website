@@ -13,6 +13,13 @@ export default class Pricing extends React.Component {
       <main>
         <Header internal />
         <h2>Welcome to NGS!</h2>
+        <p>
+            NGS is a global communications system built on{' '}
+            <a hre="https://nats.io">NATS.io</a>. NGS is easy to use, secure
+            by default, and globally available in all major cloud providers.
+            <br /> Get connected and send your first message in under a
+            minute.
+          </p>
         <section>
           <PricingCard
             data={{
@@ -39,7 +46,7 @@ export default class Pricing extends React.Component {
               monthlyData: '5',
               dataSharing: true,
               to: '/ngs/signup',
-              ctaText: 'Signup'
+              ctaText: 'Get Started'
             }}
           />
           <PricingCard
@@ -53,7 +60,7 @@ export default class Pricing extends React.Component {
               monthlyData: '25',
               dataSharing: true,
               to: '/ngs/signup',
-              ctaText: 'Signup'
+              ctaText: 'Get Started'
             }}
           />
           <PricingCard
@@ -67,7 +74,7 @@ export default class Pricing extends React.Component {
               monthlyData: '200',
               dataSharing: true,
               to: '/ngs/signup',
-              ctaText: 'Signup'
+              ctaText: 'Get Started'
             }}
           />
         </section>
