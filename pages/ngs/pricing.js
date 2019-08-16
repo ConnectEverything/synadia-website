@@ -21,7 +21,7 @@ export default class Pricing extends React.Component {
               price: '0',
               messageSize: '256',
               messageUnit: 'b',
-              connections: '2',
+              connections: '2 + 1*',
               monthlyData: "1",
               importUnits: "5 ",
               importType: "Public",
@@ -39,7 +39,7 @@ export default class Pricing extends React.Component {
               price: '0',
               messageSize: '2',
               messageUnit: 'k',
-              connections: '10 + 2 *',
+              connections: '10 + 2*',
               monthlyData: '5',
               importUnits: "10 ",
               importType: "Public",
@@ -89,7 +89,7 @@ export default class Pricing extends React.Component {
         </section>
 
         <h4>
-          * <a href="https://nats-io.github.io/docs/leafnodes/" target="_blank">Leaf Node Connections</a>
+          * <a href="https://nats-io.github.io/docs/leafnodes/" target="_blank">Leaf Node</a> private server connections. Extend NGS with your own servers.
 
         </h4>
 
