@@ -89,7 +89,7 @@ export default class Pricing extends React.Component {
         </section>
 
         <h4>
-          * <a href="https://nats-io.github.io/docs/leafnodes/" target="_blank">Leaf Node</a> private server connections. Extend NGS with your own servers.
+          * Extend the NGS supercluster with your own private <a href="https://nats-io.github.io/docs/leafnodes/" target="_blank">servers</a>.
 
         </h4>
 
