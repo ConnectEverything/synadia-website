@@ -97,6 +97,17 @@ export default class Index extends React.Component {
             linkedin: 'david-kemper-531bb038',
             github: 'davidkemper'
           }
+        },
+        {
+          name: 'Jaime Piña',
+          position: 'Engineering',
+          bio:
+            'Jaime was a self-driving car whisperer at Cruise Automation before joining Synadia. He worked on systems that helped distressed vehicles when making challenging maneuvers on San Francisco streets. During off-hours, Jaime is always tinkering with something.',
+          links: {
+            twitter: 'variadico',
+            linkedin: 'jaime-piña',
+            github: 'variadico'
+          }
         }
       ]
     };
