@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react"
 
 class BackgroundSlider extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
   }
   render() {
     return (
@@ -31,8 +31,6 @@ class BackgroundSlider extends React.Component {
               overflow-x: auto;
               scroll-behavior: smooth;
               -webkit-overflow-scrolling: touch;
-              scroll-snap-points-x: repeat(100px);
-              scroll-snap-type: mandatory;
             }
           }
         `}</style>
@@ -44,8 +42,8 @@ class BackgroundSlider extends React.Component {
           <div>{this.props.children}</div>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default BackgroundSlider;
+export default BackgroundSlider
