@@ -146,15 +146,15 @@ export default class Pricing extends React.Component {
 	    When you are ready to program your own NGS client, you can
 	    get started with one of our NGS aware clients. We have
 	    support
-	    for <a href="https://github.com/nats-io/go-nats#new-authentication-nkeys-and-user-credentials"><span className="highlight">Go </span></a>
-	    and <a href="https://github.com/nats-io/node-nats#new-authentication-nkeys-and-user-credentials"><span className="highlight">Node.js </span></a>
+	    for <a href="https://github.com/nats-io/nats.go#new-authentication-nkeys-and-user-credentials"><span className="highlight">Go </span></a>
+	    and <a href="https://github.com/nats-io/nats.js#new-authentication-nkeys-and-user-credentials"><span className="highlight">Node.js </span></a>
 	    for launch, with more clients to be released soon.
 	  </p>
 
 	  <code>
             // Go client
             <br />
-            nc, err := Connect(url, UserCreds(“~/.nkeys/synadia/accounts/ngs/users/ngs.creds”)
+            nc, err := nats.Connect(url, nats.UserCreds("~/.nkeys/synadia/accounts/ngs/users/ngs.creds"))
             <br />
             <br />
             // Node.js client
