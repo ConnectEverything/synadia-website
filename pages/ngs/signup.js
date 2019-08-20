@@ -154,7 +154,7 @@ export default class Pricing extends React.Component {
 	  <code>
             // Go client
             <br />
-            nc, err := nats.Connect(url, nats.UserCreds("~/.nkeys/synadia/accounts/ngs/users/ngs.creds"))
+            nc, err := nats.Connect(url, nats.UserCredentials("~/.nkeys/synadia/accounts/ngs/users/ngs.creds"))
             <br />
             <br />
             // Node.js client
