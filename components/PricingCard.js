@@ -29,13 +29,31 @@ export default class PricingCard extends React.Component {
             <span>gb</span>
           </dt>
           <dd>Monthly Data</dd>
-          <dt className="appendix">
+           <dt>
+                {this.props.data.importUnits}
+                <span className="period">{this.props.data.importType}</span>
+              </dt>
+               <dd><a href="/ngs/how-it-works#streams">Import Streams or Services</a></dd>
+              <dt>
+               {this.props.data.exportUnits}
+               <span className="period">{this.props.data.exportType}</span>
+             </dt>
+              <dd><a href="/ngs/how-it-works#streams">Export Streams or Services</a></dd>
+          {/*<dt className="appendix">
             {this.props.data.dataSharing ? (
               <a href="#">Sharing Options*</a>
             ) : (
               <a>No Credit Card Required</a>
             )}
-          </dt>
+          </dt>*/}
+
+          <dt className="appendix">
+                      {this.props.data.dataSharing ? (
+                        <a href="#"></a>
+                      ) : (
+                        <a>No Credit Card Required</a>
+                      )}
+                    </dt>
         </dl>
         <a
           className="action"
@@ -94,13 +112,13 @@ export default class PricingCard extends React.Component {
           }
 
           .price span {
-            position: absolute;
-            top: 0;
-            left: 0;
-            vertical-align: super;
-            font-size: 40%;
-            transform: translate(-100%, -10%);
-          }
+              position: absolute;
+              top: 0;
+              left: 0;
+              vertical-align: super;
+              font-size: 40%;
+              transform: translate(-100%, -10%);
+            }
 
           .price .period {
             font-size: 18.8%;
@@ -109,6 +127,8 @@ export default class PricingCard extends React.Component {
             vertical-align: baseline;
             transform: translate(100%, 25%);
           }
+
+
 
           dt:not(.title) {
             font-size: 2rem;
@@ -121,6 +141,11 @@ export default class PricingCard extends React.Component {
             text-transform: uppercase;
             font-size: 50%;
           }
+
+          dt.imports {
+                      font-size: 2.25rem;
+                      letter-spacing: -0.59px;
+                    }
 
           dt.appendix {
             font-size: 1.25rem;
