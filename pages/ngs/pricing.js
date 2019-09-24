@@ -13,15 +13,13 @@ export default class Pricing extends React.Component {
       <main>
         <Header internal />
         <h2>Welcome to NGS!</h2>
-        <div className="content">
-        <p>
+        
             <h3>NGS is a global communications system built on{' '}
             <a hre="https://nats.io">NATS.io</a>. <br /> NGS is easy to use, secure
             by default, and globally available in all major cloud providers.
             <br /> Get connected and send your first message in under a
             minute.</h3>
-            </p>
-          </div>
+          
         <section>
           <PricingCard
             data={{
