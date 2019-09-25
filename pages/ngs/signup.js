@@ -19,154 +19,151 @@ export default class Pricing extends React.Component {
             have you up and running and sending messages.
           </h3>
 
-          <h3 className="inner">Installation of the NGS utility</h3>
+          <h3 className="inner">Installation of the NGS and NCS utilities</h3>
 
           <p>
-            The first thing you'll need to do is install the NGS{' '}
-            <span className="highlight">CLI</span> (Command Line Interface). The{' '}
-            <span className="highlight">ngs</span> utility is used to signup and
-            administer your NGS account.
+            NGS depends on two command line tools. The first, called <span className="highlight">nsc</span>, is an open 
+             source tool used to create and edit configurations for
+             the <a href="https://nats.io">NATS.io</a> account <a href="https://nats-io.github.io/docs/nats_server/jwt_auth.html">security system</a>. This is the same system
+             used by NGS. The second, called <span className="highlight">ngs</span>, is used to manage your billing account 
+             with Synadia.
           </p>
 
           <p>
-            The installation process is straightforward. Open up a command
-            prompt and type the following:
+            The installation process is straightforward. Open up a command prompt and type the following:
           </p>
 
           <CopyCode content="$ curl https://downloads.synadia.com/ngs/install.py -sSf | python" />
 
           <p>
-            This will install the <span className="highlight">ngs</span> utility
-            into ~/.ngs/bin. Follow the instructions provided by the ngs utility
-            after the download completes to get signed up, and to send your
-            first message!
-          </p>
-
-          <p>
+            This will install the <span className="highlight">nsc</span> and <span className="highlight">ngs</span> utilities into ~/.nsc/bin.
             You can get usage help anytime by executing{' '}
-            <span className="highlight">ngs -h</span>.
+            <span className="highlight">ngs -h</span> or <span className="highlight">nsc -h</span>, 
+            or search the <a href="https://nats-io.github.io/docs/nats_tools/nsc/nsc.html">nsc documentation.</a>
           </p>
 
-          <h3 className="inner">The Free Plan</h3>
-
           <p>
-            To sign up for a free account you'll use the{' '}
-            <span className="highlight">ngs signup</span> command
+            Next we need to tell NSC about Synadia, create an account and user and deploy the account the NGS servers.
+            To create a new account named &quot;First&quot; (you can use any name here) and deploy it to NGS, 
+            open a command prompt and type:
           </p>
 
-          <CopyCode content="$ ngs signup --free" />
-
-          <h3 className="inner">Paid plans</h3>
+          <CopyCode content="$ nsc init -o synadia -n First" />
 
           <p>
-            Signing up for paid plans is similar to signing up for the free plan
-            except with a few more steps. In addition to finding plan
-            information on{' '}
-            <a href="https://synadia.com/ngs/pricing">
-              synadia.com/ngs/pricing
-            </a>
-            , you can view information about current plans locally with the
+           This will import Synadia's operator information, create an account and user named &quot;First&quot; on your local system, deploy the account to
+           NGS, create a billing account on NGS for you and associate it with a free plan. This free plan allows you to
+           use NGS but places some limits on your connections. You can check your limits using:
+          </p>
+
+          <CopyCode content="$ ngs status" />
+
+          <p>
+            The signup process will also generate the necessary credentials to
+            access your account on NGS. To test that everything is working, let's
+            send our first message with one of the tools built into nsc.
+          </p>
+
+          <CopyCode content="$ nsc tool req ngs.echo <some text>" />
+
+          <p>
+          NGS provides three demonstration services to new accounts through a set of automated imports added to your account 
+          JWT when you upload it. These services can be accessed with the `nsc` tool as follows:
+          </p>
+            
+            <code>
+              > nsc tool req ngs.echo HELLO <br />
+              Published [ngs.echo] : 'HELLO'
+              <br />
+              Received [_INBOX.IUAKVmH8SZfgJc6M666obM.wn1hGbsk] : '[California,
+              US]: "HELLO"'
+            </code>
+
+          <p>
+            Congratulations! You have successfully registered with NGS and sent your first message on the NGS secure global messaging system.
+          </p>
+
+          <h3 className="inner">Learn More</h3>
+
+          <p>
+            When you are ready to program your own NGS client, you can
+            get started with one of our <a href="https://nats.io/download/">NGS aware clients</a>. Extensive documentation is
+            available at the NATS Docs site <a href="https://nats-io.github.io/docs/">nats-io.github.io/docs/developer/</a>.
+          </p>
+
+          <p>
+            To learn more about NGS and the NATS technology, please visit <a href="/ngs/how-it-works"><span className="highlight">How it Works</span></a> and
+            join the <a href="https://slack.nats.io" target="_blank"><span className="highlight">NATS Slack Channel</span></a> to get help and information.
+          </p>
+
+          <h3 className="inner">Paid Plans and Account Limits</h3>
+
+          <p>
+            You can expand the limits applied to your account by updating to a paid plan. Synadia even offers
+            a "free" paid plan that requires an email and credit card, but doesn't cost anything.
+            In addition to finding plan
+            information on <a href="https://synadia.com/ngs/pricing"> synadia.com/ngs/pricing</a>, you can view information about current plans locally with the
             following command:
           </p>
 
-          <CopyCode content="$ ngs account plans" />
+          <CopyCode content="$ ngs plans" />
 
           <p>
             You'll see the list of available plans, select the one that most
             closely matches your requirements. If your needs exceed any of the
             plans listed, contact us at{' '}
             <a href="mailto:info@synadia.com">info@synadia.com</a> and we’d be
-            happy to help create a custom plan for you.
+            happy to help create a custom plan for you. To move to a new plan, type:
           </p>
 
-          <CopyCode content="$ ngs signup" />
+          <CopyCode content="$ ngs edit" />
 
           <p>
-            Check your email, within a minute or so you will receive an email
+            Follow the instructions, and once you complete the steps, check your email, 
+            within a minute or so you will receive an email
             with a link to a secure payment page. There you can enter your
-            payment information and activate your account. Follow the
-            instructions to complete the signup process with{' '}
-            <span className="highlight">ngs signup</span>. If you leave ngs
-            signup running, it will auto-complete. Otherwise you can check your
+            payment information and upgrade your account. You can check your
             account status with:
           </p>
 
-          <CopyCode content="$ ngs account status" />
+          <CopyCode content="$ ngs status" />
 
           <p>
-            Information about your NGS account status will be displayed. We bill
+            Information about your NGS billing account status will be displayed. We bill
             on a monthly basis, so you will see a four week expiry, which will
             be renewed on the next automatic credit card payment.
           </p>
 
-          <p>
-            The signup process will generate the necessary credentials to
-            activate your account. To test that everything is working, let's
-            send our first message.
-          </p>
-
-          <CopyCode content="$ ngs demo echo <some text>" />
+          <h3 className="inner">Demonstration Imports</h3>
 
           <p>
-            If successful, you will see something like the following:
-          </p>
-            <code>
-              > ngs demo echo HELLO <br />
-              Published [ngs.echo] : 'HELLO'
-              <br />
-              Received [_INBOX.IUAKVmH8SZfgJc6M666obM.wn1hGbsk] : '[California,
-              US]: "HELLO"'
-            </code>
-          <p>
-            Congratulations! You have successfully registered with NGS and sent your first message on the NGS secure global messaging system.
+          NGS provides three demonstration services (echo, usage, active) to new accounts through a set of automated imports added to your account
+          JWT when you upload it. These services can be accessed with the nsc tool as follows:
           </p>
 
           <p>
-            The ngs tool also has built in publishers, subscribers,
-	    queue subscribers and request and reply. Feel free to try
-	    them out and join the <a href="https://join.slack.com/t/natsio/shared_invite/enQtMzE2NDkxNDI2NTE1LTc5ZDEzYTkwYWZkYWQ5YjY1MzBjMWZmYzA5OGQxMzlkMGQzMjYxNGM3MWYxMjNiYmNjNzIwMTVjMWE2ZDgxZGM"><span className="highlight">NATS Slack Channel</span></a> to get help and information.
+            As we saw earlier, the echo service returns what you send it, a standard NATS request.
           </p>
-
-	  <code>
-	    > ngs tool -h<br/>
-	    Use one of the NATS tools: pub, sub, qsub, req<br/><br/>
-
-	    Usage:<br/>
-	    &nbsp;&nbsp;ngs tool [command]<br/><br/>
-
-	    Available Commands:<br/>
-	      &nbsp;&nbsp;pub&nbsp;&nbsp;&nbsp;&nbsp; Publish to a subject on your NGS account<br/>
-	      &nbsp;&nbsp;qsub&nbsp;&nbsp;&nbsp;      Subscribe to a subject, as part of a queue, on your NGS account<br/>
-	      &nbsp;&nbsp;reply&nbsp;&nbsp;           Listen on a subject on your NGS account, and reply to messages<br/>
-	      &nbsp;&nbsp;req&nbsp;&nbsp;&nbsp;&nbsp; Send a request to a subject on your NGS account<br/>
-	      &nbsp;&nbsp;sub&nbsp;&nbsp;&nbsp;&nbsp; Subscribe to a subject on your NGS account<br/>
-	  </code>
-
-	  <p>
-	    When you are ready to program your own NGS client, you can
-	    get started with one of our NGS aware clients. We have
-	    support
-	    for <a href="https://github.com/nats-io/nats.go#new-authentication-nkeys-and-user-credentials"><span className="highlight">Go </span></a>
-	    and <a href="https://github.com/nats-io/nats.js#new-authentication-nkeys-and-user-credentials"><span className="highlight">Node.js </span></a>
-	    for launch, with more clients to be released soon.
-	  </p>
-
-	  <code>
-            // Go client
-            <br />
-            nc, err := nats.Connect(url, nats.UserCredentials("~/.nkeys/synadia/accounts/ngs/users/ngs.creds"))
-            <br />
-            <br />
-            // Node.js client
-            <br />
-            var nc = NATS.connect(url, NATS.creds('~/.nkeys/synadia/accounts/ngs/users/ngs.creds'));
-          </code>
+          
+          <CopyCode content="$ nsc tool req -o synadia ngs.echo Hello" />
 
           <p>
-	    To learn more about NGS and the NATS technology, please visit <a href="/ngs/how-it-works"><span className="highlight">How it Works</span></a>.
+            The usage service shows an approximation of your account-wide data usage.
           </p>
 
-	  <p></p>
+          <CopyCode content="$ nsc tool req -o synadia ngs.usage ''" />
+
+          <p>
+          The active service sends out a message stream you can subscribe to. Messages indicate known servers based on various locations in the NGS cluster.
+          </p>
+
+          <CopyCode content="$ nsc tool sub -o synadia ngs.active" />
+
+          <p>
+            In all three cases, the operator should be synadia, 
+            and the account and user should be the ones you want to use to run the tool. Keep in mind that these services
+            are only available when you are connecting to NGS and not when you run locally.
+          </p>
         </section>
 
         <Footer simple />

@@ -128,7 +128,7 @@ export default class Index extends React.Component {
         <section id="home" className="first-fold">
           <h1>Connect Everything</h1>
 
-          <a className="button" href="/ngs" data-text="Introducing NGS">
+          <a className="button" href="/ngs/pricing" data-text="Introducing NGS">
             Introducing NGS
           </a>
 
