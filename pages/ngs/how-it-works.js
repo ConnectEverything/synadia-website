@@ -282,7 +282,7 @@ export default class Pricing extends React.Component {
           }
 
           p {
-            font-size: 1.25rem;
+            font-size: 1.3rem;
           }
 
           p:last-of-type {
