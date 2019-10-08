@@ -19,7 +19,7 @@ export default class Pricing extends React.Component {
             have you up and running and sending messages.
           </h3>
 
-          <h3 className="inner">Installation of the NGS and NSC utilities</h3>
+          <h3 className="inner">Installation of the NGS and NCS utilities</h3>
 
           <p>
             NGS depends on two command line tools. The first, called <span className="highlight">nsc</span>, is an open 
@@ -43,7 +43,7 @@ export default class Pricing extends React.Component {
           </p>
 
           <p>
-            Next we need to tell NSC about Synadia, create an account and user and deploy the account to the NGS servers.
+            Next we need to tell NSC about Synadia, create an account and user and deploy the account the NGS servers.
             To create a new account named &quot;First&quot; (you can use any name here) and deploy it to NGS, 
             open a command prompt and type:
           </p>
