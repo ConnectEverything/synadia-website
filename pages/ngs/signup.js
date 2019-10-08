@@ -146,19 +146,19 @@ export default class Pricing extends React.Component {
             As we saw earlier, the echo service returns what you send it, a standard NATS request.
           </p>
           
-          <CopyCode content="$ nsc tool req -o synadia ngs.echo Hello" />
+          <CopyCode content="$ nsc tool req ngs.echo Hello" />
 
           <p>
             The usage service shows an approximation of your account-wide data usage.
           </p>
 
-          <CopyCode content="$ nsc tool req -o synadia ngs.usage ''" />
+          <CopyCode content="$ nsc tool req ngs.usage ''" />
 
           <p>
           Active is a service that sends out a message stream you can subscribe to. Messages indicate known servers based on various locations in the NGS cluster.
           </p>
 
-          <CopyCode content="$ nsc tool sub -o synadia ngs.active" />
+          <CopyCode content="$ nsc tool sub ngs.active" />
 
           <p>
             In all three cases, the operator should be synadia, 
