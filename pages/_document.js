@@ -24,6 +24,7 @@ export default class MyDocument extends Document {
             name="google-site-verification"
             content={settings.meta.googleSiteVerification}
           />
+          <title>{settings.meta.pageTitle}</title>
           <link
             rel="apple-touch-icon"
             sizes="57x57"
