@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "next",
-    "build": "next build && next export -o ./dist"
+    "build": "next build"
   },
   "dependencies": {
     "acorn": "^7.1.0",
