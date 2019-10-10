@@ -1,10 +1,10 @@
-import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import React from "react"
+import Header from "../components/Header"
+import Footer from "../components/Footer"
 
 export default class Ngs extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
   }
 
   render() {
@@ -15,13 +15,17 @@ export default class Ngs extends React.Component {
           <h2>Introducing NGS!</h2>
           <div className="content">
             <p>
-              NGS is a global communications system built on{' '}
+              NGS is a global communications system built on{" "}
               <a hre="https://nats.io">NATS.io</a>. NGS is easy to use, secure
               by default, and globally available in all major cloud providers.
               <br /> Get connected and send your first message in under a
               minute.
             </p>
-            <a className="button" href="/ngs/pricing" data-text="Get Started Today!">
+            <a
+              className="button"
+              href="/ngs/pricing"
+              data-text="Get Started Today!"
+            >
               Get Started Today!
             </a>
           </div>
@@ -29,7 +33,7 @@ export default class Ngs extends React.Component {
         <Footer simple />
         <style jsx>{`
           main {
-            background-image: url('/static/images/bg.png');
+            background-image: url("/static/images/bg.png");
             background-repeat: no-repeat;
             background-size: 200%;
             background-position: 50% 10%;
@@ -59,9 +63,9 @@ export default class Ngs extends React.Component {
             font-size: 1.5rem;
           }
 
-	  .content a {
+          .content a {
             font-size: 1.5rem;
-	  }
+          }
 
           .button {
             margin: 1em;
@@ -78,6 +82,6 @@ export default class Ngs extends React.Component {
           }
         `}</style>
       </main>
-    );
+    )
   }
 }

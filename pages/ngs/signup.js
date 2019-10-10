@@ -51,7 +51,7 @@ export default class Pricing extends React.Component {
           <CopyCode content="$ nsc init -o synadia -n First" />
 
           <p>
-           This will import synadia's operator information, create an account and user named &quot;First&quot; on your local system, deploy the account to
+           This will import Synadia's operator information, create an account and user named &quot;First&quot; on your local system, deploy the account to
            NGS, create a billing account on NGS for you and associate it with a free plan. This free plan allows you to
            use NGS but places some limits on your connections. You can check your limits using:
           </p>
@@ -88,12 +88,12 @@ export default class Pricing extends React.Component {
           <p>
             When you are ready to program your own NGS client, you can
             get started with one of our <a href="https://nats.io/download/">NGS aware clients</a>. Extensive documentation is
-            available at <a href="https://nats-io.github.io/docs/">https://nats-io.github.io/docs/developer/</a>.
+            available at the NATS Docs site <a href="https://nats-io.github.io/docs/">nats-io.github.io/docs/developer/</a>.
           </p>
 
           <p>
             To learn more about NGS and the NATS technology, please visit <a href="/ngs/how-it-works"><span className="highlight">How it Works</span></a> and
-            join the <a href="https://join.slack.com/t/natsio/shared_invite/enQtMzE2NDkxNDI2NTE1LTc5ZDEzYTkwYWZkYWQ5YjY1MzBjMWZmYzA5OGQxMzlkMGQzMjYxNGM3MWYxMjNiYmNjNzIwMTVjMWE2ZDgxZGM"><span className="highlight">NATS Slack Channel</span></a> to get help and information.
+            join the <a href="https://slack.nats.io" target="_blank"><span className="highlight">NATS Slack Channel</span></a> to get help and information.
           </p>
 
           <h3 className="inner">Paid Plans and Account Limits</h3>
@@ -102,8 +102,7 @@ export default class Pricing extends React.Component {
             You can expand the limits applied to your account by updating to a paid plan. Synadia even offers
             a "free" paid plan that requires an email and credit card, but doesn't cost anything.
             In addition to finding plan
-            information on <a href="https://synadia.com/ngs/pricing"> synadia.com/ngs/pricing </a>
-            , you can view information about current plans locally with the
+            information on <a href="https://synadia.com/ngs/pricing"> synadia.com/ngs/pricing</a>, you can view information about current plans locally with the
             following command:
           </p>
 
@@ -138,8 +137,8 @@ export default class Pricing extends React.Component {
           <h3 className="inner">Demonstration Imports</h3>
 
           <p>
-          NGS provides three demonstration services to new accounts through a set of automated imports added to your account 
-          JWT when you upload it. These services can be accessed with the `nsc` tool as follows:
+          NGS provides three demonstration services (echo, usage, active) to new accounts through a set of automated imports added to your account
+          JWT when you upload it. These services can be accessed with the nsc tool as follows:
           </p>
 
           <p>
@@ -155,7 +154,7 @@ export default class Pricing extends React.Component {
           <CopyCode content="$ nsc tool req ngs.usage ''" />
 
           <p>
-          Active is a service that sends out a message stream you can subscribe to. Messages indicate known servers based on various locations in the NGS cluster.
+          The active service sends out a message stream you can subscribe to. Messages indicate known servers based on various locations in the NGS cluster.
           </p>
 
           <CopyCode content="$ nsc tool sub ngs.active" />
@@ -206,7 +205,7 @@ export default class Pricing extends React.Component {
           }
 
           p {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             max-width: 80%;
           }
 

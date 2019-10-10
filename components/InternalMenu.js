@@ -62,11 +62,16 @@ export default class MainMenu extends React.Component {
                 Team
               </a>
             </li>
-            {/* <li>
+            <li>
               <Link activeClassName="active" href="/ngs/pricing">
                 <a className="navigation-item">Pricing</a>
               </Link>
-            </li> */}
+            </li>
+            <li>
+             <Link activeClassName="active" href="/ngs/signup">
+                <a className="navigation-item">Getting started</a>
+               </Link>
+             </li>
             <li>
               <Link activeClassName="active" href="/ngs/how-it-works">
                 <a className="navigation-item">How it works</a>

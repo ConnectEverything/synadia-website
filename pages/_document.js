@@ -1,13 +1,8 @@
-import React from 'react';
-import Document, { Head, Main, NextScript } from 'next/document';
-import settings from '../settings.json';
+import React from "react"
+import Document, { Head, Main, NextScript } from "next/document"
+import settings from "../settings.json"
 
 export default class MyDocument extends Document {
-  static async getInitialProps(ctx) {
-    const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
-  }
-
   render() {
     return (
       <html lang="en">
@@ -29,6 +24,7 @@ export default class MyDocument extends Document {
             name="google-site-verification"
             content={settings.meta.googleSiteVerification}
           />
+          <title>{settings.meta.pageTitle}</title>
           <link
             rel="apple-touch-icon"
             sizes="57x57"
@@ -156,6 +152,6 @@ export default class MyDocument extends Document {
           <NextScript />
         </body>
       </html>
-    );
+    )
   }
 }
