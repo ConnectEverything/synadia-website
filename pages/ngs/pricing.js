@@ -26,15 +26,11 @@ export default class Pricing extends React.Component {
               special: false,
               title: 'Free Tier',
               price: '0',
-              messageSize: '256',
-              messageUnit: 'b',
-              connections: '2 + 1*',
+              messageSize: '1',
+              messageUnit: 'kb',
+              connections: '10',
               monthlyData: "1",
-              importUnits: "5 ",
-              importType: "Public",
-              exportUnits: "0 ",
-              exportType: "",
-              dataSharing: false,
+              ccardReq: false,
               to: '/ngs/signup',
               ctaText: 'Get Started'
             }}
@@ -44,15 +40,11 @@ export default class Pricing extends React.Component {
               special: false,
               title: 'Developer',
               price: '0',
-              messageSize: '2',
-              messageUnit: 'k',
-              connections: '10 + 2*',
+              messageSize: '4',
+              messageUnit: 'kb',
+              connections: '50',
               monthlyData: '5',
-              importUnits: "10 ",
-              importType: "Public",
-              exportUnits: "1 ",
-              exportType: "static",
-              dataSharing: true,
+              ccardReq: true,
               to: '/ngs/signup',
               ctaText: 'Get Started'
             }}
@@ -62,15 +54,11 @@ export default class Pricing extends React.Component {
               special: true,
               title: 'Project',
               price: '19',
-              messageSize: '128',
-              messageUnit: 'k',
-              connections: '100 + 5*',
+              messageSize: '256',
+              messageUnit: 'kb',
+              connections: '100',
               monthlyData: '25',
-              importUnits: "25 ",
-              importType: "Public or Private",
-              exportUnits: "10 ",
-              exportType: "static",
-              dataSharing: true,
+              ccardReq: true,
               to: '/ngs/signup',
               ctaText: 'Get Started'
             }}
@@ -82,13 +70,9 @@ export default class Pricing extends React.Component {
               price: '99',
               messageSize: '1',
               messageUnit: 'mb',
-              connections: '1000 + 10*',
+              connections: '1000',
               monthlyData: '200',
-              importUnits: "50 ",
-              importType: "Public or Private",
-              exportUnits: "25 ",
-              exportType: "flexible",
-              dataSharing: true,
+              ccardReq: true,
               to: '/ngs/signup',
               ctaText: 'Get Started'
             }}
@@ -96,14 +80,14 @@ export default class Pricing extends React.Component {
         </section>
 
         <h4>
-          * Extend the NGS supercluster with your own private <a href="https://nats-io.github.io/docs/leafnodes/" target="_blank">servers</a>.
-
+          All accounts include <a href="/ngs/how-it-works#streams" className="link">unlimited data sharing</a>. 
+          Developer, project and business accounts can extend the NGS supercluster with your own private <a href="https://nats-io.github.io/docs/leafnodes/" target="_blank">servers</a>.
         </h4>
 
         <h3>
           Transparent, flexible pricing for the first decentralized, secure
           global utility to connect all digital systems, services and devices.
-          Choose the plan that is best for you, upgrade at anytime. Get two months free with an annual subscription. <br />Commercial support is available for Business Plans.
+          Choose the plan that is best for you, upgrade at anytime. <br />Commercial support is available for Business Plans.
 
         </h3>
 
