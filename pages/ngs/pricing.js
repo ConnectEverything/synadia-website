@@ -80,8 +80,8 @@ export default class Pricing extends React.Component {
         </section>
 
         <h4>
-          All accounts include <a href="/ngs/how-it-works#streams" className="link">unlimited data sharing</a>. 
-          Developer, project and business accounts can extend the NGS supercluster with your own private <a href="https://nats-io.github.io/docs/leafnodes/" target="_blank">servers</a>.
+          All accounts include <a href="/ngs/how-it-works#streams" className="link">unlimited data sharing</a>. <br />
+          Developer, project, and business accounts can extend the NGS supercluster with your own private <a href="https://nats-io.github.io/docs/leafnodes/" target="_blank">servers</a>.
         </h4>
 
         <h3>
