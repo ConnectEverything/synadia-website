@@ -29,31 +29,13 @@ export default class PricingCard extends React.Component {
             <span>gb</span>
           </dt>
           <dd>Monthly Data</dd>
-           <dt>
-                {this.props.data.importUnits}
-                <span className="period">{this.props.data.importType}</span>
-              </dt>
-               <dd><a href="/ngs/how-it-works#streams">Import Streams or Services</a></dd>
-              <dt>
-               {this.props.data.exportUnits}
-               <span className="period">{this.props.data.exportType}</span>
-             </dt>
-              <dd><a href="/ngs/how-it-works#streams">Export Streams or Services</a></dd>
-          {/*<dt className="appendix">
-            {this.props.data.dataSharing ? (
-              <a href="#">Sharing Options*</a>
-            ) : (
-              <a>No Credit Card Required</a>
-            )}
-          </dt>*/}
-
           <dt className="appendix">
-                      {this.props.data.dataSharing ? (
-                        <a href="#"></a>
-                      ) : (
-                        <a>No Credit Card Required</a>
-                      )}
-                    </dt>
+            {!this.props.data.ccardReq ? (
+              <a>No Credit Card Required</a>
+            ) : (
+              ""
+            )}
+          </dt>
         </dl>
         <a
           className="action"
