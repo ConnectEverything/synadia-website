@@ -78,17 +78,6 @@ export default class Index extends React.Component {
           }
         },
         {
-          name: 'Stephen Asbury',
-          position: 'Engineering',
-          bio:
-            'Before joining Synadia Stephen was an engineering manager at Google, engineer at Fog Creek, architect at TIBCO, and maniac at NeXT. For some reason he has a PhD in Nuclear Engineering, and is trying to figure out how to use that with NATS.',
-          links: {
-            twitter: 'thesasbury',
-            linkedin: 'stasbury',
-            github: 'sasbury'
-          }
-        },
-        {
           name: 'David Kemper',
           position: 'Engineering',
           bio:
