@@ -96,8 +96,20 @@ export default class Index extends React.Component {
             twitter: 'variadico',
             linkedin: 'jaime-piña',
             github: 'variadico'
+           }
+          },
+          {
+            name: 'Phil Pennock',
+            position: 'Engineering',
+            bio:
+              'Phil is a recovering SRE who only occasionally forgets human language when blinking his way out of communication protocols. His assimilation into Pittsburgh living is hindered by a lack of enthusiasm for American Football, but is otherwise progressing well. For your sanity, do not get him started showing you pictures of his cats.',
+            links: {
+              twitter: 'philpennock',
+              linkedin: 'philpennock',
+              github: 'philpennock'
+            }
           }
-        }
+
       ]
     };
   }
