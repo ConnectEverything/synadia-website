@@ -88,14 +88,13 @@ export default class Index extends React.Component {
           }
         },
         {
-          name: 'Jaime Piña',
+          name: 'R.I. Pienaar',
           position: 'Engineering',
           bio:
-            'Jaime was a self-driving car whisperer at Cruise Automation before joining Synadia. He worked on systems that helped distressed vehicles when making challenging maneuvers on San Francisco streets. During off-hours, Jaime is always tinkering with something.',
+            'R.I. aka Arri is a software engineer working on various aspects of the NATS ecosystem. Arri is an industry veteran with decades of experience in operating large infrastructure and building distributed systems in almost all areas of business with a strong focus on Automation.',
           links: {
-            twitter: 'variadico',
-            linkedin: 'jaime-piña',
-            github: 'variadico'
+            twitter: 'ripienaar',
+            github: 'ripienaar'
            }
           },
           {
