@@ -107,7 +107,17 @@ export default class Index extends React.Component {
               linkedin: 'philpennock',
               github: 'philpennock'
             }
-          }
+          },
+          {
+             name: 'Matthias Hanel',
+             position: 'Engineering',
+             bio:
+              'Matthias is a software engineer who has been developing messaging systems for most of his professional career. He loves exploring the outdoors and building things.',
+             links: {
+               linkedin: 'matthias-hanel',
+               github: 'matthiashanel'
+                      }
+                    }
 
       ]
     };
