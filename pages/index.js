@@ -117,7 +117,16 @@ export default class Index extends React.Component {
                linkedin: 'matthias-hanel',
                github: 'matthiashanel'
                       }
-                    }
+                    },
+          {
+              name: 'Jarrett Green',
+              position: 'Customer Experience',
+              bio:
+                        'Jarrett has rich experience in both early stage startups and mature, run-rate revenue business in firms such as SOASTA, HP, and CA with great focus on business development and helping serve customers and partners to the fullest potential. In his spare time, Jarrett enjoys attending a mix of professional motorsports events across the Bay Area.',
+                       links: {
+                         linkedin: 'jgrn',
+                                }
+                              }
 
       ]
     };
