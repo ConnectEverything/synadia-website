@@ -4,6 +4,10 @@
     {
       "src": "/ngs/install.py",
       "dest": "https://raw.githubusercontent.com/ConnectEverything/ngs-cli/master/install.py"
+    },
+    {
+      "src": "/ngs/install.sh",
+      "dest": "https://raw.githubusercontent.com/ConnectEverything/ngs-cli/master/install.sh"
     }
   ],
   "alias": ["synadia.com", "downloads.synadia.com", "www.synadia.com"]
