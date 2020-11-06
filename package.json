@@ -11,7 +11,7 @@
     "build": "next build"
   },
   "dependencies": {
-    "acorn": "^7.1.0",
+    "acorn": "^6.4.1",
     "aos": "^2.3.4",
     "formik": "^1.5.8",
     "next": "^9.1.1",
