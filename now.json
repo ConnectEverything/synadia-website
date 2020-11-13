@@ -1,16 +1,13 @@
 {
   "version": 2,
-  "builds": [{
-    "src": "package.json",
-    "use": "@now/static-build"
-  }],
-  "routes": [{
-    "src": "/ngs/install.py",
-    "dest": "https://raw.githubusercontent.com/ConnectEverything/ngs-cli/master/install.py"
-  }],
-  "alias": [
-    "synadia.com",
-    "downloads.synadia.com",
-    "www.synadia.com"
+  "routes": [
+    {
+      "src": "/ngs/install.py",
+      "dest": "https://raw.githubusercontent.com/ConnectEverything/ngs-cli/master/install.py"
+    },
+    {
+      "src": "/ngs/install.sh",
+      "dest": "https://raw.githubusercontent.com/ConnectEverything/ngs-cli/master/install.sh"
+    }
   ]
 }
