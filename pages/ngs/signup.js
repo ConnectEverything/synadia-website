@@ -88,7 +88,7 @@ export default class Pricing extends React.Component {
           <p>
             When you are ready to program your own NGS client, you can
             get started with one of our <a href="https://nats.io/download/">NGS aware clients</a>. Extensive documentation is
-            available at the NATS Docs site <a href="https://nats-io.github.io/docs/">nats-io.github.io/docs/developer/</a>.
+            available at the NATS Docs site <a href="https://docs.nats.io/">docs.nats.io</a>.
           </p>
 
           <p>
