@@ -7,11 +7,10 @@ export default class Privacy extends React.Component {
   constructor(props) {
     super(props)
   }
-
   render() {
-    return (
-      <main>
-        <Header internal />
+      return (
+        <main>
+          <Header internal />
         <section>
           <h2>Synadia Privacy Policy</h2>
           <h3 className="inner">Our Commitment</h3>
