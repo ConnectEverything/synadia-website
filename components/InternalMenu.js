@@ -82,6 +82,11 @@ export default class MainMenu extends React.Component {
                 Join us
               </a>
             </li>
+            <li>
+              <Link activeClassName="active" href="/privacy">
+               <a className="navigation-item">Privacy</a>
+             </Link>
+            </li>
           </ul>
         </nav>
 
