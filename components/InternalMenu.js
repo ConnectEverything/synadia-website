@@ -78,15 +78,16 @@ export default class MainMenu extends React.Component {
               </Link>
             </li>
             <li>
+              <Link activeClassName="active" href="/privacy">
+               <a className="navigation-item">Privacy</a>
+              </Link>
+              </li>
+            <li>
               <a className="navigation-item" href="mailto:jobs@synadia.com" target="_blank">
                 Join us
               </a>
             </li>
-            <li>
-              <Link activeClassName="active" href="/privacy">
-               <a className="navigation-item">Privacy</a>
-             </Link>
-            </li>
+
           </ul>
         </nav>
 
