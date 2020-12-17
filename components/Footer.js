@@ -19,7 +19,7 @@ export default class Footer extends React.Component {
             <Logo />
             <p>
               &copy; {new Date().getFullYear()} Synadia Communications. <br />
-              All rights reserved. <a href="../privacy">Privacy policy</a>.
+              All rights reserved. <a href="../privacy"><span className="highlight">Privacy policy</span></a>.
             </p>
           </div>
         )}
@@ -54,6 +54,10 @@ export default class Footer extends React.Component {
           .logo {
             grid-area: logo;
           }
+
+          .highlight {
+            color: var(--color-secondary);
+           }
 
           .contact {
             grid-area: contact;
