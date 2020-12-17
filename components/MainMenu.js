@@ -62,6 +62,11 @@ export default class MainMenu extends React.Component {
                 <a className="navigation-item">NGS</a>
               </Link>
             </li>
+            <li>
+              <Link activeClassName="active" href="/privacy">
+                <a className="navigation-item">Privacy</a>
+              </Link>
+            </li>
 	    {/*
             <li>
               <Link activeClassName="active" href="/ngs/how-it-works">
