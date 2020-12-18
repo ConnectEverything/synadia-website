@@ -23,6 +23,16 @@ export default class Index extends React.Component {
           }
         },
         {
+          name: 'Jan Plutzer',
+          position: 'COO',
+          bio:
+            'Jan is a business operations and finance veteran with decades of experience leading teams at both startups and larger enterprises.  She has held leadership positions at Intuit, Apcera and TIBCO Software.',
+          links: {
+             twitter: 'jan_plutzer',
+             linkedin: 'jan-plutzer1'
+                  }
+                },
+        {
           name: 'Colin Sullivan',
           position: 'Product Management',
           bio:
