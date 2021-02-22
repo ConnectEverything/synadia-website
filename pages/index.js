@@ -152,7 +152,7 @@ export default class Index extends React.Component {
              name: 'Scott Fauerbach',
              position: 'Engineering',
              bio:
-                        'Working with Java since 1.0 Beta in 1995, Scott built the first commercial Java UI library but soon realized the server side was much easier than UI. Scott has worked for 5 person startups and Fortune 500 companies including healthcare and Fintech, where they valued his ability to be involved in every aspect of software development and delivery, from conception to deployment. He considers himself a "reverse-engineer" and will figure out any technology you put in front of him.',
+                        'Working with Java since 1.0 Beta in 1995, Scott built the first commercial Java UI library. Scott has worked for 5 person startups and Fortune 500 companies including healthcare and Fintech, where they valued his ability to be involved in every aspect of software development and delivery, from conception to deployment. He considers himself a "reverse-engineer" and will figure out any technology you put in front of him.',
                         links: {
                           linkedin: 'scottfauerbach',
                           github: 'scottf'
