@@ -83,6 +83,21 @@ export default class Pricing extends React.Component {
             Congratulations! You have successfully registered with NGS and sent your first message on the NGS secure global messaging system.
           </p>
 
+          <h3 className="inner"><em>Installation Issues</em></h3>
+          
+          <p>
+          If you are using a version of nsc installed by other means (homebrew, built from source, etc), you may run into issues due
+          to a version mismatch between NGS and the nsc tooling.  If you encounter an error related to an unexpected ed25519 key
+          algorithm, or &quot;Error: this version of nsc (x.x.x) is incompatible with the provided jwt v1&quot; set nsc to version 0.5.0.
+          </p>
+
+          <CopyCode content="$ nsc update --version 0.5.0" />
+
+          <p>
+          If you need additional help please contact us at{' '}
+            <a href="mailto:info@synadia.com">info@synadia.com</a>.
+          </p>
+
           <h3 className="inner">Learn More</h3>
 
           <p>
